@@ -283,6 +283,7 @@
   <footer></footer>
 </template>
 <style lang="css">
+@import 'tailwindcss';
 body {
   font-family: sans-serif;
   background-color: #f0f8ff; /* Дуже світло-блакитний фон */
