@@ -1,10 +1,10 @@
 import './assets/style.css'
 
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
 import Floppy from './Floppy.vue'
 //import router from './router'
 
-const app = createApp(Floppy)
+const app = createSSRApp(Floppy)
 
 //app.use(router)
 
