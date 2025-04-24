@@ -1,4 +1,4 @@
-//import './assets/tw.css'
+import './assets/style.css'
 
 import { createApp } from 'vue'
 import Floppy from './Floppy.vue'
