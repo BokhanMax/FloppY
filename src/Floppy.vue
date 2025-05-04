@@ -29,10 +29,33 @@ import ProgramCard from './components/ProgramCard.vue'
       />
 
       <ProgramCard
+        name="Foobar2000"
+        description="Легендарний аудіо-плеєр з конвертером, візуалізаціями та багатим вибором зовнішнього вигляду"
+        icon="/icons/Foobar2000Icon.png"
+        link64="https://www.foobar2000.org/getfile/foobar2000-x64_v2.24.4.exe"
+        link32="https://www.foobar2000.org/getfile/foobar2000_v2.24.4.exe"
+      />
+
+      <ProgramCard
         name="STDU Viewer"
         description="Дуже компактний переглядач PDF, а також багатьох форматів електроних книжок та коміксів"
         icon="/icons/STDUIcon.png"
         linkcommon="http://www.stdutility.com/download/stduviewer.exe"
+      />
+
+      <ProgramCard
+        name="Total Commander"
+        description="Гнучкий файловий менеджер з багатою історією, має безліч можливостей розширення функціоналу"
+        icon="/icons/TotalCommanderIcon.png"
+        linkcommon="https://totalcommander.ch/1151/tcmd1151x32_64.exe"
+      />
+
+      <ProgramCard
+        name="Thunderbird"
+        description="Зручний email-агент з календарем та планувальником від компанії Mozilla"
+        icon="/icons/ThunderbirdIcon.png"
+        link64="https://download.mozilla.org/?product=thunderbird-138.0-SSL&os=win64&lang=uk"
+        link32="https://download.mozilla.org/?product=thunderbird-138.0-SSL&os=win&lang=uk"
       />
 
       <ProgramCard
