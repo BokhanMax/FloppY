@@ -1,11 +1,13 @@
 import './assets/style.css'
 
-import { createSSRApp } from 'vue'
+import { createApp } from 'vue'
+import { createGtag, configure} from "vue-gtag";
 import Floppy from './Floppy.vue'
-//import router from './router'
 
-const app = createSSRApp(Floppy)
+const gtag = createGtag({
+    tagId: "G-LVRGKFB5Y6"
+})
 
-//app.use(router)
-
+const app = createApp(Floppy)
+app.use(gtag)
 app.mount('#app')
