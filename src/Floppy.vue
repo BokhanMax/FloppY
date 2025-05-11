@@ -3,6 +3,17 @@ import ProgramCard from './components/ProgramCard.vue'
 </script>
 
 <template>
+  <teleport to="head">
+    <component :is="'script'" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://floppy.pp.ua/",
+        "name":"Floppy",
+        "alternateName":"Floppy"
+      }
+    </component>
+  </teleport>
   <header></header>
   <main>
     <div class="container">
