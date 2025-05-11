@@ -72,6 +72,14 @@ import ProgramCard from './components/ProgramCard.vue'
         link64="https://telegram.org/dl/desktop/win64"
         link32="https://telegram.org/dl/desktop/win"
       />
+
+      <ProgramCard
+        name="Notepad++"
+        description="Безкоштовний редактор текстових файлів з підтримкою синтаксисів мов програмування"
+        icon="/icons/NotepadPlusPlusIcon.png"
+        link64="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.x64.exe"
+        link32="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.1/npp.8.8.1.Installer.exe"
+      />
     </div>
   </main>
   <footer></footer>
