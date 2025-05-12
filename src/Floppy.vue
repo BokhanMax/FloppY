@@ -29,7 +29,7 @@ import ProgramCard from './components/ProgramCard.vue'
         name="WinRAR"
         description="Безумовно найвідоміший архіватор для Windows"
         icon="/icons/WinRarIcon.svg"
-        link64="https://www.rarlab.com/rar/winrar-x64-701uk.exe"
+        link64="https://www.rarlab.com/rar/winrar-x64-711uk.exe"
       />
 
       <ProgramCard
