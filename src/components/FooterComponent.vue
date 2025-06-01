@@ -8,7 +8,7 @@
                     Всі права на програми належать їхнім розробникам.
                 </p>
                 <!--<a href="/contact" class="text-green-600 hover:text-green-700 underline transition-colors">
-                    Contact Us
+                    Зв\'язатись з адміном
                 </a>-->
             </div>
         </div>

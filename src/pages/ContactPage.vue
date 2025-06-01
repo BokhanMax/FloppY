@@ -9,10 +9,9 @@
             </p>
         </div>
 
-        <!-- Contact Options -->
         <div class="grid md:grid-cols-2 gap-6 mb-12">
 
-            <!-- Telegram Contact -->
+            <!-- Telegram -->
             <div class="bg-green-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center">
                 <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -28,11 +27,11 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium">
-                    Contact on Telegram
+                    Написати в Telegram
                 </a>
             </div>
 
-            <!-- Email Contact -->
+            <!-- Email -->
             <div class="bg-green-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center">
                 <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -46,30 +45,29 @@
                 </p>
                 <a href="mailto:support@floppy.pp.ua"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium">
-                    Send Email
+                    Написати на Email
                 </a>
             </div>
 
         </div>
 
-        <!-- Response Time Info -->
         <div class="bg-green-100 border border-green-200 rounded-lg p-6 mb-8">
-            <h3 class="text-lg font-semibold text-green-dark mb-3">Response Times</h3>
+            <h3 class="text-lg font-semibold text-green-dark mb-3">Коли чекати відповідь?</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
                 <div>
                     <strong class="text-green-dark">Telegram:</strong>
-                    <span class="text-gray-700">Usually within 2-4 hours during business hours</span>
+                    <span class="text-gray-700">зазвичай впродовж 1-2 годин</span>
                 </div>
                 <div>
                     <strong class="text-green-dark">Email:</strong>
-                    <span class="text-gray-700">Within 24 hours (weekdays)</span>
+                    <span class="text-gray-700">Впродовж 24 годин (weekdays)</span>
                 </div>
             </div>
         </div>
 
-        <!-- Disclaimer -->
+        <!-- Застереження -->
         <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-800 mb-3">Disclaimer</h3>
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">Застереження</h3>
             <div class="text-sm text-gray-600 leading-relaxed space-y-3">
                 <p>
                     <strong>Software Downloads:</strong> All software available through Floppy catalog is provided "as is" without warranty of any kind. While we strive to ensure all programs are safe and functional, we recommend scanning downloads with your antivirus software before installation.
@@ -91,8 +89,7 @@
 
     </div>
 
-    <component :is=script>
-        // Add smooth hover effects to contact cards
+    <component :is="'script'">
         document.querySelectorAll('.bg-green-50').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-2px)';

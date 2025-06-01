@@ -2,7 +2,6 @@
 
     <div class="flex flex-col lg:flex-row gap-8">
 
-        <!-- Blog Post Content -->
         <article class="lg:w-2/3">
             <header class="mb-6">
                 <h1 class="text-3xl font-bold text-green-dark mb-2">5 Essential Security Tips for Your Digital Life</h1>
@@ -45,12 +44,11 @@
             </div>
         </article>
 
-        <!-- Sidebar -->
+        <!-- Сайдбар -->
         <aside class="lg:w-1/3">
             <div class="bg-green-50 rounded-lg p-6 sticky top-4">
                 <h3 class="text-xl font-semibold text-green-dark mb-4">Latest Posts</h3>
 
-                <!-- Post 1 -->
                 <div class="mb-6 pb-4 border-b border-green-200 last:border-b-0">
                     <h4 class="text-green-dark font-medium mb-2 hover:text-green-600 cursor-pointer transition-colors">
                         Top 10 Code Editors for Developers in 2025
@@ -61,7 +59,6 @@
                     <span class="text-green-500 text-xs">May 25, 2025</span>
                 </div>
 
-                <!-- Post 2 -->
                 <div class="mb-6 pb-4 border-b border-green-200 last:border-b-0">
                     <h4 class="text-green-dark font-medium mb-2 hover:text-green-600 cursor-pointer transition-colors">
                         How to Speed Up Your PC: Ultimate Optimization Guide
@@ -72,7 +69,6 @@
                     <span class="text-green-500 text-xs">May 22, 2025</span>
                 </div>
 
-                <!-- Post 3 -->
                 <div class="mb-6 pb-4 border-b border-green-200 last:border-b-0">
                     <h4 class="text-green-dark font-medium mb-2 hover:text-green-600 cursor-pointer transition-colors">
                         File Management Best Practices for Digital Professionals
@@ -86,4 +82,5 @@
         </aside>
 
     </div>
+
 </template>

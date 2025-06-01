@@ -10,6 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "postscribe": "^2.0.8",
     "vue": "^3.5.13",
     "vue-gtag": "^3.4.0",
     "vue-router": "^4.5.1"

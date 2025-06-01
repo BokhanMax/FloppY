@@ -3,7 +3,8 @@
     <header class="bg-green-50 shadow-md">
         <div class="container mx-auto px-4 py-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <!-- Logo -->
+
+                <!-- Лого -->
                 <a class="flex items-center mb-4 md:mb-0" href="/">
                     <div class="text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3">
                         <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -28,13 +29,13 @@
                     <h1 class="xs:text-base 2xl:text-2xl font-bold text-green-dark">Floppy - безкоштовний софт</h1>
                 </a>
 
-                <!-- Navigation -->
+                <!-- Меню -->
                 <nav class="flex flex-wrap justify-center md:justify-end gap-6">
-                    <!--<a href="#utilities" class="text-green-dark hover:text-green-500 transition-colors">Utilities</a>
-                    <a href="#media" class="text-green-dark hover:text-green-500 transition-colors">Media</a>
-                    <a href="#games" class="text-green-dark hover:text-green-500 transition-colors">Games</a>
-                    <a href="#development" class="text-green-dark hover:text-green-500 transition-colors">Development</a>
-                    <a href="#security" class="text-green-dark hover:text-green-500 transition-colors">Security</a>
+                    <!--<a href="/utilities" class="text-green-dark hover:text-green-500 transition-colors">Система</a>
+                    <a href="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</a>
+                    <a href="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет</a>
+                    <a href="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка</a>
+                    <a href="/security" class="text-green-dark hover:text-green-500 transition-colors">Захист</a>
                     <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a>
                     <a href="/faq" class="text-green-dark hover:text-green-500 transition-colors">FAQ</a> -->
                 </nav>
