@@ -31,7 +31,7 @@
 
                 <!-- Меню -->
                 <nav class="flex flex-wrap justify-center md:justify-end gap-6">
-                    <a href="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет</a>
+                    <RouterLink to="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет</RouterLink>
                     <!--<a href="/utilities" class="text-green-dark hover:text-green-500 transition-colors">Система</a>
                     <a href="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</a>
                     <a href="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка</a>
