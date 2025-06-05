@@ -1,11 +1,11 @@
 <template>
     <div class="max-w-3xl mx-auto">
-        <h1 class="text-3xl font-bold text-center mb-8 text-green-dark">Contact Us</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 text-green-dark">Контакти</h1>
 
         <div class="text-center mb-8">
             <p class="text-gray-700 text-lg leading-relaxed">
-                Have questions about our software or need technical support? We're here to help!
-                Reach out to us through any of the following channels.
+                Якщо ви маєте питання щодо розміщення програм на сайті Floppy - виберіть
+                зручний спосіб зв'язку та напишіть.
             </p>
         </div>
 
@@ -20,8 +20,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
                 <p class="text-gray-600 mb-4">
-                    Get instant support and updates through our Telegram channel.
-                    Perfect for quick questions and announcements.
+                    Відповідаємо зазвичай впродовж години.
                 </p>
                 <a href="https://t.me/floppysoft"
                     target="_blank"
@@ -40,10 +39,9 @@
                 </div>
                 <h3 class="text-xl font-semibold text-green-dark mb-2">Email</h3>
                 <p class="text-gray-600 mb-4">
-                    Send us detailed inquiries, bug reports, or feature requests.
-                    We typically respond within 24 hours.
+                    Відповімо впродовж 24 годин.
                 </p>
-                <a href="mailto:support@floppy.pp.ua"
+                <a href="mailto:floppyppua@ukr.net"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium">
                     Написати на Email
                 </a>
@@ -51,7 +49,7 @@
 
         </div>
 
-        <div class="bg-green-100 border border-green-200 rounded-lg p-6 mb-8">
+<!--         <div class="bg-green-100 border border-green-200 rounded-lg p-6 mb-8">
             <h3 class="text-lg font-semibold text-green-dark mb-3">Коли чекати відповідь?</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm">
                 <div>
@@ -63,7 +61,7 @@
                     <span class="text-gray-700">Впродовж 24 годин (weekdays)</span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Застереження -->
         <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
