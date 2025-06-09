@@ -47,8 +47,8 @@ import ProgramCard from './ProgramCard.vue'
 				description="Легендарний аудіо-плеєр з конвертером, візуалізаціями та багатим вибором зовнішнього вигляду"
 				icon="/icons/Foobar2000Icon.png"
 				version="2.24.4"
-				link64="https://www.foobar2000.org/getfile/foobar2000-x64_v2.24.4.exe"
-				link32="https://www.foobar2000.org/getfile/foobar2000_v2.24.4.exe"
+				link64="https://www.foobar2000.org/getfile/foobar2000-x64_v2.24.5.exe"
+				link32="https://www.foobar2000.org/getfile/foobar2000_v2.24.5.exe"
 			/>
 
 			<ProgramCard
