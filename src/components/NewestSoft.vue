@@ -9,6 +9,14 @@ import ProgramCard from './ProgramCard.vue'
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 			<ProgramCard
+				name="Adobe Creative Cloud"
+				description="Всесвітньо відомій пакет програм для створення та редагування медіа. Photoshop - серед них!"
+				icon="/icons/CreativeCloudIcon.png"
+				version="2.14.0.35"
+				linkcommon="https://prod-rel-ffc-ccm.oobesaas.adobe.com/adobe-ffc-external/core/v1/wam/download?sapCode=KCCC&productName=Creative%20Cloud&os=win&guid=50ce3cde-49ee-4255-808a-5b1330082347&contextParams=%7B%22component%22%3A%22cc-home%22%2C%22visitor_guid%22%3A%227a6452b3-71bc-41d4-be95-957a6e1a524d%22%2C%22campaign_id%22%3A%22ahome_redirection%7C2024-11-kaizenStrictSignIn%22%2C%22browser%22%3A%22chrome%22%2C%22context_guid%22%3A%22dde612e0-0331-41b5-a5dc-b8061dd9558a%22%2C%22variation_id%22%3A%22disabled%22%2C%22experience_id%22%3A%22%22%2C%22planCodeList%22%3A%22%22%2C%22updateCCD%22%3A%22true%22%2C%22secondarySapcodeList%22%3A%22%22%2C%22Product_ID_Promoted%22%3A%22KCCC%22%2C%22contextComName%22%3A%22Organic%3ACCH%22%2C%22contextSvcName%22%3A%22NO-CCD%22%2C%22contextOrigin%22%3A%22Organic%3ACCH%22%2C%22AMCV_9E1005A551ED61CA0A490D45%2540AdobeOrg%22%3A%22MCMID%7C47123953262355562136006590410881994691%22%2C%22kaizenTrialDuration%22%3A7%7D&wamFeature=nuj-live&environment=prod"
+			/>
+
+			<ProgramCard
 				name="K-Lite Mega Codec Pack"
 				description="Найбільш повний набір кодеків для відтворення та перепаковки відео"
 				icon="/icons/KLiteIcon.png"
@@ -38,7 +46,7 @@ import ProgramCard from './ProgramCard.vue'
 				name="Google Chrome"
 				description="Браузер від компанії Google, зручний та безпечний для роботи"
 				icon="/icons/ChromeIcon.svg"
-				version="137.0.7151.69"
+				version="137.0.7151.104"
 				link64="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup64.exe"
 				link32="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup.exe"
 			/>
@@ -80,9 +88,9 @@ import ProgramCard from './ProgramCard.vue'
 				name="Thunderbird"
 				description="Зручний email-агент з календарем та планувальником від компанії Mozilla"
 				icon="/icons/ThunderbirdIcon.png"
-				version="139.0.1"
-				link64="https://download.mozilla.org/?product=thunderbird-139.0.1-SSL&os=win64&lang=uk"
-				link32="https://download.mozilla.org/?product=thunderbird-139.0.1-SSL&os=win&lang=uk"
+				version="139.0.4"
+				link64="https://download.mozilla.org/?product=thunderbird-139.0.4-SSL&os=win64&lang=uk"
+				link32="https://download.mozilla.org/?product=thunderbird-139.0.4-SSL&os=win&lang=uk"
 			/>
 
 			<ProgramCard
