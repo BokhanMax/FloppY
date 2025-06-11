@@ -1,5 +1,34 @@
 <script setup>
 import ProgramCard from '../components/ProgramCard.vue'
+import { ref, onMounted } from 'vue';
+import { db } from '../firebaseConfig';
+import { collection, getDocs } from 'firebase/firestore';
+
+const programs = ref([]);
+const loading = ref(true);
+const error = ref(null);
+
+const fetchPrograms = async () => {
+	loading.value = true;
+	error.value = null;
+	try {
+		const querySnapshot = await getDocs(collection(db, "programs"));
+		programs.value = querySnapshot.docs.map(doc => ({
+		id: doc.id, // ID документа, згенерований Firestore
+		...doc.data() // Всі поля документа
+		}));
+	} catch (err) {
+		console.error("Помилка при отриманні програм:", err);
+		error.value = err;
+	} finally {
+		loading.value = false;
+	}
+};
+
+// Викликаємо функцію отримання даних при завантаженні компонента
+onMounted(() => {
+	fetchPrograms();
+});
 </script>
 
 <template>
@@ -8,58 +37,13 @@ import ProgramCard from '../components/ProgramCard.vue'
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-			<ProgramCard
-				name="Google Chrome"
-				description="Браузер від компанії Google, зручний та безпечний для роботи"
-				icon="/icons/ChromeIcon.svg"
-				version="137.0.7151.69"
-				link64="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup64.exe"
-				link32="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup.exe"
-			/>
-
-			<ProgramCard
-				name="Opera Browser"
-				description="Один з найвідоміших броузерів, який використовую движок Blink. Є вбудований VPN."
-				icon="/icons/OperaIcon.png"
-				version="119.0.5497.70"
-				link32="https://get.geo.opera.com/pub/opera/desktop/119.0.5497.70/win/Opera_119.0.5497.70_Setup.exe"
-				link64="https://get.geo.opera.com/pub/opera/desktop/119.0.5497.70/win/Opera_119.0.5497.70_Setup_x64.exe"
-			/>
-
-			<ProgramCard
-				name="Mozilla Firefox"
-				description="Веб-браузер від Mozilla, наразі ввжаєаться найшвидшим за всі інші."
-				icon="/icons/FirefoxIcon.png"
-				version="139.0.1"
-				link32="https://download.mozilla.org/?product=firefox-139.0.1-SSL&os=win&lang=uk"
-				link64="https://download.mozilla.org/?product=firefox-139.0.1-SSL&os=win64&lang=uk"
-			/>
-
-			<ProgramCard
-				name="Thunderbird"
-				description="Зручний email-агент з календарем та планувальником від компанії Mozilla"
-				icon="/icons/ThunderbirdIcon.png"
-				version="139.0.1"
-				link64="https://download.mozilla.org/?product=thunderbird-139.0.1-SSL&os=win64&lang=uk"
-				link32="https://download.mozilla.org/?product=thunderbird-139.0.1-SSL&os=win&lang=uk"
-			/>
-
-			<ProgramCard
-				name="Telegram Desktop"
-				description="Популярний месенджер для спілкування з широкими можливостями"
-				icon="/icons/TelegramIcon.png"
-				version="5.15.0"
-				link64="https://telegram.org/dl/desktop/win64"
-				link32="https://telegram.org/dl/desktop/win"
-			/>
-
-			<ProgramCard
-				name="Viber PC"
-				description="Месенджер від компанії Rakuten для дзвінків та повідомлень. Відомий по всьому світу."
-				icon="/icons/ViberIcon.png"
-				version="25.4.2"
-				link64="https://download.cdn.viber.com/desktop/windows/ViberSetup.exe"
-				link32="https://download.cdn.viber.com/desktop/windows_32/ViberSetup.exe"
+			<ProgramCard v-for="program in programs" :key="program.id"
+				:name="program.name"
+				:description="program.description"
+				:icon="program.icon"
+				:version="program.version"
+				:link64="program.link64"
+				:link32="program.link32"
 			/>
 
 		</div>

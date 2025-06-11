@@ -9,6 +9,23 @@ import ProgramCard from './ProgramCard.vue'
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 			<ProgramCard
+				name="K-Lite Mega Codec Pack"
+				description="Найбільш повний набір кодеків для відтворення та перепаковки відео"
+				icon="/icons/KLiteIcon.png"
+				version="19.0.1"
+				linkcommon="https://files3.codecguide.com/K-Lite_Codec_Pack_1901_Mega.exe"
+			/>
+
+			<ProgramCard
+				name="Telegram Desktop"
+				description="Популярний месенджер для спілкування з широкими можливостями"
+				icon="/icons/TelegramIcon.png"
+				version="5.15.3"
+				link64="https://telegram.org/dl/desktop/win64"
+				link32="https://telegram.org/dl/desktop/win"
+			/>
+
+			<ProgramCard
 				name="mp3Tag"
 				description="Універсальний пакетний редактор ID3 тегів для колекціонерів музики"
 				icon="/icons/mp3TagIcon.png"
@@ -35,18 +52,10 @@ import ProgramCard from './ProgramCard.vue'
 			/>
 
 			<ProgramCard
-				name="K-Lite Mega Codec Pack"
-				description="Найбільш повний набір кодеків для відтворення та перепаковки відео"
-				icon="/icons/KLiteIcon.png"
-				version="18.9.5"
-				linkcommon="https://files3.codecguide.com/K-Lite_Codec_Pack_1895_Mega.exe"
-			/>
-
-			<ProgramCard
 				name="Foobar2000"
 				description="Легендарний аудіо-плеєр з конвертером, візуалізаціями та багатим вибором зовнішнього вигляду"
 				icon="/icons/Foobar2000Icon.png"
-				version="2.24.4"
+				version="2.24.5"
 				link64="https://www.foobar2000.org/getfile/foobar2000-x64_v2.24.5.exe"
 				link32="https://www.foobar2000.org/getfile/foobar2000_v2.24.5.exe"
 			/>
@@ -82,15 +91,6 @@ import ProgramCard from './ProgramCard.vue'
 				icon="/icons/GeekUninstallerIcon.png"
 				version="1.5.2.165"
 				linkcommon="https://geekuninstaller.com/geek.zip"
-			/>
-
-			<ProgramCard
-				name="Telegram Desktop"
-				description="Популярний месенджер для спілкування з широкими можливостями"
-				icon="/icons/TelegramIcon.png"
-				version="5.15.0"
-				link64="https://telegram.org/dl/desktop/win64"
-				link32="https://telegram.org/dl/desktop/win"
 			/>
 
 			<ProgramCard

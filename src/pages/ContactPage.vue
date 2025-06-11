@@ -20,7 +20,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
                 <p class="text-gray-600 mb-4">
-                    Відповідаємо зазвичай впродовж години.
+                    Відповідаємо зазвичай впродовж години
                 </p>
                 <a href="https://t.me/floppysoft"
                     target="_blank"
@@ -39,7 +39,7 @@
                 </div>
                 <h3 class="text-xl font-semibold text-green-dark mb-2">Email</h3>
                 <p class="text-gray-600 mb-4">
-                    Відповімо впродовж 24 годин.
+                    Відповідаємо впродовж 24 годин
                 </p>
                 <a href="mailto:floppyppua@ukr.net"
                     class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium">
@@ -68,19 +68,19 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-3">Застереження</h3>
             <div class="text-sm text-gray-600 leading-relaxed space-y-3">
                 <p>
-                    <strong>Software Downloads:</strong> All software available through Floppy catalog is provided "as is" without warranty of any kind. While we strive to ensure all programs are safe and functional, we recommend scanning downloads with your antivirus software before installation.
+                    <strong>Завантаження:</strong> Усе програмне забезпечення, доступне через каталог Floppy, надається «як є» без будь-яких гарантій. Хоча ми прагнемо забезпечити безпеку та функціональність усіх програм, рекомендуємо перевірити завантажені файли за допомогою антивірусного програмного забезпечення перед встановленням.
                 </p>
                 <p>
-                    <strong>Third-Party Software:</strong> Some applications in our catalog are developed by third parties. We are not responsible for the functionality, security, or support of third-party software. Please contact the original developers for specific software issues.
+                    <strong>Програмне забезпечення сторонніх розробників:</strong> Ми не несемо відповідальності за функціональність, безпеку чи підтримку стороннього програмного забезпечення. Будь ласка, звертайтеся до оригінальних розробників щодо конкретних проблем із програмним забезпеченням.
                 </p>
                 <p>
-                    <strong>System Compatibility:</strong> Software compatibility may vary depending on your operating system version and hardware configuration. Always check system requirements before downloading.
+                    <strong>Сумісність систем:</strong> Сумісність програмного забезпечення може відрізнятися залежно від версії вашої операційної системи та конфігурації обладнання. Завжди <a href="/faq">перевіряйте системні вимоги</a> перед завантаженням.
                 </p>
                 <p>
-                    <strong>Support Limitations:</strong> Our support team provides general assistance with downloads and catalog navigation. For specific software functionality or technical issues with individual programs, please refer to the software's documentation or contact the original developer.
+                    <strong>Обмеження підтримки:</strong> Наша служба підтримки надає загальну допомогу із завантаженнями та навігацією по каталогу. Щодо конкретних функцій програмного забезпечення або технічних проблем з окремими програмами, зверніться до документації до програмного забезпечення або зверніться до розробника.
                 </p>
                 <p>
-                    <strong>Data Privacy:</strong> We respect your privacy and do not share your contact information with third parties. Communications sent to us may be stored for support purposes only.
+                    <strong>Конфіденційність даних:</strong> Ми поважаємо вашу конфіденційність і не передаємо вашу контактну інформацію третім особам.
                 </p>
             </div>
         </div>

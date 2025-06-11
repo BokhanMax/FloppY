@@ -36,8 +36,7 @@
                     <a href="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</a>
                     <a href="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка</a>
                     <a href="/security" class="text-green-dark hover:text-green-500 transition-colors">Захист</a>
-                    <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a>
-                    <a href="/faq" class="text-green-dark hover:text-green-500 transition-colors">FAQ</a> -->
+                    <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a> -->
                 </nav>
             </div>
         </div>
