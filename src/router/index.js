@@ -35,6 +35,16 @@ const router = createRouter({
       name: 'internet',
       component: () => import('../categories/Internet.vue'),
     },
+    {
+      path: '/media',
+      name: 'media',
+      component: () => import('../categories/Media.vue'),
+    },
+    {
+      path: '/files',
+      name: 'files',
+      component: () => import('../categories/Files.vue'),
+    },
   ],
 })
 

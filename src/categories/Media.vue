@@ -8,11 +8,11 @@ const programs = ref([]);
 const loading = ref(true);
 const error = ref(null);
 
-const fetchProgramsByCategory = async () => {
+const fetchProgramsByCategory = async (category) => {
 	loading.value = true;
 	error.value = null;
 	try {
-		const q = query(collection(db, "programs"));
+		const q = query(collection(db, "programs"), where("category", "==", category));
 		const querySnapshot = await getDocs(q);
 
 		programs.value = querySnapshot.docs.map(doc => ({
@@ -29,13 +29,13 @@ const fetchProgramsByCategory = async () => {
 
 // Викликаємо функцію отримання даних при завантаженні компонента
 onMounted(() => {
-	fetchProgramsByCategory();
+	fetchProgramsByCategory("media");
 });
 </script>
 
 <template>
 
-	<h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">Останні оновлення програм</h2>
+	<h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">Програми для медіа</h2>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 

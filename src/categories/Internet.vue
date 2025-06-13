@@ -16,8 +16,8 @@ const fetchProgramsByCategory = async (category) => {
 		const querySnapshot = await getDocs(q);
 
 		programs.value = querySnapshot.docs.map(doc => ({
-		id: doc.id, // ID документа, згенерований Firestore
-		...doc.data() // Всі поля документа
+		id: doc.id,
+		...doc.data()
 		}));
 	} catch (err) {
 		console.error("Помилка при отриманні програм:", err);
@@ -46,6 +46,7 @@ onMounted(() => {
 				:version="program.version"
 				:link64="program.link64"
 				:link32="program.link32"
+				:linkcommon="program.linkcommon"
 			/>
 
 		</div>

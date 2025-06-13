@@ -32,8 +32,9 @@
                 <!-- Меню -->
                 <nav class="flex flex-wrap justify-center md:justify-end gap-6">
                     <RouterLink to="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет</RouterLink>
+                    <RouterLink to="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</RouterLink>
+                    <RouterLink to="/files" class="text-green-dark hover:text-green-500 transition-colors">Файли</RouterLink>
                     <!--<a href="/utilities" class="text-green-dark hover:text-green-500 transition-colors">Система</a>
-                    <a href="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</a>
                     <a href="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка</a>
                     <a href="/security" class="text-green-dark hover:text-green-500 transition-colors">Захист</a>
                     <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a> -->
