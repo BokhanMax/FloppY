@@ -45,7 +45,7 @@ import ProgramCard from './ProgramCard.vue'
 			<ProgramCard
 				name="Google Chrome"
 				description="Браузер від компанії Google, зручний та безпечний для роботи"
-				icon="/icons/ChromeIcon.svg"
+				icon="/icons/ChromeIcon.png"
 				version="137.0.7151.104"
 				link64="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup64.exe"
 				link32="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B24F3351A-A4AF-042A-4DA6-AEE56456DDA4%7D%26lang%3Duk%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3D-statsdef_1%26installdataindex%3Ddefaultbrowser/update2/installers/ChromeStandaloneSetup.exe"
@@ -54,7 +54,7 @@ import ProgramCard from './ProgramCard.vue'
 			<ProgramCard
 				name="WinRAR"
 				description="Безумовно найвідоміший архіватор для Windows, працює з багатьма форматами"
-				icon="/icons/WinRarIcon.svg"
+				icon="/icons/WinRarIcon.png"
 				version="7.11"
 				link64="https://www.rarlab.com/rar/winrar-x64-711uk.exe"
 			/>
