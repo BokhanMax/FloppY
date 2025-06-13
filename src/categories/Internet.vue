@@ -2,17 +2,19 @@
 import ProgramCard from '../components/ProgramCard.vue'
 import { ref, onMounted } from 'vue';
 import { db } from '../firebaseConfig';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 const programs = ref([]);
 const loading = ref(true);
 const error = ref(null);
 
-const fetchPrograms = async () => {
+const fetchProgramsByCategory = async (category) => {
 	loading.value = true;
 	error.value = null;
 	try {
-		const querySnapshot = await getDocs(collection(db, "programs"));
+		const q = query(collection(db, "programs"), where("category", "==", category));
+		const querySnapshot = await getDocs(q);
+
 		programs.value = querySnapshot.docs.map(doc => ({
 		id: doc.id, // ID документа, згенерований Firestore
 		...doc.data() // Всі поля документа
@@ -27,7 +29,7 @@ const fetchPrograms = async () => {
 
 // Викликаємо функцію отримання даних при завантаженні компонента
 onMounted(() => {
-	fetchPrograms();
+	fetchProgramsByCategory("internet");
 });
 </script>
 
