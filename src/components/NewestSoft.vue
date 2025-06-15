@@ -2,17 +2,17 @@
 import ProgramCard from '../components/ProgramCard.vue'
 import { ref, onMounted } from 'vue';
 import { db } from '../firebaseConfig';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, orderBy, where, getDocs } from 'firebase/firestore';
 
 const programs = ref([]);
 const loading = ref(true);
 const error = ref(null);
 
-const fetchProgramsByCategory = async () => {
+const fetchPNewestrograms = async () => {
 	loading.value = true;
 	error.value = null;
 	try {
-		const q = query(collection(db, "programs"));
+		const q = query(collection(db, "programs")/* , orderBy("createdAt", "desc") */);
 		const querySnapshot = await getDocs(q);
 
 		programs.value = querySnapshot.docs.map(doc => ({
@@ -29,7 +29,7 @@ const fetchProgramsByCategory = async () => {
 
 // Викликаємо функцію отримання даних при завантаженні компонента
 onMounted(() => {
-	fetchProgramsByCategory();
+	fetchPNewestrograms();
 });
 </script>
 
