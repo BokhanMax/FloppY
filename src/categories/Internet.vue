@@ -47,6 +47,7 @@ onMounted(() => {
 				:link64="program.link64"
 				:link32="program.link32"
 				:linkcommon="program.linkcommon"
+				:website="program.website"
 			/>
 
 		</div>
