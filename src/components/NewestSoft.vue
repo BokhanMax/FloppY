@@ -12,7 +12,7 @@ const fetchPNewestrograms = async () => {
 	loading.value = true;
 	error.value = null;
 	try {
-		const q = query(collection(db, "programs")/* , orderBy("createdAt", "desc") */);
+		const q = query(collection(db, "programs"), orderBy("createdAt", "desc"));
 		const querySnapshot = await getDocs(q);
 
 		programs.value = querySnapshot.docs.map(doc => ({

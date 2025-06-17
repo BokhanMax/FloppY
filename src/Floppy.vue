@@ -1,7 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Homepage from './pages/HomePage.vue'
-import ProgramCard from './components/ProgramCard.vue'
 import SiteHeader from './components/HeaderComponent.vue'
 import SiteFooter from './components/FooterComponent.vue'
 </script>
@@ -13,8 +11,8 @@ import SiteFooter from './components/FooterComponent.vue'
 		"@context": "https://schema.org",
 		"@type": "WebSite",
 		"url": "https://floppy.pp.ua/",
-		"name":"Floppy",
-		"alternateName":"Floppy"
+		"name": "Floppy",
+		"alternateName": "Floppy"
 	}
 	</component>
 </teleport>
