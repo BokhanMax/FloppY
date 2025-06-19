@@ -10,8 +10,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const dataToAdd = [
-  { name: 'AIMP', description: 'Чудовий аудіоплеєр, дуже сильно схожий на легендарний Winamp. Купа додаткових можливостей!', icon: '/icons/AIMPIcon.png', version: '5.40.2683', link64: 'https://www.aimp.ru/?do=download.file&id=3', link32: 'https://www.aimp.ru/?do=download.file&id=4', linkcommon: '', category: 'media', createdAt: admin.firestore.FieldValue.serverTimestamp() },
-  { name: '7Zip', description: 'Альтернативний архіватор, використовує свій формат, але працює з усіма відомими', icon: '/icons/7ZipIcon.png', version: '24.09', link64: 'https://www.7-zip.org/a/7z2409-x64.exe', link32: 'https://www.7-zip.org/a/7z2409.exe', linkcommon: '', category: 'files', createdAt: admin.firestore.FieldValue.serverTimestamp() }
+  { name: 'AnyDesk', description: 'Компактний RDP-клієнт, дуже простий у використанні, підходить для будь-яких систем', icon: '/icons/AnyDesk.png', version: '9.5.6', link64: '', link32: '', linkcommon: 'https://download.anydesk.com/AnyDesk.exe', category: 'media', website: 'https://anydesk.com/en/downloads/windows', createdAt: admin.firestore.FieldValue.serverTimestamp() }
 ];
 
 async function seedDatabase() {
