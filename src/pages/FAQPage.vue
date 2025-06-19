@@ -37,6 +37,23 @@
                 </div>
             </div>
 
+            <!-- FAQ Item 3 -->
+            <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+                <button class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100" onclick="toggleAccordion('faq3')">
+                    <h3 class="text-lg font-semibold text-green-dark">Скачав програму звідси, встановив - і все зависло!</h3>
+                    <svg id="icon-faq2" class="w-5 h-5 text-green-600 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq3" class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            По-перше, я не винен. По друге, всі програми належать їх розробникам. А також всі проблеми, які можуть виникнути при роботі програм. Мій сайт - це каталог якісного та корисного софту. Я НЕ розробляв ці програми, і я НЕ відповідаю за помилки у ваших комп'ютерах. Якщо є питання по роботі програми - звертайтесь до розробників.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
