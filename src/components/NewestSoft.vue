@@ -8,7 +8,7 @@ const programs = ref([]);
 const loading = ref(true);
 const error = ref(null);
 
-const fetchPNewestrograms = async () => {
+const fetchNewestPrograms = async () => {
 	loading.value = true;
 	error.value = null;
 	try {
@@ -29,7 +29,7 @@ const fetchPNewestrograms = async () => {
 
 // Викликаємо функцію отримання даних при завантаженні компонента
 onMounted(() => {
-	fetchPNewestrograms();
+	fetchNewestPrograms();
 });
 </script>
 

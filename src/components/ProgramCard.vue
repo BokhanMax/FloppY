@@ -44,7 +44,7 @@ const props = defineProps({
               </div>
             </div>
             <div class="flex self-start">
-              <a v-if="website" :href="props.website" class="text-gray-600 text-xs">
+              <a v-if="website" :href="props.website" class="text-gray-600 text-xs" target="_blank">
                 Веб-сайт
               </a>
             </div>
