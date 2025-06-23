@@ -29,5 +29,9 @@ coverage
 
 *.tsbuildinfo
 package-lock.json
+import/
 import/key.json
 import/seedFirestore.cjs
+import/import.csv
+import/importtodb.cjs
+import/old_seedFirestore.cjs

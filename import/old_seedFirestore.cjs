@@ -10,7 +10,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const dataToAdd = [
-  { name: 'AnyDesk', description: 'Компактний RDP-клієнт, дуже простий у використанні, підходить для будь-яких систем', icon: '/icons/AnyDesk.png', version: '9.5.6', link64: '', link32: '', linkcommon: 'https://download.anydesk.com/AnyDesk.exe', category: 'media', website: 'https://anydesk.com/en/downloads/windows', createdAt: admin.firestore.FieldValue.serverTimestamp() }
+  { name: 'K-Lite Codek Pack', description: 'Величезний набір кодеків для відтворення та перепаковки відео. Може допомогти прочитати рідкісні формати.', icon: '/icons/KLiteIcon.png', version: '19.0.1', link64: '', link32: '', linkcommon: 'https://files3.codecguide.com/K-Lite_Codec_Pack_1901_Mega.exe', category: 'media', website: 'https://codecguide.com/', createdAt: admin.firestore.FieldValue.serverTimestamp() }
 ];
 
 async function seedDatabase() {
