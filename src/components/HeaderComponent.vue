@@ -34,9 +34,9 @@
                     <RouterLink to="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет</RouterLink>
                     <RouterLink to="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</RouterLink>
                     <RouterLink to="/files" class="text-green-dark hover:text-green-500 transition-colors">Файли</RouterLink>
+                    <RouterLink to="/system" class="text-green-dark hover:text-green-500 transition-colors">Система</RouterLink>
                     <RouterLink to="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка</RouterLink>
-                    <!--<a href="/utilities" class="text-green-dark hover:text-green-500 transition-colors">Система</a>
-                    <a href="/office" class="text-green-dark hover:text-green-500 transition-colors">Офісні</a>
+                    <!--<a href="/office" class="text-green-dark hover:text-green-500 transition-colors">Офісні</a>
                     <a href="/security" class="text-green-dark hover:text-green-500 transition-colors">Безпека</a>
                     <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a> -->
                 </nav>

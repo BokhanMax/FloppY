@@ -10,6 +10,7 @@ const names = [
   'media',
   'dev',
   'files',
+  'system',
   'faq',
   'contact'
 ]

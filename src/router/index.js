@@ -53,6 +53,15 @@ const router = createRouter({
       }
     },
     {
+      path: '/system',
+      name: 'system',
+      component: Category,
+      props: { cat: 'system', title: 'Системні утиліти' },
+      meta: {
+        title: "Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy",
+      }
+    },
+    {
       path: '/media',
       name: 'media',
       component: Category,
