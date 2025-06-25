@@ -10,9 +10,9 @@ import SiteFooter from './components/FooterComponent.vue'
 	{
 		"@context": "https://schema.org",
 		"@type": "WebSite",
-		"url": "https://floppy.pp.ua/",
 		"name": "Floppy",
-		"alternateName": "Floppy"
+		"alternateName": ["FL"],
+		"url": "https://floppy.pp.ua/"
 	}
 	</component>
 </teleport>
@@ -22,5 +22,10 @@ import SiteFooter from './components/FooterComponent.vue'
 		<RouterView />
 	</main>
 	<SiteFooter />
+	<div itemscope itemtype="https://schema.org/WebSite">
+		<link itemprop="url" href="https://example.com" />
+		<meta itemprop="name" content="Floppy" />
+		<meta itemprop="alternateName" content="FL" />
+	</div>
 </body>
 </template>
