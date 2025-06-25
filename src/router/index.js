@@ -66,6 +66,14 @@ const router = createRouter({
         title: "Робота з файлами - Скачати безкоштовний софт | Floppy",
       }
     },
+    {
+      path: '/development',
+      name: 'development',
+      component: () => import('../categories/Development.vue'),
+      meta: {
+        title: "Розробка, програмування - Скачати безкоштовний софт | Floppy",
+      }
+    },
   ],
 })
 

@@ -10,7 +10,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const dataToAdd = [
-  { name: 'K-Lite Codek Pack', description: 'Величезний набір кодеків для відтворення та перепаковки відео. Може допомогти прочитати рідкісні формати.', icon: '/icons/KLiteIcon.png', version: '19.0.1', link64: '', link32: '', linkcommon: 'https://files3.codecguide.com/K-Lite_Codec_Pack_1901_Mega.exe', category: 'media', website: 'https://codecguide.com/', createdAt: admin.firestore.FieldValue.serverTimestamp() }
+  { name: 'Git Windows', description: 'Найвідоміша система контролю версій, вміє збеігати історію змін.', icon: '/icons/GitIcon.png', version: '2.50.0', link64: 'https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.1/Git-2.50.0-64-bit.exe', link32: '', linkcommon: '', category: 'dev', website: 'https://git-scm.com/', createdAt: admin.firestore.FieldValue.serverTimestamp() }
 ];
 
 async function seedDatabase() {
