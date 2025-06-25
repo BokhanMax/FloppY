@@ -1,3 +1,5 @@
+import { routes } from './src/router/index.js';
+
 module.exports = {
     pages: {
         // This is our main page which refers to the main Javascript file

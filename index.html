@@ -32,8 +32,22 @@
     <link rel="manifest" href="/site.webmanifest">
 
   </head>
-  <body>
+  <body class="bg-white text-gray-800">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Floppy",
+        "alternateName": ["FL"],
+        "url": "https://floppy.pp.ua/"
+      }
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <div itemscope itemtype="https://schema.org/WebSite">
+      <link itemprop="url" href="https://example.com" />
+      <meta itemprop="name" content="Floppy" />
+      <meta itemprop="alternateName" content="FL" />
+    </div>
   </body>
 </html>

@@ -4,6 +4,15 @@ import { ref, onMounted } from 'vue';
 import { db } from '../firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 
+const props = defineProps({
+    cat: {
+        type: String,
+    },
+    title: {
+        type: String,
+    },
+});
+
 const programs = ref([]);
 const loading = ref(true);
 const error = ref(null);
@@ -27,15 +36,15 @@ const fetchProgramsByCategory = async (category) => {
 	}
 };
 
-// Викликаємо функцію отримання даних при завантаженні компонента
 onMounted(() => {
-	fetchProgramsByCategory("media");
+	fetchProgramsByCategory(props.cat);
 });
+
 </script>
 
 <template>
 
-	<h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">Програми для медіа</h2>
+	<h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">{{ title }}</h2>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -53,3 +62,12 @@ onMounted(() => {
 		</div>
 
 </template>
+<script>
+export default {
+	methods: {
+		reRender(){
+			this.$forceUpdate()
+		}
+	}
+}
+</script>

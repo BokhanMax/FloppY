@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Homepage from '../pages/HomePage.vue'
+import Category from '../components/Category.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -45,7 +46,8 @@ const router = createRouter({
     {
       path: '/internet',
       name: 'internet',
-      component: () => import('../categories/Internet.vue'),
+      component: Category,
+      props: { cat: 'internet', title: 'Програми для Інтернету' },
       meta: {
         title: "Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy",
       }
@@ -53,7 +55,8 @@ const router = createRouter({
     {
       path: '/media',
       name: 'media',
-      component: () => import('../categories/Media.vue'),
+      component: Category,
+      props: { cat: 'media', title: 'Програми для медіа' },
       meta: {
         title: "Програми для аудіо, відео - Скачати безкоштовний софт | Floppy",
       }
@@ -61,7 +64,8 @@ const router = createRouter({
     {
       path: '/files',
       name: 'files',
-      component: () => import('../categories/Files.vue'),
+      component: Category,
+      props: { cat: 'files', title: 'Робота з файлами' },
       meta: {
         title: "Робота з файлами - Скачати безкоштовний софт | Floppy",
       }
@@ -69,7 +73,8 @@ const router = createRouter({
     {
       path: '/development',
       name: 'development',
-      component: () => import('../categories/Development.vue'),
+      component: Category,
+      props: { cat: 'dev', title: 'Розробка, програмування' },
       meta: {
         title: "Розробка, програмування - Скачати безкоштовний софт | Floppy",
       }
