@@ -18,7 +18,7 @@ const dynamicRoutes = names.map(name => `/${name}`)
 
 export default defineConfig({
   base: '/floppyppua/',
-  //build: {outDir: './docs'},
+  build: {outDir: './docs'},
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -28,6 +28,6 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tailwindcss(),
-    Sitemap({ dynamicRoutes, hostname: 'https://floppy.pp.ua'/* , outDir: './docs' */ }),
+    Sitemap({ dynamicRoutes, hostname: 'https://floppy.pp.ua', outDir: './docs' }),
   ],
 })
