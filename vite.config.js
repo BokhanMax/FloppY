@@ -17,6 +17,7 @@ const names = [
 const dynamicRoutes = names.map(name => `/${name}`)
 
 export default defineConfig({
+  base: '/floppyppua/',
   build: {outDir: './docs'},
   resolve: {
     alias: {
