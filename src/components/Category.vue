@@ -2,7 +2,7 @@
 import ProgramCard from '../components/ProgramCard.vue'
 import { ref, onMounted } from 'vue';
 import { db } from '../firebaseConfig';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, orderBy, getDocs } from 'firebase/firestore';
 
 const props = defineProps({
     cat: {
@@ -21,7 +21,7 @@ const fetchProgramsByCategory = async (category) => {
 	loading.value = true;
 	error.value = null;
 	try {
-		const q = query(collection(db, "programs"), where("category", "==", category));
+		const q = query(collection(db, "programs"), where("category", "==", category), orderBy("name", "asc"));
 		const querySnapshot = await getDocs(q);
 
 		programs.value = querySnapshot.docs.map(doc => ({
