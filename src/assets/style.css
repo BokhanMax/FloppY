@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-    --breakpoint-xs: 20rem;
-    --light-green: '#86efac';
-    --green-custom: '#22c55e';
-    --green-dark: '#16a34a';
+  --breakpoint-xs: 20rem;
+  --light-green: '#86efac';
+  --green-custom: '#22c55e';
+  --green-dark: '#16a34a';
 }

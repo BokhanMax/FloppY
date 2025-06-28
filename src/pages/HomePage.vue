@@ -3,5 +3,5 @@ import NewestSoft from '../components/NewestSoft.vue'
 </script>
 
 <template>
-	<NewestSoft />
+  <NewestSoft />
 </template>

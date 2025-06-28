@@ -5,7 +5,6 @@ import Category from '../components/Category.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-
     // Pages
 
     {
@@ -13,32 +12,32 @@ const router = createRouter({
       name: 'home',
       component: Homepage,
       meta: {
-        title: "",
-      }
+        title: '',
+      },
     },
     {
       path: '/blog',
       name: 'blog',
       component: () => import('../pages/BlogPage.vue'),
       meta: {
-        title: "Блог про програми, систему тощо - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Блог про програми, систему тощо - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/contact',
       name: 'contact',
       component: () => import('../pages/ContactPage.vue'),
       meta: {
-        title: "Контакти - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Контакти - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/faq',
       name: 'faq',
       component: () => import('../pages/FAQPage.vue'),
       meta: {
-        title: "Часті питання - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Часті питання - Скачати безкоштовний софт | Floppy',
+      },
     },
 
     // Categories
@@ -49,8 +48,8 @@ const router = createRouter({
       component: Category,
       props: { cat: 'internet', title: 'Програми для Інтернету' },
       meta: {
-        title: "Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/system',
@@ -58,8 +57,8 @@ const router = createRouter({
       component: Category,
       props: { cat: 'system', title: 'Системні утиліти' },
       meta: {
-        title: "Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/media',
@@ -67,8 +66,8 @@ const router = createRouter({
       component: Category,
       props: { cat: 'media', title: 'Програми для медіа' },
       meta: {
-        title: "Програми для аудіо, відео - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Програми для аудіо, відео - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/files',
@@ -76,8 +75,8 @@ const router = createRouter({
       component: Category,
       props: { cat: 'files', title: 'Робота з файлами' },
       meta: {
-        title: "Робота з файлами - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Робота з файлами - Скачати безкоштовний софт | Floppy',
+      },
     },
     {
       path: '/development',
@@ -85,15 +84,15 @@ const router = createRouter({
       component: Category,
       props: { cat: 'dev', title: 'Розробка, програмування' },
       meta: {
-        title: "Розробка, програмування - Скачати безкоштовний софт | Floppy",
-      }
+        title: 'Розробка, програмування - Скачати безкоштовний софт | Floppy',
+      },
     },
   ],
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy'; // Set title based on meta or a default
-  next();
-});
+  document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy' // Set title based on meta or a default
+  next()
+})
 
 export default router
