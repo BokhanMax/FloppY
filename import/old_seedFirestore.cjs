@@ -10,7 +10,8 @@ admin.initializeApp({
 const db = admin.firestore();
 
 const dataToAdd = [
-  { name: 'Git Windows', description: 'Найвідоміша система контролю версій, вміє збеігати історію змін.', icon: '/icons/GitIcon.png', version: '2.50.0', link64: 'https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.1/Git-2.50.0-64-bit.exe', link32: '', linkcommon: '', category: 'dev', website: 'https://git-scm.com/', createdAt: admin.firestore.FieldValue.serverTimestamp() }
+  { name: 'Signal', description: 'Кросплатформений месенджер, вважається одним із найзахищеніших та безпечних.', icon: '/icons/SignalIcon.png', version: '7.59.0', link64: 'https://updates.signal.org/desktop/signal-desktop-win-7.59.0.exe', link32: '', linkcommon: '', category: 'internet', website: 'https://signal.org/uk/', createdAt: admin.firestore.FieldValue.serverTimestamp() },
+  { name: 'WARP 1.1.1.1', description: 'Крутий VPN-клієнт від компанії Cloudflare. Безкоштовний для домашнього використання.', icon: '/icons/WARPIcon.png', version: '7.59.0', link64: '', link32: '', linkcommon: 'https://1111-releases.cloudflareclient.com/win/latest', category: 'internet', website: 'https://one.one.one.one/', createdAt: admin.firestore.FieldValue.serverTimestamp() }
 ];
 
 async function seedDatabase() {
