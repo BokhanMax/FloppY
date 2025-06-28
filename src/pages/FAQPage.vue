@@ -54,6 +54,23 @@
                 </div>
             </div>
 
+                        <!-- FAQ Item 4 -->
+            <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+                <button class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100" onclick="toggleAccordion('faq4')">
+                    <h3 class="text-lg font-semibold text-green-dark">Чому програма не запускається? У мене Windows 7.</h3>
+                    <svg id="icon-faq2" class="w-5 h-5 text-green-600 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <div id="faq4" class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            Компанія Microsoft завершила випуск та підтримку ОС Windows 7 з січня 2020 року. Більшість виробників програмного забепечення також перестали підтримувати "сімку". Тому я не обіцяю правильну роботу свіжих версій програм на цій системі. Ви ще на WinXP спробуйте встановити :)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
