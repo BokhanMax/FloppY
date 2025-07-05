@@ -33,7 +33,7 @@ const props = defineProps({
     <div class="flex items-center place-content-between mb-4">
       <div class="flex">
         <div class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-          <img :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" width="48" height="48" :alt="name" :title="'Скачати ' + props.name + 'безкоштовно по прямому посиланню'" />
+          <img :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" width="48" height="48" :alt="name" :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'" />
         </div>
         <div class="flex">
           <div class="flex flex-col">
