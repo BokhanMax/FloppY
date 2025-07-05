@@ -6,7 +6,9 @@
         <!-- Лого -->
         <a class="flex items-center mb-4 md:mb-0" href="/">
           <div class="text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img">
+              <title>Floppy</title>
+              <desc>український каталог безкоштовних програм</desc>
               <!-- Outer disc body -->
               <rect
                 x="6"
