@@ -107,11 +107,15 @@
       </div>
     </div>
   </div>
-
   <component :is="'script'">
-    document.querySelectorAll('.bg-green-50').forEach(card => { card.addEventListener('mouseenter',
-    function() { this.style.transform = 'translateY(-2px)'; this.style.transition = 'transform 0.2s
-    ease'; }); card.addEventListener('mouseleave', function() { this.style.transform =
-    'translateY(0)'; }); });
+    document.querySelectorAll('.bg-green-50').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+        this.style.transition = 'transform 0.2s ease';
+    });
+    card.addEventListener('mouseleave', function() {
+        this.style.transform ='translateY(0)';
+    });
+});
   </component>
 </template>

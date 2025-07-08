@@ -34,22 +34,24 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">
-    Останні оновлення програм
-  </h2>
+  <div class="newestsoftsection">
+    <h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">
+      Останні оновлення програм
+    </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <ProgramCard
-      v-for="program in programs"
-      :key="program.id"
-      :name="program.name"
-      :description="program.description"
-      :icon="program.icon"
-      :version="program.version"
-      :link64="program.link64"
-      :link32="program.link32"
-      :linkcommon="program.linkcommon"
-      :website="program.website"
-    />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProgramCard
+        v-for="program in programs"
+        :key="program.id"
+        :name="program.name"
+        :description="program.description"
+        :icon="program.icon"
+        :version="program.version"
+        :link64="program.link64"
+        :link32="program.link32"
+        :linkcommon="program.linkcommon"
+        :website="program.website"
+      />
+    </div>
   </div>
 </template>
