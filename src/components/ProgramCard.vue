@@ -3,6 +3,7 @@ const props = defineProps({
   id: {type: String},
   name: {type: String, required: true},
   description: {type: String},
+  createdAt: {type: String},
   version: {type: String},
   website: {type: String},
   icon: {type: String},
@@ -10,10 +11,13 @@ const props = defineProps({
   link64: {type: String},
   linkcommon: {type: String}
 })
+
+const date = props.createdAt.toDate().toLocaleDateString();
+
 </script>
 
 <template>
-  <div class="bg-green-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+  <div class="bg-green-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow" :id="props.id">
     <div class="flex items-center place-content-between mb-4">
       <div class="flex">
         <div class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
@@ -21,15 +25,17 @@ const props = defineProps({
         </div>
         <div class="flex">
           <div class="flex flex-col">
-            <div hidden>{{ id }}</div>
             <h3 class="text-xl font-semibold text-green-dark">{{ name }}</h3>
             <p class="text-green-600">{{ version }}</p>
           </div>
         </div>
       </div>
-      <div class="flex self-start">
+      <div class="flex self-start flex-col items-end">
+        <span class="text-green-400 text-[9px] mb-1">
+          Оновлено: {{ date }}
+        </span>
         <a v-if="website" :href="props.website" class="text-gray-600 text-xs" target="_blank">
-          Веб-сайт
+          🌐 Веб-сайт
         </a>
       </div>
     </div>

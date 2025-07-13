@@ -47,6 +47,7 @@ onMounted(() => {
         :name="program.name"
         :description="program.description"
         :icon="program.icon"
+        :createdAt="program.createdAt"
         :version="program.version"
         :link64="program.link64"
         :link32="program.link32"
