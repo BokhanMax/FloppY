@@ -1,7 +1,7 @@
 <script setup>
-import NewestSoft from '../components/NewestSoft.vue'
+import Category from '@/components/Category.vue';
 </script>
 
 <template>
-  <NewestSoft />
+  <Category />
 </template>

@@ -9,7 +9,8 @@ const props = defineProps({
   icon: {type: String},
   link32: {type: String},
   link64: {type: String},
-  linkcommon: {type: String}
+  linkcommon: {type: String},
+  linkupdate: {type: String}
 })
 
 const date = props.createdAt.toDate().toLocaleDateString();
@@ -61,6 +62,13 @@ const date = props.createdAt.toDate().toLocaleDateString();
         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
       >
         Завантажити x86-x64
+      </a>
+      <a
+        v-if="linkupdate"
+        :href="props.linkupdate"
+        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
+      >
+        Апдейт
       </a>
     </div>
   </div>

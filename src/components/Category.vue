@@ -17,21 +17,36 @@ const programs = ref([])
 const loading = ref(true)
 const error = ref(null)
 
-const fetchProgramsByCategory = async (category) => {
+const fetchPrograms = async (category) => {
   loading.value = true
   error.value = null
   try {
-    const q = query(
+    if (props.cat == 'newest') {
+      const q = query(
+      collection(db, 'programs'),
+      orderBy('createdAt', 'desc')
+      )
+      const querySnapshot = await getDocs(q)
+
+      programs.value = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+
+    } else {
+      const q = query(
       collection(db, 'programs'),
       where('category', '==', category),
-      orderBy('name', 'asc'),
-    )
-    const querySnapshot = await getDocs(q)
+      orderBy('name', 'asc')
+      )
+      const querySnapshot = await getDocs(q)
 
-    programs.value = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }))
+      programs.value = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+    }
+
   } catch (err) {
     console.error('Помилка при отриманні програм:', err)
     error.value = err
@@ -41,12 +56,12 @@ const fetchProgramsByCategory = async (category) => {
 }
 
 onMounted(() => {
-  fetchProgramsByCategory(props.cat)
+  fetchPrograms(props.cat)
 })
 </script>
 
 <template>
-  <div :class="'wrapper' + props.cat">
+  <div :class="'wrapper_' + props.cat">
     <h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">{{ title }}</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -62,10 +77,12 @@ onMounted(() => {
         :link64="program.link64"
         :link32="program.link32"
         :linkcommon="program.linkcommon"
+        :linkupdate="program.linkupdate"
         :website="program.website"
       />
     </div>
   </div>
+  <!--<div v-if="props.cat == 'newest'" class="mt-12 text-green-dark">Some text...</div>-->
 </template>
 <script>
 export default {

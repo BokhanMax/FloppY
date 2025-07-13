@@ -7,14 +7,14 @@ const router = createRouter({
   routes: [
     // Pages
 
-    {
+/*     {
       path: '/',
       name: 'home',
       component: Homepage,
       meta: {
         title: '',
       },
-    },
+    }, */
     {
       path: '/blog',
       name: 'blog',
@@ -41,7 +41,15 @@ const router = createRouter({
     },
 
     // Categories
-
+    {
+      path: '/',
+      name: 'newest',
+      component: Category,
+      props: { cat: 'newest', title: 'Останні оновлення програм' },
+      meta: {
+        title: '',
+      },
+    },
     {
       path: '/internet',
       name: 'internet',
