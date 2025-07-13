@@ -1,30 +1,14 @@
 <script setup>
 const props = defineProps({
-  icon: {
-    type: String,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  link64: {
-    type: String,
-  },
-  linkcommon: {
-    type: String,
-  },
-  link32: {
-    type: String,
-  },
-  description: {
-    type: String,
-  },
-  version: {
-    type: String,
-  },
-  website: {
-    type: String,
-  },
+  id: {type: String},
+  name: {type: String, required: true},
+  description: {type: String},
+  version: {type: String},
+  website: {type: String},
+  icon: {type: String},
+  link32: {type: String},
+  link64: {type: String},
+  linkcommon: {type: String}
 })
 </script>
 
@@ -37,6 +21,7 @@ const props = defineProps({
         </div>
         <div class="flex">
           <div class="flex flex-col">
+            <div hidden>{{ id }}</div>
             <h3 class="text-xl font-semibold text-green-dark">{{ name }}</h3>
             <p class="text-green-600">{{ version }}</p>
           </div>

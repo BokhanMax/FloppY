@@ -43,6 +43,7 @@ onMounted(() => {
       <ProgramCard
         v-for="program in programs"
         :key="program.id"
+        :id="program.id"
         :name="program.name"
         :description="program.description"
         :icon="program.icon"
