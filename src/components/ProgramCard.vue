@@ -10,7 +10,8 @@ const props = defineProps({
   link32: {type: String},
   link64: {type: String},
   linkcommon: {type: String},
-  linkupdate: {type: String}
+  linkupdate: {type: String},
+  textupdate: {type: String}
 })
 
 const date = props.createdAt.toDate().toLocaleDateString();
@@ -68,7 +69,7 @@ const date = props.createdAt.toDate().toLocaleDateString();
         :href="props.linkupdate"
         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
       >
-        Апдейт
+        {{ textupdate }}
       </a>
     </div>
   </div>

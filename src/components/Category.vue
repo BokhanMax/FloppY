@@ -78,6 +78,7 @@ onMounted(() => {
         :link32="program.link32"
         :linkcommon="program.linkcommon"
         :linkupdate="program.linkupdate"
+        :textupdate="program.textupdate"
         :website="program.website"
       />
     </div>
