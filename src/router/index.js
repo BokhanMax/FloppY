@@ -24,6 +24,14 @@ const router = createRouter({
       },
     },
     {
+      path: '/manage',
+      name: 'manage',
+      component: () => import('../pages/Manage.vue'),
+      meta: {
+        title: 'Таблиця програм | Floppy',
+      },
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import('../pages/ContactPage.vue'),
