@@ -46,28 +46,28 @@ const date = props.createdAt.toDate().toLocaleDateString();
       <a
         v-if="link64"
         :href="props.link64"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
+        class="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded transition-colors flex-1 text-center"
       >
         Завантажити x64
       </a>
       <a
         v-if="link32"
         :href="props.link32"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
+        class="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded transition-colors flex-1 text-center"
       >
         Завантажити x32
       </a>
       <a
         v-if="linkcommon"
         :href="props.linkcommon"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
+        class="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded transition-colors flex-1 text-center"
       >
         Завантажити x86-x64
       </a>
       <a
         v-if="linkupdate"
         :href="props.linkupdate"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors flex-1 text-center"
+        class="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded transition-colors flex-1 text-center"
       >
         {{ textupdate }}
       </a>
