@@ -87,31 +87,31 @@
         </nav>
       </div>
     </div>
-  </header>
-  <component :is="'script'">
+    <component :is="'script'">
     // Add smooth scrolling for navigation links
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-            behavior: 'smooth'
-            });
-        }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                behavior: 'smooth'
+                });
+            }
+        });
     });
-});
 
-// Add hover effects to software cards
+    // Add hover effects to software cards
 
-document.querySelectorAll('.bg-green-50').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
-        this.style.transition = 'transform 0.2s ease';
+    document.querySelectorAll('.bg-green-50').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.transition = 'transform 0.2s ease';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
     });
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
   </component>
+  </header>
 </template>

@@ -37,6 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <div>
     <h1 class="text-center font-bold text-4xl mb-8">Manage DB - floppy.pp.ua</h1>
     <DataTable :value="programs" resizableColumns columnResizeMode="fit" showGridlines stripedRows tableStyle="min-width: 150rem">
       <ColumnGroup type="header">
@@ -74,6 +75,7 @@ onMounted(() => {
       <Column field="link64"></Column>
       <Column field="linkcommon"></Column>
     </DataTable>
+  </div>
 </template>
 <style scoped>
 
