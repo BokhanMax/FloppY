@@ -22,7 +22,7 @@ const date = props.createdAt.toDate().toLocaleDateString();
   <div class="bg-green-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow" :id="props.id">
     <div class="flex items-center place-content-between mb-4">
       <div class="flex">
-        <div class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+        <div class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 hover:scale-[1.3] duration-500 ease-in-out">
           <img :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" width="48" height="48" :alt="name" :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'" />
         </div>
         <div class="flex">
