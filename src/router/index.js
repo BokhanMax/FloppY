@@ -23,14 +23,14 @@ const router = createRouter({
         title: 'Блог про програми, систему тощо - Скачати безкоштовний софт | Floppy',
       },
     },
-    {
+/*     {
       path: '/manage',
       name: 'manage',
       component: () => import('../pages/Manage.vue'),
       meta: {
         title: 'Таблиця програм | Floppy',
       },
-    },
+    }, */
     {
       path: '/contact',
       name: 'contact',
@@ -73,7 +73,7 @@ const router = createRouter({
       component: Category,
       props: { cat: 'system', title: 'Системні утиліти' },
       meta: {
-        title: 'Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy',
+        title: 'Програми для системи - Скачати безкоштовний софт | Floppy',
       },
     },
     {
