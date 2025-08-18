@@ -80,6 +80,7 @@ onMounted(() => {
         :linkupdate="program.linkupdate"
         :textupdate="program.textupdate"
         :website="program.website"
+        :ispaid="program.ispaid"
       />
     </div>
   </div>
