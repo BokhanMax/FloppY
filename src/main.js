@@ -12,12 +12,4 @@ const gtag = createGtag({
 const app = createApp(Floppy)
 app.use(router)
 app.use(gtag)
-app.use(PrimeVue, {    theme: {
-        preset: Aura,
-        options: {
-            prefix: 'p',
-            darkModeSelector: 'system',
-            cssLayer: false
-        }
-    }})
 app.mount('#app')
