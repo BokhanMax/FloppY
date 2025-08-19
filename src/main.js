@@ -4,8 +4,6 @@ import { createApp } from 'vue'
 import { createGtag } from 'vue-gtag'
 import Floppy from './Floppy.vue'
 import router from './router'
-import PrimeVue from 'primevue/config'
-import Aura from '@primeuix/themes/aura'
 
 const gtag = createGtag({
   tagId: 'G-LVRGKFB5Y6',
