@@ -33,16 +33,16 @@ const date = props.createdAt.toDate().toLocaleDateString();
         </div>
         <div class="flex">
           <div class="flex flex-col">
-            <h1 class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark">{{ name }}</h1>
-            <p class="text-green-600 lg:text-sm">{{ version }}</p>
+            <h1 class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-6">{{ name }}</h1>
+            <p class="text-green-600 lg:text-sm xs:text-xs">{{ version }}</p>
           </div>
         </div>
       </div>
       <div class="flex self-start flex-col items-end">
-        <span class="text-green-400 md:text-xs lg:text-[8px] xl:text-xs mb-1">
+        <span class="text-green-400 md:text-xs lg:text-[8px] xl:text-xs mb-1 xs:text-[10px]">
           {{ date }}
         </span>
-        <a v-if="website" :href="props.website" class="text-gray-600 md:text-xs lg:text-[8px] xl:text-xs" target="_blank">
+        <a v-if="website" :href="props.website" class="text-gray-600 md:text-xs lg:text-[8px] xl:text-xs xs:text-[10px]" target="_blank">
           🌐 Сайт
         </a>
         <span v-if="ispaid" class="text-red-500 text-xs mt-1">
@@ -58,22 +58,22 @@ const date = props.createdAt.toDate().toLocaleDateString();
     <p class="text-gray-600 mb-4 md:text-sm">{{ description }}</p>
     <div class="flex flex-col sm:flex-row gap-2">
       <a v-if="link64" :href="props.link64"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px]"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x64
       </a>
       <a v-if="link32" :href="props.link32"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px]"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x32
       </a>
       <a v-if="linkcommon" :href="props.linkcommon"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px]"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x86-x64
       </a>
       <a v-if="linkupdate" :href="props.linkupdate"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px]"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         {{ textupdate }}
       </a>
