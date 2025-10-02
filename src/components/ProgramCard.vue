@@ -33,7 +33,7 @@ const date = props.createdAt.toDate().toLocaleDateString();
         </div>
         <div class="flex">
           <div class="flex flex-col">
-            <h1 class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-6">{{ name }}</h1>
+            <h1 class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8">{{ name }}</h1>
             <p class="text-green-600 lg:text-sm xs:text-xs">{{ version }}</p>
           </div>
         </div>
