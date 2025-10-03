@@ -4,7 +4,7 @@
 
     <div class="text-center mb-8">
       <p class="text-gray-700 text-lg leading-relaxed">
-        Якщо ви маєте питання щодо розміщення програм на сайті Floppy - виберіть зручний спосіб
+        Якщо ви маєте питання щодо розміщення програм та роботи сайту FloppY - виберіть зручний спосіб
         зв'язку та напишіть.
       </p>
     </div>
@@ -24,9 +24,9 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
-        <p class="text-gray-600 mb-4">Відповідаємо зазвичай впродовж години</p>
+        <p class="text-gray-600 mb-4">Відповідаю зазвичай впродовж години</p>
         <a
-          href="https://t.me/floppysoft"
+          href="https://t.me/tuo_max"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium"
@@ -49,7 +49,7 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-green-dark mb-2">Email</h3>
-        <p class="text-gray-600 mb-4">Відповідаємо впродовж 24 годин</p>
+        <p class="text-gray-600 mb-4">Відповідаю впродовж 4-6 годин</p>
         <a
           href="mailto:floppyppua@ukr.net"
           class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium"
