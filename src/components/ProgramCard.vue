@@ -1,6 +1,7 @@
 <script setup>
 import { Timestamp } from 'firebase/firestore';
 import { time } from 'vue-gtag';
+import VLazyImage from "v-lazy-image";
 
 const props = defineProps({
   id: { type: String },
@@ -35,8 +36,8 @@ const date = props.createdAt.toDate().toLocaleDateString();
           <picture>
             <source media="(width < 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" />
             <source media="(width >= 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'" />
-            <img
-              :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" :alt="name"
+            <v-lazy-image
+              :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" :alt="name"
               :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
             />
           </picture>
