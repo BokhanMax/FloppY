@@ -28,8 +28,18 @@ const date = props.createdAt.toDate().toLocaleDateString();
       <div class="flex">
         <div
           class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 hover:scale-[1.3] duration-500 ease-in-out">
-          <img :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" width="48" height="48" :alt="name"
-            :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'" />
+          <!--<img
+            :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" :alt="name"
+            :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
+          /> -->
+          <picture>
+            <source media="(width < 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" />
+            <source media="(width >= 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'" />
+            <img
+              :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" :alt="name"
+              :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
+            />
+          </picture>
         </div>
         <div class="flex">
           <div class="flex flex-col">
