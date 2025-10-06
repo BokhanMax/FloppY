@@ -37,7 +37,7 @@ const date = props.createdAt.toDate().toLocaleDateString();
             <source media="(width < 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" />
             <source media="(width >= 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'" />
             <v-lazy-image
-              :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon.png'" :alt="name"
+              :src="'icons/fallback/' + props.name.replace(/\s+/g, '') + 'Icon.png'" :alt="name"
               :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
             />
           </picture>
