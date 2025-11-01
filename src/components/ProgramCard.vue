@@ -83,7 +83,7 @@ const date = props.createdAt.toDate().toLocaleDateString();
         target="_blank">
         Завантажити x86-x64
       </a>
-      <a v-if="linkupdate" :href="props.linkupdate"
+      <a v-if="textupdate" :href="props.linkupdate"
         class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         {{ textupdate }}
