@@ -1,6 +1,6 @@
 {
   "name": "floppyppua",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,15 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "import": "node import/import_lines.cjs",
-    "format": "prettier --write src/",
-    "deploy": "vite build && cp docs/index.html docs/404.html && gh-pages -d docs"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "fs": "*",
-    "gh-pages": "^6.3.0",
     "v-lazy-image": "^2.1.1",
     "vue": "*",
-    "vue-cli-service": "^5.0.10",
     "vue-gtag": "*",
     "vue-router": "*",
     "vuefire": "*"
