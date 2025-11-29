@@ -47,6 +47,14 @@ const router = createRouter({
         title: 'Часті питання - Скачати безкоштовний софт | Floppy',
       },
     },
+    {
+      path: '/program/:id',
+      name: 'program',
+      component: () => import('../pages/ProgramPage.vue'),
+      meta: {
+        title: 'Скачати безкоштовний софт | Floppy',
+      },
+    },
 
     // Categories
     {

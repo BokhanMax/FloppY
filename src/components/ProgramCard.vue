@@ -2,6 +2,7 @@
 import { Timestamp } from 'firebase/firestore'
 import { time } from 'vue-gtag'
 import VLazyImage from 'v-lazy-image'
+import { RouterLink } from 'vue-router'
 
 const props = defineProps({
   id: { type: String },
@@ -54,7 +55,15 @@ const date = props.createdAt.toDate().toLocaleDateString()
         </div>
         <div class="flex">
           <div class="flex flex-col">
+            <RouterLink
+              v-if="id"
+              :to="'/program/' + id"
+              class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8 hover:text-green-600 transition-colors cursor-pointer"
+            >
+              {{ name }}
+            </RouterLink>
             <h1
+              v-else
               class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8"
             >
               {{ name }}

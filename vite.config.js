@@ -15,6 +15,8 @@ const names = [
   'contact'
 ]
 const dynamicRoutes = names.map(name => `/${name}`)
+// Note: Dynamic program routes (/program/:id) would need to be fetched from Firebase
+// at build time to be included in the sitemap. This would require a custom build script.
 
 export default defineConfig({
   build: {outDir: './docs'},
