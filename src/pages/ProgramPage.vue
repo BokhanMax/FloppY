@@ -59,7 +59,7 @@ const categoryName = computed(() => {
 // Update document title when program is loaded
 watch(program, (newProgram) => {
     if (newProgram) {
-        document.title = `${newProgram.name} - Скачати безкоштовний софт | Floppy`
+        document.title = `Скачати ${newProgram.name} ${newProgram.version} безкоштовно | Floppy`
     }
 }, { immediate: true })
 
@@ -89,7 +89,7 @@ onMounted(() => {
         <div class="bg-green-50 rounded-lg shadow-md p-6 mb-8">
             <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
                 <!-- Icon -->
-                <div class="flex-shrink-0">
+                <div class="shrink-0">
                     <div class="w-24 h-24 rounded-lg flex items-center justify-center bg-white shadow-sm">
                         <picture>
                             <source media="(width < 800px)"
@@ -122,7 +122,7 @@ onMounted(() => {
                         <span v-if="categoryName" class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
                             {{ categoryName }}
                         </span>
-                        <span v-if="program.ispaid" class="text-sm text-red-500 font-semibold">
+                        <span v-if="program.ispaid" class="flex items-center text-sm text-red-500 font-semibold">
                             <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -219,7 +219,7 @@ onMounted(() => {
                 <div v-if="program.ispaid !== undefined">
                     <strong class="text-green-dark">Тип ліцензії:</strong>
                     <span class="ml-2">{{ program.ispaid ? 'Shareware (потрібна підтримка розробника)' : 'Безкоштовна'
-                        }}</span>
+                    }}</span>
                 </div>
             </div>
         </div>
