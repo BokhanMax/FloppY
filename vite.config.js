@@ -4,19 +4,11 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import Sitemap from 'vite-plugin-sitemap'
-import { fetchProgramRoutes } from './scripts/fetchProgramRoutes.js'
+import { fetchProgramRoutes } from './src/router/programroutes.js'
 
-const names = [
-  'internet',
-  'media',
-  'dev',
-  'files',
-  'system',
-  'faq',
-  'contact'
-]
+const names = ['internet', 'media', 'dev', 'files', 'system', 'faq', 'contact']
 
-const staticRoutes = names.map(name => `/${name}`)
+const staticRoutes = names.map((name) => `/${name}`)
 
 export default defineConfig(async () => {
   // Fetch program routes from Firebase at build time
@@ -32,10 +24,10 @@ export default defineConfig(async () => {
   const allRoutes = [...staticRoutes, ...programRoutes]
 
   return {
-    build: {outDir: './docs'},
+    build: { outDir: './docs' },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
     plugins: [

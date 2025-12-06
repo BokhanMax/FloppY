@@ -21,9 +21,9 @@ export async function fetchProgramRoutes() {
   try {
     const programsCollection = collection(db, 'programs')
     const querySnapshot = await getDocs(programsCollection)
-    
+
     const programRoutes = querySnapshot.docs.map((doc) => `/program/${doc.id}`)
-    
+
     console.log(`✅ Fetched ${programRoutes.length} program routes for sitemap`)
     return programRoutes
   } catch (error) {
@@ -32,4 +32,3 @@ export async function fetchProgramRoutes() {
     return []
   }
 }
-
