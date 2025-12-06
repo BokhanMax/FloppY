@@ -138,6 +138,7 @@ const saveProgram = async () => {
 
     if (editingProgram.value) {
       // Update existing program
+      data.createdAt = Timestamp.now()
       const docRef = doc(db, 'programs', editingProgram.value.id)
       await updateDoc(docRef, data)
     } else {
