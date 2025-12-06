@@ -23,14 +23,14 @@ const router = createRouter({
         title: 'Блог про програми, систему тощо - Скачати безкоштовний софт | Floppy',
       },
     },
-/*     {
+    {
       path: '/manage',
       name: 'manage',
       component: () => import('../pages/Manage.vue'),
       meta: {
-        title: 'Таблиця програм | Floppy',
+        title: 'Управління програмами | Floppy',
       },
-    }, */
+    },
     {
       path: '/contact',
       name: 'contact',
