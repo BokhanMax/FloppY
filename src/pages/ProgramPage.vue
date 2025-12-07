@@ -146,7 +146,14 @@ onMounted(() => {
         </div>
 
         <!-- Description Section -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <div v-if="program.descriptionbig" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-green-dark mb-4">Опис програми</h2>
+            <p class="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
+                {{ program.descriptionbig }}
+            </p>
+        </div>
+
+        <div v-else class="bg-white rounded-lg shadow-md p-6 mb-8">
             <h2 class="text-2xl font-bold text-green-dark mb-4">Опис програми</h2>
             <p class="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
                 {{ program.description }}
