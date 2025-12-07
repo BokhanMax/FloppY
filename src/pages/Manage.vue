@@ -40,6 +40,7 @@ const sortDirection = ref('asc')
 const formData = ref({
   name: '',
   description: '',
+  descriptionbig: '',
   version: '',
   category: '',
   website: '',
@@ -84,6 +85,7 @@ const openAddModal = () => {
   formData.value = {
     name: '',
     description: '',
+    descriptionbig: '',
     version: '',
     category: '',
     website: '',
@@ -102,6 +104,7 @@ const openEditModal = (program) => {
   formData.value = {
     name: program.name || '',
     description: program.description || '',
+    descriptionbig: program.descriptionbig || '',
     version: program.version || '',
     category: program.category || '',
     website: program.website || '',
@@ -125,6 +128,7 @@ const saveProgram = async () => {
     const data = {
       name: formData.value.name,
       description: formData.value.description,
+      descriptionbig: formData.value.descriptionbig,
       version: formData.value.version,
       category: formData.value.category,
       website: formData.value.website,
@@ -392,8 +396,14 @@ onMounted(() => {
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Опис</label>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Опис (анонс)</label>
             <textarea v-model="formData.description" rows="3"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Опис (великий)</label>
+            <textarea v-model="formData.descriptionbig" rows="15"
               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
           </div>
 
@@ -444,13 +454,13 @@ onMounted(() => {
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Посилання оновлення</label>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Додаткове посилання</label>
               <input v-model="formData.linkupdate" type="url"
                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Текст оновлення</label>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Текст додаткового посилання</label>
               <input v-model="formData.textupdate" type="text"
                 class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" />
             </div>
