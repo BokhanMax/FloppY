@@ -323,6 +323,7 @@ onMounted(() => {
                   <span class="text-green-600">{{ getSortIcon('name') }}</span>
                 </div>
               </th>
+              <th class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">URL</th>
               <th @click="sortBy('version')"
                 class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-green-100 select-none">
                 <div class="flex items-center gap-2">
@@ -351,6 +352,8 @@ onMounted(() => {
             <tr v-for="program in sortedPrograms" :key="program.id" class="hover:bg-gray-50">
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.id }}</td>
               <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ program.name }}</td>
+              <td class="px-4 py-3 text-xs italic text-gray-500"><a :href="program.website" target="_blank">перейти</a>
+              </td>
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.version }}</td>
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.category }}</td>
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ formatDate(program.date) }}</td>
