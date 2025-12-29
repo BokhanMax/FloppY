@@ -34,3 +34,5 @@ temp/index.html
 temp/submenus.html
 
 .osp
+# Local Netlify folder
+.netlify
