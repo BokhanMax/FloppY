@@ -13,7 +13,7 @@ import {
   Timestamp
 } from 'firebase/firestore'
 
-const PASSWORD_HASH = 'c32d626fcbe8e5e4c82625572617e4e977370b7c65f13996bb023ad3f12645a9'
+const PASSWORD_HASH = import.meta.env.VITE_MANAGE_PWD
 const AUTH_KEY = 'manage_auth'
 
 // Hash password using SHA-256

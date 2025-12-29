@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
@@ -14,7 +14,11 @@ const names = ['internet', 'media', 'dev', 'files', 'system', 'faq', 'contact']
 
 const staticRoutes = names.map((name) => `/${name}`)
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ mode }) => {
+  // Load .env files into process.env for build-time (Node) usage.
+  // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
+  const env = loadEnv(mode, process.cwd(), '')
+  Object.assign(process.env, env)
   // Fetch program routes from Firebase at build time
   let programRoutes = []
   try {
@@ -25,7 +29,7 @@ export default defineConfig(async () => {
   }
 
   // Combine static and dynamic routes, exclude /404
-  const allRoutes = [...staticRoutes, ...programRoutes].filter(route => route !== '/404')
+  const allRoutes = [...staticRoutes, ...programRoutes].filter((route) => route !== '/404')
 
   return {
     build: { outDir: './docs' },
@@ -38,9 +42,9 @@ export default defineConfig(async () => {
       vue(),
       vueDevTools(),
       tailwindcss(),
-      Sitemap({ 
-        dynamicRoutes: allRoutes, 
-        hostname: 'https://floppy.pp.ua', 
+      Sitemap({
+        dynamicRoutes: allRoutes,
+        hostname: 'https://floppy.pp.ua',
         outDir: './docs',
         readable: true, // Format XML for readability
         changefreq: 'daily',
@@ -53,10 +57,10 @@ export default defineConfig(async () => {
         writeBundle() {
           const indexPath = path.resolve(__dirname, 'index.html')
           const destPath = path.resolve(__dirname, 'docs', '404.html')
-          
+
           // Read index.html
           let content = fs.readFileSync(indexPath, 'utf-8')
-          
+
           // Add redirect script before closing body tag
           // This script handles SPA routing for GitHub Pages
           const redirectScript = `
@@ -73,14 +77,14 @@ export default defineConfig(async () => {
         l.hash
       );
     </script>`
-          
+
           // Insert script before closing body tag
           content = content.replace('</body>', redirectScript + '\n  </body>')
-          
+
           // Write to 404.html
           fs.writeFileSync(destPath, content, 'utf-8')
           console.log('✅ Created 404.html with SPA redirect for GitHub Pages')
-        }
+        },
       },
     ],
   }
