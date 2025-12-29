@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const sourceDir = path.join(__dirname, '../public/icons/source')
-const outputDir = path.join(__dirname, '../public/icons')
+const outputDir = path.join(__dirname, '../docs/icons')
 const sizes = [96, 72]
 
 async function convertIcons() {
@@ -20,11 +20,11 @@ async function convertIcons() {
     const files = fs.readdirSync(sourceDir).filter((file) => file.endsWith('.png'))
 
     if (files.length === 0) {
-      console.log('⚠️  В папке source не найдены PNG файлы')
+      console.log('⚠️  В директорії source не знайдено PNG файлів')
       return
     }
 
-    console.log(`📦 Начинаем конвертирование ${files.length} изображений...`)
+    console.log(`📦 Конвертуємо ${files.length} зображень...`)
 
     let totalConverted = 0
 
@@ -49,12 +49,12 @@ async function convertIcons() {
         totalConverted++
       }
 
-      console.log(`✅ Обработано: ${baseName}`)
+      console.log(`✅ Зроблено: ${baseName}`)
     }
 
-    console.log(`\n🎉 Успешно обработано ${totalConverted} файлов!`)
+    console.log(`\n🎉 Конвертовано ${totalConverted} файлів`)
   } catch (error) {
-    console.error('❌ Ошибка при конвертировании изображений:', error.message)
+    console.error('❌ Помилка:', error.message)
     process.exit(1)
   }
 }
