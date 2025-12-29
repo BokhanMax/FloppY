@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const sourceDir = path.join(__dirname, '../public/icons/source')
-const outputDir = path.join(__dirname, '../docs/icons')
+const outputDir = path.join(__dirname, '../public/icons')
 const sizes = [96, 72]
 
 async function convertIcons() {
