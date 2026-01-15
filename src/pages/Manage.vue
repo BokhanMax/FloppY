@@ -52,6 +52,8 @@ const formData = ref({
   ispaid: false,
 })
 
+const updateDate = ref(true)
+
 const categories = [
   { value: 'internet', label: 'Інтернет, месенджери, RDP' },
   { value: 'system', label: 'Системні утиліти' },
@@ -96,6 +98,7 @@ const openAddModal = () => {
     textupdate: '',
     ispaid: false,
   }
+  updateDate.value = true
   showModal.value = true
 }
 
@@ -115,6 +118,8 @@ const openEditModal = (program) => {
     textupdate: program.textupdate || '',
     ispaid: program.ispaid || false,
   }
+  // По умолчанию при редактировании дата будет обновляться
+  updateDate.value = true
   showModal.value = true
 }
 
@@ -142,7 +147,9 @@ const saveProgram = async () => {
 
     if (editingProgram.value) {
       // Update existing program
-      data.createdAt = Timestamp.now()
+      if (updateDate.value) {
+        data.createdAt = Timestamp.now()
+      }
       const docRef = doc(db, 'programs', editingProgram.value.id)
       await updateDoc(docRef, data)
     } else {
@@ -352,7 +359,7 @@ onMounted(() => {
             <tr v-for="program in sortedPrograms" :key="program.id" class="hover:bg-gray-50">
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.id }}</td>
               <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ program.name }}</td>
-              <td class="px-4 py-3 text-xs italic text-gray-500"><a :href="program.website" target="_blank">перейти</a>
+              <td class="px-4 py-3 text-xs text-gray-500"><a :href="program.website" target="_blank">www:/🔗</a>
               </td>
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.version }}</td>
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.category }}</td>
@@ -469,10 +476,14 @@ onMounted(() => {
             </div>
           </div>
 
-          <div>
+          <div class="flex gap-4">
             <label class="flex items-center">
               <input v-model="formData.ispaid" type="checkbox" class="mr-2" />
               <span class="text-sm font-medium text-gray-700">Shareware (потрібна підтримка розробника)</span>
+            </label>
+            <label class="flex items-center">
+              <input v-model="updateDate" type="checkbox" class="mr-2" />
+              <span class="text-sm font-medium text-gray-700">Обновить дату программы?</span>
             </label>
           </div>
 
