@@ -26,7 +26,7 @@
         <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
         <p class="text-gray-600 mb-4">Відповідаю зазвичай впродовж години</p>
         <a
-          href="https://t.me/tuo_max"
+          href="https://t.me/maxmidq"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium"
