@@ -23,7 +23,7 @@ const textBlockContent = computed(() => {
     return `<p>На цій сторінці ви знайдете найкращі <strong>безкоштовні програми для Windows</strong>, які допоможуть вам працювати продуктивніше, створювати контент та розважатися.</p>
 <p>Всі програми в нашій базі:</p>
 <ul>
-  <li><strong>100% безкоштовні</strong> — жодних прихованих платежів</li>
+  <li><strong>100% безкоштовні</strong> — або з випробувальним періодом</li>
   <li><strong>Безпечні</strong> — перевірені й рекомендовані спільнотою</li>
   <li><strong>Без реклами інсталяторів</strong> — чисті та надійні посилання для завантаження</li>
   <li><strong>Постійно оновлені</strong> — свіжі версії та нові програми</li>
@@ -37,7 +37,7 @@ const textBlockContent = computed(() => {
   <li><strong>Редактори коду</strong> — потужні текстові редактори з підтримкою синтаксису</li>
   <li><strong>Git-клієнти</strong> — керування версіями та контролем коду</li>
   <li><strong>Фреймворки й бібліотеки</strong> — засоби для швидкої розробки</li>
-  <li><strong>Компіляори й інтерпретатори</strong> — рантайми для популярних мов програмування</li>
+  <li><strong>Компілятори й інтерпретатори</strong> — рантайми для популярних мов програмування</li>
   <li><strong>Утиліти для зручності</strong> — допоміжні інструменти для розробника</li>
 </ul>
 <p>Безкоштовний софт для розробки програмного забезпечення без додаткових витрат!</p>`
@@ -51,8 +51,8 @@ const fetchPrograms = async (category) => {
   try {
     if (props.cat == 'newest') {
       const q = query(
-      collection(db, 'programs'),
-      orderBy('createdAt', 'desc')
+        collection(db, 'programs'),
+        orderBy('createdAt', 'desc')
       )
       const querySnapshot = await getDocs(q)
 
@@ -63,9 +63,9 @@ const fetchPrograms = async (category) => {
 
     } else {
       const q = query(
-      collection(db, 'programs'),
-      where('category', '==', category),
-      orderBy('name', 'asc')
+        collection(db, 'programs'),
+        where('category', '==', category),
+        orderBy('name', 'asc')
       )
       const querySnapshot = await getDocs(q)
 
@@ -93,23 +93,11 @@ onMounted(() => {
     <h2 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">{{ title }}</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <ProgramCard
-        v-for="program in programs"
-        :key="program.id"
-        :id="program.id"
-        :name="program.name"
-        :description="program.description"
-        :createdAt="program.createdAt"
-        :icon="program.icon"
-        :version="program.version"
-        :link64="program.link64"
-        :link32="program.link32"
-        :linkcommon="program.linkcommon"
-        :linkupdate="program.linkupdate"
-        :textupdate="program.textupdate"
-        :website="program.website"
-        :ispaid="program.ispaid"
-      />
+      <ProgramCard v-for="program in programs" :key="program.id" :id="program.id" :name="program.name"
+        :description="program.description" :createdAt="program.createdAt" :icon="program.icon"
+        :version="program.version" :link64="program.link64" :link32="program.link32" :linkcommon="program.linkcommon"
+        :linkupdate="program.linkupdate" :textupdate="program.textupdate" :website="program.website"
+        :ispaid="program.ispaid" />
     </div>
 
     <TextBlock v-if="props.cat === 'newest' || props.cat === 'dev'" :content="textBlockContent" />
