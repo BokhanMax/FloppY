@@ -57,6 +57,7 @@ const updateDate = ref(true)
 const categories = [
   { value: 'internet', label: 'Інтернет, месенджери, RDP' },
   { value: 'system', label: 'Системні утиліти' },
+  { value: 'drivers', label: 'Драйвери' },
   { value: 'media', label: 'Програми для медіа' },
   { value: 'files', label: 'Робота з файлами' },
   { value: 'dev', label: 'Розробка, програмування' },

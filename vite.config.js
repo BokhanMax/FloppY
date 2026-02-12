@@ -10,7 +10,7 @@ import path from 'path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const names = ['internet', 'media', 'dev', 'files', 'system', 'faq', 'contact']
+const names = ['internet', 'media', 'drivers', 'dev', 'files', 'system', 'faq', 'contact']
 
 const staticRoutes = names.map((name) => `/${name}`)
 

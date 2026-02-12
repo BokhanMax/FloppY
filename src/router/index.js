@@ -7,7 +7,7 @@ const router = createRouter({
   routes: [
     // Pages
 
-/*     {
+    /*     {
       path: '/',
       name: 'home',
       component: Homepage,
@@ -82,6 +82,15 @@ const router = createRouter({
       props: { cat: 'system', title: 'Системні утиліти' },
       meta: {
         title: 'Програми для системи - Скачати безкоштовний софт | Floppy',
+      },
+    },
+    {
+      path: '/drivers',
+      name: 'drivers',
+      component: Category,
+      props: { cat: 'drivers', title: 'Драйвери' },
+      meta: {
+        title: 'Драйвери - Скачати безкоштовний софт | Floppy',
       },
     },
     {

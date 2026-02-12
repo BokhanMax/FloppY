@@ -49,6 +49,7 @@ const categoryName = computed(() => {
     const categories = {
         internet: 'Інтернет, месенджери, RDP',
         system: 'Системні утиліти',
+        drivers: 'Драйвери',
         media: 'Програми для медіа',
         files: 'Робота з файлами',
         dev: 'Розробка, програмування',
@@ -226,7 +227,7 @@ onMounted(() => {
                 <div v-if="program.ispaid !== undefined">
                     <strong class="text-green-dark">Тип ліцензії:</strong>
                     <span class="ml-2">{{ program.ispaid ? 'Shareware (потрібна підтримка розробника)' : 'Безкоштовна'
-                    }}</span>
+                        }}</span>
                 </div>
             </div>
         </div>

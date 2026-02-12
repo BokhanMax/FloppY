@@ -5,7 +5,7 @@
             https://floppy.pp.ua/404
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -19,7 +19,7 @@
             https://floppy.pp.ua/
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -33,7 +33,7 @@
             https://floppy.pp.ua/internet
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -47,7 +47,21 @@
             https://floppy.pp.ua/media
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
+        </lastmod>
+        <changefreq>
+            daily
+        </changefreq>
+        <priority>
+            0.8
+        </priority>
+    </url>
+    <url>
+        <loc>
+            https://floppy.pp.ua/drivers
+        </loc>
+        <lastmod>
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -61,7 +75,7 @@
             https://floppy.pp.ua/dev
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -75,7 +89,7 @@
             https://floppy.pp.ua/files
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -89,7 +103,7 @@
             https://floppy.pp.ua/system
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -103,7 +117,7 @@
             https://floppy.pp.ua/faq
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -117,7 +131,7 @@
             https://floppy.pp.ua/contact
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -131,7 +145,7 @@
             https://floppy.pp.ua/program/021aYLdQvwe0JEr9VCNt
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -145,7 +159,7 @@
             https://floppy.pp.ua/program/0X8CjtVtO1IfEPKv2GmP
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -159,7 +173,7 @@
             https://floppy.pp.ua/program/1MaXZ5RLxQgykkkpqP5N
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -173,7 +187,7 @@
             https://floppy.pp.ua/program/1TiIIEC2HfMnr7zGH7HF
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -187,7 +201,7 @@
             https://floppy.pp.ua/program/4fYO3CuFZkuPeawCfifF
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -201,7 +215,7 @@
             https://floppy.pp.ua/program/5GOB5UVNrxiKMExuA6nn
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -215,7 +229,7 @@
             https://floppy.pp.ua/program/6NwPSXhanka2tagk0MWS
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -229,7 +243,7 @@
             https://floppy.pp.ua/program/6ssON3nhuUJwb5aL73PE
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -243,7 +257,7 @@
             https://floppy.pp.ua/program/BFZcoSWeCqJujJvLJfKd
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -257,7 +271,21 @@
             https://floppy.pp.ua/program/CI0SjZqMEsbXyIMJiWFO
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
+        </lastmod>
+        <changefreq>
+            daily
+        </changefreq>
+        <priority>
+            0.8
+        </priority>
+    </url>
+    <url>
+        <loc>
+            https://floppy.pp.ua/program/EOAJFYv5MbU1cBljfeon
+        </loc>
+        <lastmod>
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -271,7 +299,7 @@
             https://floppy.pp.ua/program/ETBVcFN8MNXAh6nel1Lu
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -285,7 +313,7 @@
             https://floppy.pp.ua/program/GEdFLkU6wYyFeHqHWCyO
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -299,7 +327,7 @@
             https://floppy.pp.ua/program/JVWx4kwspBhOEGjnOTt9
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -313,7 +341,7 @@
             https://floppy.pp.ua/program/Jj6TnvP2x5MacR22t3Pk
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -327,7 +355,7 @@
             https://floppy.pp.ua/program/Js0ROjW5zoyjlo8T7uTc
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -341,7 +369,7 @@
             https://floppy.pp.ua/program/L9BsgZIWstPQGijnbwuH
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -355,7 +383,7 @@
             https://floppy.pp.ua/program/Mk7A1VFzKqveNhYhZ0Ts
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -369,7 +397,7 @@
             https://floppy.pp.ua/program/MzztWgEf3xFD1zy5TiEP
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -383,7 +411,7 @@
             https://floppy.pp.ua/program/NS3fvoYOSmCKa0k9H7Yf
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -397,7 +425,7 @@
             https://floppy.pp.ua/program/NXkukmkC1n2zUIXv2SQW
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -411,7 +439,7 @@
             https://floppy.pp.ua/program/P14r0HYhfQY8Z8DN6tfM
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -425,7 +453,7 @@
             https://floppy.pp.ua/program/Qde4ggLT0D8PWQRnhCsb
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -439,7 +467,7 @@
             https://floppy.pp.ua/program/QhSX7aHE4wDPT1vKxJCf
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -453,7 +481,7 @@
             https://floppy.pp.ua/program/Qm7NiOw3t7CiBN6dkeL5
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -467,7 +495,7 @@
             https://floppy.pp.ua/program/Qub05enSKcR3tAuiOuZ6
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -481,7 +509,7 @@
             https://floppy.pp.ua/program/Rr7MRsWnfQ9EEhYjWwmi
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -495,7 +523,7 @@
             https://floppy.pp.ua/program/YU5OcWdn8z5sl75kB5s3
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -509,7 +537,7 @@
             https://floppy.pp.ua/program/ZbIYFg0yWTCkLqXWDlRN
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -523,7 +551,7 @@
             https://floppy.pp.ua/program/bP7slm639wqsO9zIYa30
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -537,7 +565,7 @@
             https://floppy.pp.ua/program/cdaVVQEAaFNZyveYyZqJ
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -551,7 +579,7 @@
             https://floppy.pp.ua/program/dHxwOok28fdGRZyGjg09
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -565,7 +593,7 @@
             https://floppy.pp.ua/program/fRJOei2Vh2L5LXfmsry7
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -579,7 +607,7 @@
             https://floppy.pp.ua/program/h9TpmzNjCllqAxvtjgIR
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -593,7 +621,7 @@
             https://floppy.pp.ua/program/hVIUvmTJ8Y8ZjDCUtlLk
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -607,7 +635,7 @@
             https://floppy.pp.ua/program/itysbMRzC8OIaGXh7rl4
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -621,7 +649,7 @@
             https://floppy.pp.ua/program/k1kMTBbOoGcEYW4ITAXQ
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -635,7 +663,7 @@
             https://floppy.pp.ua/program/kDo7xS2ZJM92HCEvzVy4
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -649,7 +677,7 @@
             https://floppy.pp.ua/program/kyBA8tL1h73g66tybK67
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -663,7 +691,7 @@
             https://floppy.pp.ua/program/laT5AZxiSZgM2Un0uF8E
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -677,7 +705,7 @@
             https://floppy.pp.ua/program/n6kUv1Wqmy9qHregwIoG
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -691,7 +719,7 @@
             https://floppy.pp.ua/program/pdgQuRZEckUP1t3oPISR
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -705,7 +733,7 @@
             https://floppy.pp.ua/program/qJRlQs24J5lpUIbgm91x
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -719,7 +747,7 @@
             https://floppy.pp.ua/program/sUfIxDSEscARS1TFtNBD
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -733,7 +761,7 @@
             https://floppy.pp.ua/program/scXEZmuSFxZldOeEJkKi
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -747,7 +775,7 @@
             https://floppy.pp.ua/program/t6xNoLBZmW7YJj6guhjX
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -761,7 +789,7 @@
             https://floppy.pp.ua/program/tYJVqjLyqxURL2C6d9QI
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -775,7 +803,7 @@
             https://floppy.pp.ua/program/uXriBibjCXJgCWqKMq87
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -789,7 +817,7 @@
             https://floppy.pp.ua/program/vvBSITOiwLLs7sfn4B5Y
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -803,7 +831,7 @@
             https://floppy.pp.ua/program/wpjb4sgRGiPJrFNnNszw
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -817,7 +845,7 @@
             https://floppy.pp.ua/program/xMLscn6MFsZNLWyOa3Qn
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -831,7 +859,7 @@
             https://floppy.pp.ua/program/xpxebnwDsfCTES0YA4g6
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily
@@ -845,7 +873,7 @@
             https://floppy.pp.ua/program/zInhwSNGKJAQaaMmCcVz
         </loc>
         <lastmod>
-            2026-02-09T16:51:16.778Z
+            2026-02-12T21:17:50.391Z
         </lastmod>
         <changefreq>
             daily

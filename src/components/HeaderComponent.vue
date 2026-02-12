@@ -20,6 +20,7 @@
           <RouterLink to="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</RouterLink>
           <RouterLink to="/files" class="text-green-dark hover:text-green-500 transition-colors">Файли</RouterLink>
           <RouterLink to="/system" class="text-green-dark hover:text-green-500 transition-colors">Система</RouterLink>
+          <RouterLink to="/drivers" class="text-green-dark hover:text-green-500 transition-colors">Драйвери</RouterLink>
           <RouterLink to="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка
           </RouterLink>
           <!--<a href="/office" class="text-green-dark hover:text-green-500 transition-colors">Офісні</a>
