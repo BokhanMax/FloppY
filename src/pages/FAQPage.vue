@@ -29,7 +29,7 @@
           class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
           <div class="px-6 pb-4">
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed mt-3 mb-2">
               Потрібна вам версія залежить від архітектури вашої операційної системи. Щоб перевірити
               тип вашої системи у Windows, клацніть правою кнопкою миші на «Цей ПК» або «Мій
               комп’ютер» і виберіть «Властивості». Знайдіть «Тип системи» – якщо відображається
@@ -71,7 +71,7 @@
           class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
           <div class="px-6 pb-4">
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed mt-3 mb-2">
               Та де завгодно. Але НЕ тут! Я не займаюся ламанням програм та не публікую кряки та
               ключі. Я зібрав програми, які мають тип Freeware, а також умовно-безплатне програмне
               забезпечення, яким можна користуватись в тріальному режимі, або оплатити ліцензію.
@@ -108,7 +108,7 @@
           class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
           <div class="px-6 pb-4">
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed mt-3 mb-2">
               По-перше, я не винен. По друге, всі програми належать їх розробникам. А також всі
               проблеми, які можуть виникнути при роботі програм. Мій сайт - це каталог якісного та
               корисного софту. Я НЕ розробляв ці програми, і я НЕ відповідаю за помилки у ваших
@@ -145,7 +145,7 @@
           class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
           <div class="px-6 pb-4">
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-relaxed mt-3 mb-2">
               Компанія Microsoft завершила випуск та підтримку ОС Windows 7 з січня 2020 року.
               Більшість виробників програмного забепечення також перестали підтримувати "сімку".
               Тому я не обіцяю правильну роботу свіжих версій програм на цій системі. Ви ще на WinXP

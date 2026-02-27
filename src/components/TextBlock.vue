@@ -27,7 +27,7 @@
     margin-bottom: 1rem;
     line-height: 1.6;
     color: #1a5c3a;
-    font-size: 1rem;
+    font-size: 1.125rem;
 }
 
 :deep(p:last-child) {
@@ -51,9 +51,10 @@
 }
 
 :deep(ul li) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     line-height: 1.6;
     color: #1a5c3a;
+    font-size: 1.125rem;
 }
 
 :deep(a) {

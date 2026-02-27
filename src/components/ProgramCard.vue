@@ -28,7 +28,7 @@ const date = props.createdAt.toDate().toLocaleDateString()
     <div class="flex items-center place-content-between mb-4">
       <div class="flex">
         <div
-          class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 hover:scale-[1.3] duration-500 ease-in-out">
+          class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 hover:scale-[1.2] duration-500 ease-in-out">
           <!--<img
             :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" :alt="name"
             :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
@@ -36,16 +36,18 @@ const date = props.createdAt.toDate().toLocaleDateString()
           <picture>
             <source media="(width < 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" />
             <source media="(width >= 800px)" :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'" />
-            <v-lazy-image :src="'icons/source/' + props.name.replace(/\s+/g, '') + 'Icon.png'" :alt="name"
+            <v-lazy-image :src="'icons/source/' + props.name.replace(/\s+/g, '') + 'Icon.png'" :alt="'Скачати ' + props.name + ' безкоштовно'"
               :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'" />
           </picture>
         </div>
         <div class="flex">
           <div class="flex flex-col">
-            <RouterLink v-if="id" :to="'/program/' + id"
+            <h1 v-if="id" class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8 hover:text-green-600 transition-colors cursor-pointer">
+              <RouterLink :to="'/program/' + id"
               class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8 hover:text-green-600 transition-colors cursor-pointer">
               {{ name }}
-            </RouterLink>
+              </RouterLink>
+            </h1>
             <h1 v-else class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8">
               {{ name }}
             </h1>
@@ -54,10 +56,10 @@ const date = props.createdAt.toDate().toLocaleDateString()
         </div>
       </div>
       <div class="flex self-start flex-col items-end">
-        <span class="text-green-400 md:text-xs lg:text-[8px] xl:text-xs mb-1 xs:text-[10px]">
+        <span class="text-green-400 md:text-s lg:text-[12px] xl:text-s mb-1 xs:text-[9px]">
           {{ date }}
         </span>
-        <a v-if="website" :href="props.website" class="text-gray-600 md:text-xs lg:text-[8px] xl:text-xs xs:text-[10px]"
+        <a v-if="website" :href="props.website" class="text-gray-600 md:text-s lg:text-[12px] xl:text-s xs:text-[9px]"
           target="_blank">
           🌐 Сайт
         </a>
@@ -71,25 +73,25 @@ const date = props.createdAt.toDate().toLocaleDateString()
         </span>
       </div>
     </div>
-    <p class="text-gray-600 mb-4 md:text-sm">{{ description }}</p>
+    <p class="text-gray-600 mb-4 md:text-base">{{ description }}</p>
     <div class="flex flex-col sm:flex-row gap-2">
       <a v-if="link64" :href="props.link64"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-s lg:text-[10px] 2xl:text-base md:text-[12px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x64
       </a>
       <a v-if="link32" :href="props.link32"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-s lg:text-[10px] 2xl:text-base md:text-[12px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x32
       </a>
       <a v-if="linkcommon" :href="props.linkcommon"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-s lg:text-[10px] 2xl:text-base md:text-[12px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         Завантажити x86-x64
       </a>
       <a v-if="textupdate" :href="props.linkupdate"
-        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-xs lg:text-[9px] 2xl:text-sm md:text-[10px] xs:py-1.5 xs:px-1.5"
+        class="bg-green-500 hover:bg-green-600 text-white md:px-1 md:py-1 lg:px-2 lg:py-2 rounded transition-colors flex-1 text-center xl:text-s lg:text-[10px] 2xl:text-base md:text-[12px] xs:py-1.5 xs:px-1.5"
         target="_blank">
         {{ textupdate }}
       </a>

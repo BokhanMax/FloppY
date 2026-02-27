@@ -24,7 +24,7 @@
           </svg>
         </div>
         <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
-        <p class="text-gray-600 mb-4">Відповідаю зазвичай впродовж години</p>
+        <p class="text-gray-600 mb-4">Відповідаю впродовж години</p>
         <a
           href="https://t.me/maxmidq"
           target="_blank"
@@ -74,8 +74,8 @@
         </div> -->
 
     <!-- Застереження -->
-    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-      <h3 class="text-lg font-semibold text-gray-800 mb-3">Застереження</h3>
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 zasteregennya">
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">Застереження</h3>
       <div class="text-sm text-gray-600 leading-relaxed space-y-3">
         <p>
           <strong>Завантаження:</strong> Усе програмне забезпечення, доступне через каталог Floppy,
@@ -119,3 +119,15 @@
 });
   </component>
 </template>
+
+<style scoped>
+.zasteregennya p {
+  font-size: 1.125rem;
+  margin-bottom: 1.3rem;
+  text-align: justify;
+}
+h3 {
+  border-bottom: 1px solid oklch(27.8% 0.033 256.848);
+  padding-bottom: 22px;
+}
+</style>
