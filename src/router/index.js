@@ -123,9 +123,8 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, from) => {
   document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy' // Set title based on meta or a default
-  next()
 })
 
 export default router
