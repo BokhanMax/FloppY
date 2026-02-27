@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <div class="bg-green-50 rounded-lg shadow-md p-6 lg:p-4 xs:p-4 hover:shadow-lg transition-shadow mb-8 mt-8">
-        <div class="prose prose-green max-w-none text-green-dark" v-html="content"></div>
+    <div class="bg-white border border-gray-200 rounded-lg p-6 lg:p-4 xs:p-4 hover:border-gray-300 transition-colors mb-8 mt-8">
+        <div class="prose max-w-none" v-html="content"></div>
     </div>
 </template>
 
@@ -26,7 +26,7 @@
 :deep(p) {
     margin-bottom: 1rem;
     line-height: 1.6;
-    color: #1a5c3a;
+    color: #374151;
     font-size: 1.125rem;
 }
 
@@ -36,12 +36,12 @@
 
 :deep(strong) {
     font-weight: 600;
-    color: #0d3922;
+    color: #111827;
 }
 
 :deep(em) {
     font-style: italic;
-    color: #3a8c5f;
+    color: #6b7280;
 }
 
 :deep(ul) {
@@ -53,19 +53,20 @@
 :deep(ul li) {
     margin-bottom: 0.25rem;
     line-height: 1.6;
-    color: #1a5c3a;
+    color: #374151;
     font-size: 1.125rem;
 }
 
 :deep(a) {
-    color: #16a34a;
+    color: #0071e3;
     text-decoration: none;
-    border-bottom: 1px solid #16a34a;
+    border-bottom: 1px solid #0071e3;
     transition: color 0.2s ease;
 }
 
 :deep(a:hover) {
-    color: #15803d;
+    color: #005bb5;
+    border-bottom-color: #005bb5;
 }
 
 :deep(h1),
@@ -74,7 +75,7 @@
 :deep(h4),
 :deep(h5),
 :deep(h6) {
-    color: #0d3922;
+    color: #111827;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.5rem;

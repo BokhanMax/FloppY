@@ -1,31 +1,70 @@
 <template>
   <!-- Header -->
-  <header class="bg-green-50 shadow-md sticky top-0 z-10">
-    <div class="container mx-auto px-4 py-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
+  <header class="bg-white/60 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-10 shadow-sm">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <!-- Лого -->
-        <a class="flex items-center mb-4 md:mb-0" href="/">
-          <div class="text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+        <a class="flex items-center group" href="/">
+          <div class="text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3 transform group-hover:scale-110 transition-transform duration-200">
             <img src="/favicon.svg" alt="FloppY" width="48" height="48">
           </div>
-          <h1 class="xs:text-base 2xl:text-2xl font-bold text-green-dark">
+          <h1 class="xs:text-base 2xl:text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">
             Скачати безкоштовний софт
           </h1>
         </a>
 
         <!-- Меню -->
-        <nav class="flex flex-wrap justify-center md:justify-end gap-6">
-          <RouterLink to="/internet" class="text-green-dark hover:text-green-500 transition-colors">Інтернет
+        <nav class="flex flex-wrap justify-center md:justify-end gap-2">
+          <RouterLink to="/internet" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            Інтернет
           </RouterLink>
-          <RouterLink to="/media" class="text-green-dark hover:text-green-500 transition-colors">Медіа</RouterLink>
-          <RouterLink to="/files" class="text-green-dark hover:text-green-500 transition-colors">Файли</RouterLink>
-          <RouterLink to="/system" class="text-green-dark hover:text-green-500 transition-colors">Система</RouterLink>
-          <RouterLink to="/drivers" class="text-green-dark hover:text-green-500 transition-colors">Драйвери</RouterLink>
-          <RouterLink to="/development" class="text-green-dark hover:text-green-500 transition-colors">Розробка
+          <RouterLink to="/media" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Медіа
           </RouterLink>
-          <!--<a href="/office" class="text-green-dark hover:text-green-500 transition-colors">Офісні</a>
-                    <a href="/security" class="text-green-dark hover:text-green-500 transition-colors">Безпека</a>
-                    <a href="/blog" class="text-green-dark hover:text-green-500 transition-colors">Блог</a> -->
+          <RouterLink to="/files" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
+            Файли
+          </RouterLink>
+          <RouterLink to="/system" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Система
+          </RouterLink>
+          <RouterLink to="/drivers" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+            Драйвери
+          </RouterLink>
+          <RouterLink to="/development" 
+            class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-900 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-100"
+            active-class="bg-[#0071e3] text-white border-[#0071e3] hover:bg-[#0077ed] hover:border-[#0077ed]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+            Розробка
+          </RouterLink>
         </nav>
       </div>
     </div>
@@ -42,18 +81,17 @@
       }
       });
       });
-
-      // Add hover effects to software cards
-
-      document.querySelectorAll('.bg-green-50').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-2px)';
-      this.style.transition = 'transform 0.2s ease';
-      });
-      card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0)';
-      });
-      });
     </component>
   </header>
 </template>
+
+<style scoped>
+/* Фикс для hover на активном пункте меню */
+.nav-link:not(.router-link-active):hover {
+  color: #0071e3;
+}
+
+.nav-link.router-link-active:hover {
+  color: white;
+}
+</style>

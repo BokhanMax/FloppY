@@ -5,9 +5,11 @@ import SiteFooter from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <SiteHeader />
-  <main class="container mx-auto px-4 py-8 xs:px-1.5 xs:py-8">
-    <router-view :key="$route.fullPath"></router-view>
-  </main>
-  <SiteFooter />
+  <div class="min-h-screen bg-[#FCFCFD]">
+    <SiteHeader />
+    <main class="container mx-auto px-4 py-8 xs:px-1.5 xs:py-8">
+      <router-view :key="$route.fullPath"></router-view>
+    </main>
+    <SiteFooter />
+  </div>
 </template>

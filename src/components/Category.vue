@@ -91,7 +91,9 @@ onMounted(() => {
 <template>
   <div :class="'wrapper_' + props.cat">
     <h1 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">{{ title }}</h1>
-
+    <div class="flex justify-center mb-8">
+      <hr class="w-24 border-t border-gray-300">
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       <ProgramCard v-for="program in programs" :key="program.id" :id="program.id" :name="program.name"
         :description="program.description" :createdAt="program.createdAt" :icon="program.icon"

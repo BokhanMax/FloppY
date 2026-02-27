@@ -12,10 +12,10 @@
     <div class="grid md:grid-cols-2 gap-6 mb-12">
       <!-- Telegram -->
       <div
-        class="bg-green-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center"
+        class="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors text-center"
       >
         <div
-          class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+          class="bg-gradient-to-br from-gray-700 to-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -23,13 +23,13 @@
             />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-green-dark mb-2">Telegram</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж години</p>
         <a
           href="https://t.me/maxmidq"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+          class="inline-block bg-gradient-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
         >
           Написати в Telegram
         </a>
@@ -37,10 +37,10 @@
 
       <!-- Email -->
       <div
-        class="bg-green-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center"
+        class="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors text-center"
       >
         <div
-          class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+          class="bg-gradient-to-br from-gray-700 to-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -48,11 +48,11 @@
             />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-green-dark mb-2">Email</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж 4-6 годин</p>
         <a
           href="mailto:floppyppua@ukr.net"
-          class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+          class="inline-block bg-gradient-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
         >
           Написати на Email
         </a>
@@ -107,17 +107,6 @@
       </div>
     </div>
   </div>
-  <component :is="'script'">
-    document.querySelectorAll('.bg-green-50').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
-        this.style.transition = 'transform 0.2s ease';
-    });
-    card.addEventListener('mouseleave', function() {
-        this.style.transform ='translateY(0)';
-    });
-});
-  </component>
 </template>
 
 <style scoped>

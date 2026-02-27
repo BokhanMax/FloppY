@@ -1,17 +1,5 @@
-import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyBAKCi5ttcpGkB5nLNcBFzuYSfrzClwtgg',
-  authDomain: 'floppyppua.firebaseapp.com',
-  projectId: 'floppyppua',
-  storageBucket: 'floppyppua.firebasestorage.app',
-  messagingSenderId: '632221136636',
-  appId: '1:632221136636:web:0c906476f404df50dbc979',
-}
-
-const app = initializeApp(firebaseConfig)
-const db = getFirestore(app)
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebaseConfig.js'
 
 /**
  * Fetches all program IDs from Firebase and generates routes for the sitemap

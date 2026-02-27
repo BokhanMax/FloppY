@@ -65,7 +65,7 @@
 
     <!-- Сайдбар -->
     <aside class="lg:w-1/3">
-      <div class="bg-green-50 rounded-lg p-6 sticky top-4">
+      <div class="bg-white border border-gray-200 rounded-lg p-6 sticky top-4">
         <h3 class="text-xl font-semibold text-green-dark mb-4">Latest Posts</h3>
 
         <div class="mb-6 pb-4 border-b border-green-200 last:border-b-0">

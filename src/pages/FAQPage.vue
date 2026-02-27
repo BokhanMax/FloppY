@@ -3,9 +3,9 @@
     <h1 class="text-3xl font-bold text-center mb-8 text-green-dark">Часті питання</h1>
     <div class="space-y-4">
       <!-- FAQ Item 1 -->
-      <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <button
-          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100"
+          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
           onclick="toggleAccordion('faq1')"
         >
           <h3 class="text-lg font-semibold text-green-dark">
@@ -45,9 +45,9 @@
       </div>
 
       <!-- FAQ Item 2 -->
-      <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <button
-          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100"
+          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
           onclick="toggleAccordion('faq2')"
         >
           <h3 class="text-lg font-semibold text-green-dark">
@@ -82,9 +82,9 @@
       </div>
 
       <!-- FAQ Item 3 -->
-      <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <button
-          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100"
+          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
           onclick="toggleAccordion('faq3')"
         >
           <h3 class="text-lg font-semibold text-green-dark">
@@ -119,9 +119,9 @@
       </div>
 
       <!-- FAQ Item 4 -->
-      <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <button
-          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-green-100 transition-colors focus:outline-none focus:bg-green-100"
+          class="cursor-pointer w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50"
           onclick="toggleAccordion('faq4')"
         >
           <h3 class="text-lg font-semibold text-green-dark">
@@ -155,23 +155,23 @@
         </div>
       </div>
     </div>
+    <component :is="'script'">
+      function toggleAccordion(id) {
+          const content = document.getElementById(id);
+          const icon = document.getElementById(`icon-${id}`);
+          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+              content.style.maxHeight = '0px'; icon.style.transform = 'rotate(0deg)';
+          } else {
+              document.querySelectorAll('.accordion-content').forEach(item => {
+                  if (item.id !== id) {
+                  item.style.maxHeight = '0px'; const otherIcon = document.getElementById(`icon-${item.id}`);
+                  if (otherIcon) {
+                      otherIcon.style.transform = 'rotate(0deg)'; }
+                  }
+              });
+              content.style.maxHeight = content.scrollHeight + 'px'; icon.style.transform = 'rotate(180deg)';
+          }
+      }
+    </component>
   </div>
-  <component :is="'script'">
-    function toggleAccordion(id) {
-        const content = document.getElementById(id);
-        const icon = document.getElementById(`icon-${id}`);
-        if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-            content.style.maxHeight = '0px'; icon.style.transform = 'rotate(0deg)';
-        } else {
-            document.querySelectorAll('.accordion-content').forEach(item => {
-                if (item.id !== id) {
-                item.style.maxHeight = '0px'; const otherIcon = document.getElementById(`icon-${item.id}`);
-                if (otherIcon) {
-                    otherIcon.style.transform = 'rotate(0deg)'; }
-                }
-            });
-            content.style.maxHeight = content.scrollHeight + 'px'; icon.style.transform = 'rotate(180deg)';
-        }
-    }
-  </component>
 </template>

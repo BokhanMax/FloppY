@@ -2,7 +2,10 @@
 
 @theme {
   --breakpoint-xs: 20rem;
-  --light-green: '#86efac';
-  --green-custom: '#22c55e';
-  --green-dark: '#16a34a';
+  --light-green: '#d1fae5';
+  --green-custom: '#059669';
+  --green-dark: '#047857';
+  --green-accent: '#10b981';
+  --neutral-bg: '#f9fafb';
+  --border-color: '#e5e7eb';
 }
