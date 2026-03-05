@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { db } from '../firebaseConfig'
+import { db } from '../helpers/firebaseConfig'
 import {
   collection,
   query,

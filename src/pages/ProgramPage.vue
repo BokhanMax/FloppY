@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { db } from '../firebaseConfig'
+import { db } from '../helpers/firebaseConfig'
 import { doc, getDoc } from 'firebase/firestore'
 import { Timestamp } from 'firebase/firestore'
 import VLazyImage from 'v-lazy-image'

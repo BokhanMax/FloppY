@@ -1,5 +1,5 @@
 import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../firebaseConfig.js'
+import { db } from '../helpers/firebaseConfig.js'
 
 /**
  * Fetches all program IDs from Firebase and generates routes for the sitemap
