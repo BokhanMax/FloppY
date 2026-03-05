@@ -16,14 +16,6 @@ const router = createRouter({
       },
     }, */
     {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('../pages/BlogPage.vue'),
-      meta: {
-        title: 'Блог про програми, систему тощо - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
       path: '/manage',
       name: 'manage',
       component: () => import('../pages/Manage.vue'),
