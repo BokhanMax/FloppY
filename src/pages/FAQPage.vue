@@ -13,7 +13,7 @@
           </h3>
           <svg
             id="icon-faq1"
-            class="w-5 h-5 text-green-600 transform transition-transform duration-200"
+            class="w-5 h-5 text-[#0071e3] transform transition-transform duration-200"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -55,7 +55,7 @@
           </h3>
           <svg
             id="icon-faq2"
-            class="w-5 h-5 text-green-600 transform transition-transform duration-200"
+            class="w-5 h-5 text-[#0071e3] transform transition-transform duration-200"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -91,8 +91,8 @@
             Скачав програму звідси, встановив - і все зависло!
           </h3>
           <svg
-            id="icon-faq2"
-            class="w-5 h-5 text-green-600 transform transition-transform duration-200"
+            id="icon-faq3"
+            class="w-5 h-5 text-[#0071e3] transform transition-transform duration-200"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -128,8 +128,8 @@
             Чому програма не запускається? У мене Windows 7.
           </h3>
           <svg
-            id="icon-faq2"
-            class="w-5 h-5 text-green-600 transform transition-transform duration-200"
+            id="icon-faq4"
+            class="w-5 h-5 text-[#0071e3] transform transition-transform duration-200"
             fill="currentColor"
             viewBox="0 0 20 20"
           >

@@ -1,3 +1,7 @@
+<script setup>
+import VLazyImage from 'v-lazy-image'
+</script>
+
 <template>
   <div class="max-w-3xl mx-auto">
     <h1 class="text-3xl font-bold text-center mb-8 text-green-dark">Контакти</h1>
@@ -15,13 +19,13 @@
         class="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors text-center"
       >
         <div
-          class="bg-gradient-to-br from-gray-700 to-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
+          class="text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M8.75,17.25L9.5,14.5L16,9L10,12.5L7.25,11.5L16,7L8.75,17.25Z"
-            />
-          </svg>
+          <picture>
+            <source media="(width < 800px)" :srcset="'icons/TelegramDesktopIcon-72w.avif'" />
+            <source media="(width >= 800px)" :srcset="'icons/TelegramDesktopIcon-96w.avif'" />
+            <v-lazy-image :src="'icons/source/TelegramDesktopIcon.png'" />
+          </picture>
         </div>
         <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж години</p>
@@ -29,7 +33,7 @@
           href="https://t.me/maxmidq"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block bg-gradient-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
+          class="inline-block bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
         >
           Написати в Telegram
         </a>
@@ -40,19 +44,19 @@
         class="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors text-center"
       >
         <div
-          class="bg-gradient-to-br from-gray-700 to-gray-900 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
+          class="text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
-          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-            />
-          </svg>
+          <picture>
+            <source media="(width < 800px)" :srcset="'icons/ThunderbirdIcon-72w.avif'" />
+            <source media="(width >= 800px)" :srcset="'icons/ThunderbirdIcon-96w.avif'" />
+            <v-lazy-image :src="'icons/source/ThunderbirdIcon.png'" />
+          </picture>
         </div>
         <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж 4-6 годин</p>
         <a
           href="mailto:floppyppua@ukr.net"
-          class="inline-block bg-gradient-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
+          class="inline-block bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
         >
           Написати на Email
         </a>
