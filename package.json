@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node src/SharpIconsConvert.js && vite build",
+    "build": "node src/helpers/SharpIconsConvert.js && vite build",
+    "buildhtml": "vite build",
+    "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
     "import": "node import/import_lines.cjs",
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@gtm-support/vue-gtm": "^3.1.0",
+    "@gtm-support/vue-gtm": "*",
     "dotenv": "*",
     "fs": "*",
     "fs-extra": "*",
