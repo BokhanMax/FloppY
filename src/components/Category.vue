@@ -50,22 +50,18 @@ const fetchPrograms = async (category) => {
   error.value = null
   try {
     if (props.cat == 'newest') {
-      const q = query(
-        collection(db, 'programs'),
-        orderBy('createdAt', 'desc')
-      )
+      const q = query(collection(db, 'programs'), orderBy('createdAt', 'desc'))
       const querySnapshot = await getDocs(q)
 
       programs.value = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }))
-
     } else {
       const q = query(
         collection(db, 'programs'),
         where('category', '==', category),
-        orderBy('name', 'asc')
+        orderBy('name', 'asc'),
       )
       const querySnapshot = await getDocs(q)
 
@@ -74,7 +70,6 @@ const fetchPrograms = async (category) => {
         ...doc.data(),
       }))
     }
-
   } catch (err) {
     console.error('Помилка при отриманні програм:', err)
     error.value = err
@@ -92,18 +87,29 @@ onMounted(() => {
   <div :class="'wrapper_' + props.cat">
     <h1 class="xs:text-2xl text-3xl font-bold text-center mb-8 text-green-dark">{{ title }}</h1>
     <div class="flex justify-center mb-8">
-      <hr class="w-24 border-t border-gray-300">
+      <hr class="w-24 border-t border-gray-300" />
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-      <ProgramCard v-for="program in programs" :key="program.id" :id="program.id" :name="program.name"
-        :description="program.description" :createdAt="program.createdAt" :icon="program.icon"
-        :version="program.version" :link64="program.link64" :link32="program.link32" :linkcommon="program.linkcommon"
-        :linkupdate="program.linkupdate" :textupdate="program.textupdate" :website="program.website"
-        :ispaid="program.ispaid" />
+      <ProgramCard
+        v-for="program in programs"
+        :key="program.id"
+        :id="program.id"
+        :name="program.name"
+        :description="program.description"
+        :createdAt="program.createdAt"
+        :icon="program.icon"
+        :version="program.version"
+        :link64="program.link64"
+        :link32="program.link32"
+        :linkcommon="program.linkcommon"
+        :linkupdate="program.linkupdate"
+        :textupdate="program.textupdate"
+        :website="program.website"
+        :ispaid="program.ispaid"
+      />
     </div>
 
     <TextBlock v-if="props.cat === 'newest' || props.cat === 'dev'" :content="textBlockContent" />
-
   </div>
 </template>
 <script>

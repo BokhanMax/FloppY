@@ -156,22 +156,13 @@
       </div>
     </div>
     <component :is="'script'">
-      function toggleAccordion(id) {
-          const content = document.getElementById(id);
-          const icon = document.getElementById(`icon-${id}`);
-          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-              content.style.maxHeight = '0px'; icon.style.transform = 'rotate(0deg)';
-          } else {
-              document.querySelectorAll('.accordion-content').forEach(item => {
-                  if (item.id !== id) {
-                  item.style.maxHeight = '0px'; const otherIcon = document.getElementById(`icon-${item.id}`);
-                  if (otherIcon) {
-                      otherIcon.style.transform = 'rotate(0deg)'; }
-                  }
-              });
-              content.style.maxHeight = content.scrollHeight + 'px'; icon.style.transform = 'rotate(180deg)';
-          }
-      }
+      function toggleAccordion(id) { const content = document.getElementById(id); const icon =
+      document.getElementById(`icon-${id}`); if (content.style.maxHeight && content.style.maxHeight
+      !== '0px') { content.style.maxHeight = '0px'; icon.style.transform = 'rotate(0deg)'; } else {
+      document.querySelectorAll('.accordion-content').forEach(item => { if (item.id !== id) {
+      item.style.maxHeight = '0px'; const otherIcon = document.getElementById(`icon-${item.id}`); if
+      (otherIcon) { otherIcon.style.transform = 'rotate(0deg)'; } } }); content.style.maxHeight =
+      content.scrollHeight + 'px'; icon.style.transform = 'rotate(180deg)'; } }
     </component>
   </div>
 </template>

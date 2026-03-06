@@ -8,8 +8,8 @@ import VLazyImage from 'v-lazy-image'
 
     <div class="text-center mb-8">
       <p class="text-gray-700 text-lg leading-relaxed">
-        Якщо ви маєте питання щодо розміщення програм та роботи сайту FloppY - виберіть зручний спосіб
-        зв'язку та напишіть.
+        Якщо ви маєте питання щодо розміщення програм та роботи сайту FloppY - виберіть зручний
+        спосіб зв'язку та напишіть.
       </p>
     </div>
 

@@ -8,7 +8,10 @@
           безкоштовних програм.<br />
           Всі права на програми належать їхнім розробникам.
         </p>
-        <RouterLink to="/contact" class="text-[#0071e3] hover:text-[#005bb5] transition-colors mr-16">
+        <RouterLink
+          to="/contact"
+          class="text-[#0071e3] hover:text-[#005bb5] transition-colors mr-16"
+        >
           Зв'язатись з адміном
         </RouterLink>
         <RouterLink to="/faq" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">

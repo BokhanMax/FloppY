@@ -10,7 +10,7 @@ import {
   addDoc,
   updateDoc,
   deleteDoc,
-  Timestamp
+  Timestamp,
 } from 'firebase/firestore'
 
 const PASSWORD_HASH = import.meta.env.VITE_MANAGE_PWD
@@ -22,7 +22,7 @@ const hashPassword = async (password) => {
   const data = encoder.encode(password)
   const hashBuffer = await crypto.subtle.digest('SHA-256', data)
   const hashArray = Array.from(new Uint8Array(hashBuffer))
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   return hashHex
 }
 
@@ -274,19 +274,29 @@ onMounted(() => {
 
 <template>
   <!-- Login Form -->
-  <div v-if="!isAuthenticated" class="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+  <div
+    v-if="!isAuthenticated"
+    class="min-h-screen flex items-center justify-center bg-gray-50 px-4"
+  >
     <div class="max-w-md w-full bg-white border border-gray-200 rounded-lg p-8">
       <h2 class="text-2xl font-bold text-center text-green-dark mb-6">Доступ до управління</h2>
       <form @submit="handleLogin" class="space-y-4">
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Пароль</label>
-          <input v-model="passwordInput" type="password" required autofocus
+          <input
+            v-model="passwordInput"
+            type="password"
+            required
+            autofocus
             class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="Введіть пароль" />
+            placeholder="Введіть пароль"
+          />
           <p v-if="passwordError" class="mt-2 text-sm text-red-600">{{ passwordError }}</p>
         </div>
-        <button type="submit"
-          class="w-full bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-2 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]">
+        <button
+          type="submit"
+          class="w-full bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-2 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
+        >
           Увійти
         </button>
       </form>
@@ -298,12 +308,16 @@ onMounted(() => {
     <div class="flex justify-between items-center mb-6">
       <h1 class="text-3xl font-bold text-green-dark">Управління програмами</h1>
       <div class="flex gap-3">
-        <button @click="handleLogout"
-          class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm">
+        <button
+          @click="handleLogout"
+          class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+        >
           Вийти
         </button>
-        <button @click="openAddModal"
-          class="bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-2 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]">
+        <button
+          @click="openAddModal"
+          class="bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 px-6 py-2 rounded-lg transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
+        >
           + Додати програму
         </button>
       </div>
@@ -314,7 +328,9 @@ onMounted(() => {
     </div>
 
     <div v-if="loading" class="text-center py-12">
-      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+      <div
+        class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"
+      ></div>
       <p class="mt-4 text-gray-600">Завантаження...</p>
     </div>
 
@@ -323,50 +339,80 @@ onMounted(() => {
         <table class="min-w-full divide-y divide-gray-200">
           <thead class="bg-gray-50 border-b border-gray-200">
             <tr>
-              <th class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">ID</th>
-              <th @click="sortBy('name')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none">
+              <th
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+              >
+                ID
+              </th>
+              <th
+                @click="sortBy('name')"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+              >
                 <div class="flex items-center gap-2">
                   Назва
                   <span class="text-emerald-600">{{ getSortIcon('name') }}</span>
                 </div>
               </th>
-              <th class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">URL</th>
-              <th @click="sortBy('version')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none">
+              <th
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+              >
+                URL
+              </th>
+              <th
+                @click="sortBy('version')"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+              >
                 <div class="flex items-center gap-2">
                   Версія
                   <span class="text-emerald-600">{{ getSortIcon('version') }}</span>
                 </div>
               </th>
-              <th @click="sortBy('category')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none">
+              <th
+                @click="sortBy('category')"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+              >
                 <div class="flex items-center gap-2">
                   Категорія
                   <span class="text-emerald-600">{{ getSortIcon('category') }}</span>
                 </div>
               </th>
-              <th @click="sortBy('date')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none">
+              <th
+                @click="sortBy('date')"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+              >
                 <div class="flex items-center gap-2">
                   Дата
                   <span class="text-emerald-600">{{ getSortIcon('date') }}</span>
                 </div>
               </th>
-              <th class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Дії</th>
+              <th
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+              >
+                Дії
+              </th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <tr v-for="program in sortedPrograms" :key="program.id" class="hover:bg-gray-50">
               <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.id }}</td>
               <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ program.name }}</td>
-              <td class="px-4 py-3 text-xs text-gray-500"><a :href="program.website" target="_blank">www:/🔗</a>
+              <td class="px-4 py-3 text-xs text-gray-500">
+                <a :href="program.website" target="_blank">www:/🔗</a>
               </td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.version }}</td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.category }}</td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ formatDate(program.date) }}</td>
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                {{ program.version }}
+              </td>
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                {{ program.category }}
+              </td>
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                {{ formatDate(program.date) }}
+              </td>
               <td class="px-4 py-3 whitespace-nowrap text-sm font-medium">
-                <button @click="openEditModal(program)" class="text-green-600 hover:text-green-900 mr-3">
+                <button
+                  @click="openEditModal(program)"
+                  class="text-green-600 hover:text-green-900 mr-3"
+                >
                   Редагувати
                 </button>
                 <button @click="deleteProgram(program.id)" class="text-red-600 hover:text-red-900">
@@ -385,16 +431,26 @@ onMounted(() => {
     </div>
 
     <!-- Modal -->
-    <div v-if="showModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
-      @click.self="closeModal">
-      <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 border-gray-200 rounded-md bg-white">
+    <div
+      v-if="showModal"
+      class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
+      @click.self="closeModal"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 border-gray-200 rounded-md bg-white"
+      >
         <div class="flex justify-between items-center mb-4">
           <h3 class="text-xl font-bold text-green-dark">
             {{ editingProgram ? 'Редагувати програму' : 'Додати нову програму' }}
           </h3>
           <button @click="closeModal" class="text-gray-400 hover:text-gray-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -402,33 +458,49 @@ onMounted(() => {
         <form @submit.prevent="saveProgram" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Назва *</label>
-            <input v-model="formData.name" type="text" required
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <input
+              v-model="formData.name"
+              type="text"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Опис (анонс)</label>
-            <textarea v-model="formData.description" rows="3"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+            <textarea
+              v-model="formData.description"
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            ></textarea>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Опис (великий)</label>
-            <textarea v-model="formData.descriptionbig" rows="15"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+            <textarea
+              v-model="formData.descriptionbig"
+              rows="15"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            ></textarea>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Версія</label>
-              <input v-model="formData.version" type="text"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <input
+                v-model="formData.version"
+                type="text"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Категорія *</label>
-              <select v-model="formData.category" required
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500">
+              <select
+                v-model="formData.category"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              >
                 <option value="">Виберіть категорію</option>
                 <option v-for="cat in categories" :key="cat.value" :value="cat.value">
                   {{ cat.label }}
@@ -439,48 +511,72 @@ onMounted(() => {
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">URL розробника</label>
-            <input v-model="formData.website" type="url"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+            <input
+              v-model="formData.website"
+              type="url"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            />
           </div>
 
           <div class="grid grid-cols-3 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Посилання x32</label>
-              <input v-model="formData.link32" type="url"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <input
+                v-model="formData.link32"
+                type="url"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Посилання x64</label>
-              <input v-model="formData.link64" type="url"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <input
+                v-model="formData.link64"
+                type="url"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Посилання x86-x64</label>
-              <input v-model="formData.linkcommon" type="url"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <input
+                v-model="formData.linkcommon"
+                type="url"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Додаткове посилання</label>
-              <input v-model="formData.linkupdate" type="url"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Додаткове посилання</label
+              >
+              <input
+                v-model="formData.linkupdate"
+                type="url"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Текст додаткового посилання</label>
-              <input v-model="formData.textupdate" type="text"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Текст додаткового посилання</label
+              >
+              <input
+                v-model="formData.textupdate"
+                type="text"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
             </div>
           </div>
 
           <div class="flex gap-4">
             <label class="flex items-center">
               <input v-model="formData.ispaid" type="checkbox" class="mr-2" />
-              <span class="text-sm font-medium text-gray-700">Shareware (потрібна підтримка розробника)</span>
+              <span class="text-sm font-medium text-gray-700"
+                >Shareware (потрібна підтримка розробника)</span
+              >
             </label>
             <label class="flex items-center">
               <input v-model="updateDate" type="checkbox" class="mr-2" />
@@ -489,12 +585,17 @@ onMounted(() => {
           </div>
 
           <div class="flex justify-end gap-3 pt-4">
-            <button type="button" @click="closeModal"
-              class="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors">
+            <button
+              type="button"
+              @click="closeModal"
+              class="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+            >
               Скасувати
             </button>
-            <button type="submit"
-              class="px-6 py-2 bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 rounded-md transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]">
+            <button
+              type="submit"
+              class="px-6 py-2 bg-linear-to-b from-white to-gray-100 hover:from-gray-50 hover:to-gray-200 text-gray-800 border border-gray-300 rounded-md transition-all font-semibold shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] hover:shadow-[0_2px_4px_-1px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.06),inset_0_1px_0_0_rgba(255,255,255,0.8)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]"
+            >
               {{ editingProgram ? 'Зберегти зміни' : 'Додати програму' }}
             </button>
           </div>
