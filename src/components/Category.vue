@@ -45,6 +45,7 @@ const textBlockContent = computed(() => {
   return ''
 })
 
+
 const fetchPrograms = async (category) => {
   loading.value = true
   error.value = null
@@ -81,6 +82,7 @@ const fetchPrograms = async (category) => {
 onMounted(() => {
   fetchPrograms(props.cat)
 })
+
 </script>
 
 <template>
@@ -112,12 +114,3 @@ onMounted(() => {
     <TextBlock v-if="props.cat === 'newest' || props.cat === 'dev'" :content="textBlockContent" />
   </div>
 </template>
-<script>
-export default {
-  methods: {
-    reRender() {
-      this.$forceUpdate()
-    },
-  },
-}
-</script>
