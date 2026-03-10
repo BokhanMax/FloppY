@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 py-8">
       <div class="text-center">
         <p class="text-gray-600 mb-4">
-          © 2026 <b><a href="/">Floppy</a></b> - скачати безкоштовний софт. Український каталог
+          © {{ new Date().getFullYear() }} <b><a href="/">Floppy</a></b> - скачати безкоштовний софт. Український каталог
           безкоштовних програм.<br />
           Всі права на програми належать їхнім розробникам.
         </p>

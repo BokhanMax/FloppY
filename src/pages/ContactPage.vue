@@ -41,7 +41,7 @@ import VLazyImage from 'v-lazy-image'
             />
           </picture>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]">Telegram</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж години</p>
         <a
           href="https://t.me/maxmidq"
@@ -80,7 +80,7 @@ import VLazyImage from 'v-lazy-image'
             />
           </picture>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]">Email</h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж 4-6 годин</p>
         <a
           href="mailto:floppyppua@ukr.net"
@@ -109,30 +109,30 @@ import VLazyImage from 'v-lazy-image'
     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 zasteregennya">
       <h3 class="text-xl font-semibold text-gray-800 mb-3">Застереження</h3>
       <div class="text-sm text-gray-600 leading-relaxed space-y-3">
-        <p>
-          <strong>Завантаження:</strong> Усе програмне забезпечення, доступне через каталог Floppy,
+        <p class="text-[1.125em] mb-[1.3em] text-justify">
+          <strong>Завантаження:</strong> Усе програмне забезпечення, доступне через каталог FloppY,
           надається «як є» без будь-яких гарантій. Хоча ми прагнемо забезпечити безпеку та
           функціональність усіх програм, рекомендуємо перевірити завантажені файли за допомогою
           антивірусного програмного забезпечення перед встановленням.
         </p>
-        <p>
+        <p class="text-[1.125em] mb-[1.3em] text-justify">
           <strong>Програмне забезпечення сторонніх розробників:</strong> Ми не несемо
           відповідальності за функціональність, безпеку чи підтримку стороннього програмного
           забезпечення. Будь ласка, звертайтеся до оригінальних розробників щодо конкретних проблем
           із програмним забезпеченням.
         </p>
-        <p>
+        <p class="text-[1.125em] mb-[1.3em] text-justify">
           <strong>Сумісність систем:</strong> Сумісність програмного забезпечення може відрізнятися
           залежно від версії вашої операційної системи та конфігурації обладнання. Завжди
-          <a href="/faq">перевіряйте системні вимоги</a> перед завантаженням.
+          <a href="/faq">перевіряйте системні вимоги</a> та правила сайту перед завантаженням.
         </p>
-        <p>
+        <p class="text-[1.125em] mb-[1.3em] text-justify">
           <strong>Обмеження підтримки:</strong> Наша служба підтримки надає загальну допомогу із
           завантаженнями та навігацією по каталогу. Щодо конкретних функцій програмного забезпечення
           або технічних проблем з окремими програмами, зверніться до документації до програмного
           забезпечення або зверніться до розробника.
         </p>
-        <p>
+        <p class="text-[1.125em] mb-[1.3em] text-justify">
           <strong>Конфіденційність даних:</strong> Ми поважаємо вашу конфіденційність і не передаємо
           вашу контактну інформацію третім особам.
         </p>
@@ -140,15 +140,3 @@ import VLazyImage from 'v-lazy-image'
     </div>
   </div>
 </template>
-
-<style scoped>
-.zasteregennya p {
-  font-size: 1.125rem;
-  margin-bottom: 1.3rem;
-  text-align: justify;
-}
-h3 {
-  border-bottom: 1px solid oklch(27.8% 0.033 256.848);
-  padding-bottom: 22px;
-}
-</style>
