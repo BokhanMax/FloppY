@@ -22,9 +22,23 @@ import VLazyImage from 'v-lazy-image'
           class="text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
           <picture>
-            <source media="(width < 800px)" :srcset="'icons/TelegramDesktopIcon-72w.avif'" />
-            <source media="(width >= 800px)" :srcset="'icons/TelegramDesktopIcon-96w.avif'" />
-            <v-lazy-image :src="'icons/source/TelegramDesktopIcon.png'" />
+            <source
+              media="(width < 800px)"
+              :srcset="'icons/TelegramDesktopIcon-72w.avif'"
+              :width="72"
+              :height="72"
+            />
+            <source
+              media="(width >= 800px)"
+              :srcset="'icons/TelegramDesktopIcon-96w.avif'"
+              :width="96"
+              :height="96"
+            />
+            <v-lazy-image
+              :src="'icons/source/TelegramDesktopIcon.png'"
+              :width="48"
+              :height="48"
+            />
           </picture>
         </div>
         <h3 class="text-xl font-semibold text-gray-900 mb-2">Telegram</h3>
@@ -47,9 +61,23 @@ import VLazyImage from 'v-lazy-image'
           class="text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
         >
           <picture>
-            <source media="(width < 800px)" :srcset="'icons/ThunderbirdIcon-72w.avif'" />
-            <source media="(width >= 800px)" :srcset="'icons/ThunderbirdIcon-96w.avif'" />
-            <v-lazy-image :src="'icons/source/ThunderbirdIcon.png'" />
+            <source
+              media="(width < 800px)"
+              :srcset="'icons/ThunderbirdIcon-72w.avif'"
+              :width="72"
+              :height="72"
+            />
+            <source
+              media="(width >= 800px)"
+              :srcset="'icons/ThunderbirdIcon-96w.avif'"
+              :width="96"
+              :height="96"
+            />
+            <v-lazy-image
+              :src="'icons/source/ThunderbirdIcon.png'"
+              :width="48"
+              :height="48"
+            />
           </picture>
         </div>
         <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>

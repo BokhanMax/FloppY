@@ -42,15 +42,21 @@ const date = props.createdAt.toDate().toLocaleDateString()
             <source
               media="(width < 800px)"
               :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'"
+              :width="72"
+              :height="72"
             />
             <source
               media="(width >= 800px)"
               :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'"
+              :width="96"
+              :height="96"
             />
             <v-lazy-image
               :src="'icons/source/' + props.name.replace(/\s+/g, '') + 'Icon.png'"
               :alt="'Скачати ' + props.name + ' безкоштовно'"
               :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
+              :width="48"
+              :height="48"
             />
           </picture>
         </div>

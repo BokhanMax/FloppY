@@ -106,14 +106,21 @@ onMounted(() => {
               <source
                 media="(width < 800px)"
                 :srcset="'/icons/' + program.name.replace(/\s+/g, '') + 'Icon-72w.avif'"
+                :width="72"
+                :height="72"
               />
               <source
                 media="(width >= 800px)"
                 :srcset="'/icons/' + program.name.replace(/\s+/g, '') + 'Icon-96w.avif'"
+                :width="96"
+                :height="96"
               />
               <v-lazy-image
                 :src="'/icons/fallback/' + program.name.replace(/\s+/g, '') + 'Icon.png'"
                 :alt="'Скачати програму ' + program.name + ' для Windows безкоштовно'"
+                :title="'Скачати безкоштовно ' + program.name + ' по прямому посиланню'"
+                :width="48"
+                :height="48"
                 class="w-12 h-12 object-contain"
               />
             </picture>
