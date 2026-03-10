@@ -113,7 +113,7 @@ onMounted(() => {
               />
               <v-lazy-image
                 :src="'/icons/fallback/' + program.name.replace(/\s+/g, '') + 'Icon.png'"
-                :alt="program.name"
+                :alt="'Скачати програму ' + program.name + ' для Windows безкоштовно'"
                 class="w-12 h-12 object-contain"
               />
             </picture>
