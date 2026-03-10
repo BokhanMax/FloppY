@@ -46,7 +46,7 @@ export default defineConfig(async ({ mode }) => {
         dynamicRoutes: allRoutes,
         hostname: 'https://floppy.pp.ua',
         exclude: ['/404', '/google791bf0808cd727c5'], // Exclude pages from sitemap
-        outDir: './docs',
+        outDir: './docs', // Output sitemap in the docs directory
         readable: true, // Format XML for readability
         changefreq: 'daily',
         priority: 0.8,
