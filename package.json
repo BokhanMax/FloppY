@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node src/helpers/SharpIconsConvert.js && vite build",
+    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite build",
     "buildhtml": "vite build",
     "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
