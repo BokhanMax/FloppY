@@ -1,8 +1,8 @@
 <script setup>
-import ProgramCard from '../components/ProgramCard.vue'
-import TextBlock from '../components/TextBlock.vue'
+import ProgramCard from './ProgramCard.vue'
+import TextBlock from '../TextBlock.vue'
 import { ref, onMounted, computed } from 'vue'
-import { db } from '../helpers/firebaseConfig'
+import { db } from '../../helpers/firebaseConfig'
 import { collection, query, where, orderBy, getDocs } from 'firebase/firestore'
 
 const props = defineProps({

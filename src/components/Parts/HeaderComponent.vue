@@ -1,6 +1,6 @@
 <script setup>
-import NavItem from './NavItem.vue'
-import Logo from './Logo.vue'
+import NavItem from '../NavItem.vue'
+import Logo from '../Logo.vue'
 </script>
 
 <template>

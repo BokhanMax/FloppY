@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-//import Homepage from '../pages/HomePage.vue'
-import Category from '../components/Category.vue'
+import Category from '../components/Parts/Category.vue'
 
 const router = createRouter({
   history: createWebHistory(),
