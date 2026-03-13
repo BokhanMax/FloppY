@@ -45,7 +45,6 @@ const textBlockContent = computed(() => {
   return ''
 })
 
-
 const fetchPrograms = async (category) => {
   loading.value = true
   error.value = null
@@ -82,7 +81,6 @@ const fetchPrograms = async (category) => {
 onMounted(() => {
   fetchPrograms(props.cat)
 })
-
 </script>
 
 <template>

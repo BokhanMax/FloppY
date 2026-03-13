@@ -34,14 +34,14 @@ import VLazyImage from 'v-lazy-image'
               :width="96"
               :height="96"
             />
-            <v-lazy-image
-              :src="'icons/source/TelegramDesktopIcon.png'"
-              :width="48"
-              :height="48"
-            />
+            <v-lazy-image :src="'icons/source/TelegramDesktopIcon.png'" :width="48" :height="48" />
           </picture>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]">Telegram</h3>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]"
+        >
+          Telegram
+        </h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж години</p>
         <a
           href="https://t.me/maxmidq"
@@ -73,14 +73,14 @@ import VLazyImage from 'v-lazy-image'
               :width="96"
               :height="96"
             />
-            <v-lazy-image
-              :src="'icons/source/ThunderbirdIcon.png'"
-              :width="48"
-              :height="48"
-            />
+            <v-lazy-image :src="'icons/source/ThunderbirdIcon.png'" :width="48" :height="48" />
           </picture>
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]">Email</h3>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 pb-5.5 border-b border-solid border-[#1e2939]"
+        >
+          Email
+        </h3>
         <p class="text-gray-600 mb-4">Відповідаю впродовж 4-6 годин</p>
         <a
           href="mailto:floppyppua@ukr.net"
