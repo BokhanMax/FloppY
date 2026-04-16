@@ -274,11 +274,8 @@ onMounted(() => {
 
 <template>
   <!-- Login Form -->
-  <div
-    v-if="!isAuthenticated"
-    class="min-h-screen flex items-center justify-center bg-gray-50 px-4"
-  >
-    <div class="max-w-md w-full bg-white border border-gray-200 rounded-lg p-8">
+  <div v-if="!isAuthenticated" class="min-h-screen flex items-start justify-center bg-gray-50 px-4">
+    <div class="max-w-md w-full bg-white border border-gray-200 rounded-lg p-4">
       <h2 class="text-2xl font-bold text-center text-green-dark mb-6">Доступ до управління</h2>
       <form @submit="handleLogin" class="space-y-4">
         <div>
@@ -305,9 +302,13 @@ onMounted(() => {
 
   <!-- Management Interface -->
   <div v-else class="max-w-7xl mx-auto px-4 py-8">
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold text-green-dark">Управління програмами</h1>
-      <div class="flex gap-3">
+    <div
+      class="flex justify-between items-center mb-6 xs:flex-col xs:gap-4 xs:items-center xs:content-center"
+    >
+      <h1 class="text-3xl font-bold text-green-dark xs:text-2xl xs:text-center">
+        Управління програмами
+      </h1>
+      <div class="flex gap-3 xs:flex-col xs:gap-2">
         <button
           @click="handleLogout"
           class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
@@ -340,7 +341,7 @@ onMounted(() => {
           <thead class="bg-gray-50 border-b border-gray-200">
             <tr>
               <th
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:hidden"
               >
                 ID
               </th>
@@ -354,13 +355,13 @@ onMounted(() => {
                 </div>
               </th>
               <th
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:px-2 xs:py-2"
               >
                 URL
               </th>
               <th
                 @click="sortBy('version')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:px-2 xs:py-2 cursor-pointer hover:bg-gray-100 select-none"
               >
                 <div class="flex items-center gap-2">
                   Версія
@@ -369,7 +370,7 @@ onMounted(() => {
               </th>
               <th
                 @click="sortBy('category')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:px-2 xs:py-2 cursor-pointer hover:bg-gray-100 select-none"
               >
                 <div class="flex items-center gap-2">
                   Категорія
@@ -378,7 +379,7 @@ onMounted(() => {
               </th>
               <th
                 @click="sortBy('date')"
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:px-2 xs:py-2 cursor-pointer hover:bg-gray-100 select-none"
               >
                 <div class="flex items-center gap-2">
                   Дата
@@ -386,7 +387,7 @@ onMounted(() => {
                 </div>
               </th>
               <th
-                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+                class="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider xs:px-2 xs:py-2"
               >
                 Дії
               </th>
@@ -394,18 +395,22 @@ onMounted(() => {
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
             <tr v-for="program in sortedPrograms" :key="program.id" class="hover:bg-gray-50">
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">{{ program.id }}</td>
-              <td class="px-4 py-3 text-sm font-medium text-gray-900">{{ program.name }}</td>
-              <td class="px-4 py-3 text-xs text-gray-500">
-                <a :href="program.website" target="_blank">www:/🔗</a>
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 xs:hidden">
+                {{ program.id }}
               </td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+              <td class="px-4 py-3 text-sm font-medium text-gray-900 xs:text-s">
+                {{ program.name }}
+              </td>
+              <td class="px-4 py-3 text-xs text-gray-500">
+                <a :href="program.website" target="_blank">link</a>
+              </td>
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 xs:text-xs">
                 {{ program.version }}
               </td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 xs:text-xs">
                 {{ program.category }}
               </td>
-              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+              <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500 xs:text-xs">
                 {{ formatDate(program.date) }}
               </td>
               <td class="px-4 py-3 whitespace-nowrap text-sm font-medium">

@@ -107,5 +107,7 @@ import Logo from '../Logo.vue'
 
 .nav-link.router-link-active:hover {
   color: white;
+  background-color: #0077ed;
+  border-color: #0077ed;
 }
 </style>
