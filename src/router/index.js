@@ -15,6 +15,15 @@ const router = createRouter({
       },
     }, */
     {
+      path: '/:pathMatch(.*)*',
+      name: '404',
+      component: Category,
+      props: { cat: 'newest', title: 'Останні оновлення програм' },
+      meta: {
+        title: '',
+      },
+    },
+    {
       path: '/manage',
       name: 'manage',
       component: () => import('../pages/Manage.vue'),

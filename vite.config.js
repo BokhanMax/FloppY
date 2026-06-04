@@ -15,7 +15,6 @@ const names = ['internet', 'media', 'drivers', 'dev', 'files', 'system', 'faq', 
 const staticRoutes = names.map((name) => `/${name}`)
 
 export default defineConfig(async ({ mode }) => {
-  // Load .env files into process.env for build-time (Node) usage.
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
   const env = loadEnv(mode, process.cwd(), '')
   Object.assign(process.env, env)
@@ -32,7 +31,6 @@ export default defineConfig(async ({ mode }) => {
   const allRoutes = [...staticRoutes, ...programRoutes].filter((route) => route !== '/404')
 
   return {
-    build: { outDir: './docs' },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -45,48 +43,12 @@ export default defineConfig(async ({ mode }) => {
       Sitemap({
         dynamicRoutes: allRoutes,
         hostname: 'https://floppy.pp.ua',
-        exclude: ['/404', '/google791bf0808cd727c5'], // Exclude pages from sitemap
-        outDir: './docs', // Output sitemap in the docs directory
-        readable: true, // Format XML for readability
+        exclude: ['/404', '/google791bf0808cd727c5'],
+        readable: true,
         changefreq: 'daily',
         priority: 0.8,
         lastmod: new Date().toISOString(),
       }),
-      // Plugin to copy 404.html with proper redirect script for GitHub Pages
-      {
-        name: 'copy-404',
-        writeBundle() {
-          const indexPath = path.resolve(__dirname, 'index.html')
-          const destPath = path.resolve(__dirname, 'docs', '404.html')
-
-          // Read index.html
-          let content = fs.readFileSync(indexPath, 'utf-8')
-
-          // Add redirect script before closing body tag
-          // This script handles SPA routing for GitHub Pages
-          const redirectScript = `
-    <script>
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>`
-
-          // Insert script before closing body tag
-          content = content.replace('</body>', redirectScript + '\n  </body>')
-
-          // Write to 404.html
-          fs.writeFileSync(destPath, content, 'utf-8')
-          console.log('✅ Created 404.html with SPA redirect for GitHub Pages')
-        },
-      },
     ],
   }
 })
