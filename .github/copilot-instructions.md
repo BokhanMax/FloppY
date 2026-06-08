@@ -156,7 +156,7 @@
 2. **Icon script location:** `src/helpers/SharpIconsConvert.js` (moved from root `src/`)
 3. **Static route list:** maintained manually in `vite.config.js` (must update when adding categories)
 4. **Sitemap freshness:** requires `npm run build` to fetch latest programs from Firestore
-5. **404 fallback:** GitHub Pages requires exact redirect script pattern — do not modify without testing
+5. **404 fallback / SPA routing:** Netlify uses `public/_redirects` with rule `/* /index.html 200` — do not remove or modify this file, all client-side routes depend on it
 6. **Admin password:** stored as plain hash in `.env` file — not cryptographically secure, suitable only for light protection
 
 ## Development Workflow
@@ -176,7 +176,7 @@
 ### Changing Routes
 1. Update `src/router/index.js` route definitions
 2. Update static routes list in `vite.config.js` for sitemap
-3. Verify 404.html redirect script still works
+3. `public/_redirects` does not need changes (wildcard rule covers all routes)
 4. Test navigation from all pages
 5. Run full build + preview to test production behavior
 
@@ -193,10 +193,18 @@
   - Icon loading and lazy loading
   - Mobile responsive layout
 
+## Deployment
+
+- **Platform:** Netlify
+- **SPA routing:** `public/_redirects` contains `/* /index.html 200` — required for all routes to work on direct URL access or page refresh
+- **Environment variables:** set in Netlify dashboard (e.g. `VITE_MANAGE_PWD`); also stored locally in `.env` for development
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+
 ## External Dependencies & Limits
 
 - Firebase Firestore free tier limits (read/write quotas)
-- GitHub Pages 1GB soft limit for repository size
+- Netlify free tier bandwidth/build limits
 - AVIF browser support (fallback icons may be needed for older browsers)
 - Sharp library requires Node.js for build-time image processing
 
