@@ -42,9 +42,7 @@ export const CATEGORIES = [
     label: 'Робота з файлами',
     title: 'Робота з файлами',
     metaTitle: 'Робота з файлами - Скачати безкоштовний софт | Floppy',
-    iconPaths: [
-      'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z',
-    ],
+    iconPaths: ['M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z'],
   },
   {
     cat: 'system',
@@ -76,8 +74,6 @@ export const CATEGORIES = [
     label: 'Розробка, програмування',
     title: 'Розробка, програмування',
     metaTitle: 'Розробка, програмування - Скачати безкоштовний софт | Floppy',
-    iconPaths: [
-      'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    ],
+    iconPaths: ['M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'],
   },
 ]

@@ -15,12 +15,7 @@ import { CATEGORIES } from '../../helpers/cats.js'
 
         <!-- Menu -->
         <nav class="flex flex-wrap justify-center md:justify-end gap-1 lg:gap-2">
-          <NavItem
-            v-for="cat in CATEGORIES"
-            :key="cat.slug"
-            :title="cat.navLabel"
-            :link="cat.slug"
-          >
+          <NavItem v-for="cat in CATEGORIES" :key="cat.slug" :title="cat.navLabel" :link="cat.slug">
             <template #icon>
               <path
                 v-for="(d, i) in cat.iconPaths"

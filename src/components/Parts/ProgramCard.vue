@@ -93,7 +93,9 @@ const date = props.createdAt.toDate().toLocaleDateString()
         <Paid v-if="ispaid" />
       </div>
     </div>
-    <p class="text-gray-600 mb-4 md:text-base xs:text-justify xs:text-sm xs:mx-2">{{ description }}</p>
+    <p class="text-gray-600 mb-4 md:text-base xs:text-justify xs:text-sm xs:mx-2">
+      {{ description }}
+    </p>
     <div class="flex flex-col sm:flex-row gap-2">
       <Button v-if="link64" title="Завантажити x64" :link="props.link64" />
       <Button v-if="link32" title="Завантажити x32" :link="props.link32" />

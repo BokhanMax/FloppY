@@ -1,5 +1,5 @@
 <script setup>
-const appVersion = __APP_VERSION__;
+const appVersion = __APP_VERSION__
 </script>
 
 <template>
@@ -8,9 +8,10 @@ const appVersion = __APP_VERSION__;
     <div class="container mx-auto px-4 py-8">
       <div class="text-center">
         <p class="text-gray-600 mb-4">
-          © {{ new Date().getFullYear() }} <b><a href="/">Floppy</a> | ver. {{ appVersion }}</b> - скачати безкоштовний
+          © {{ new Date().getFullYear() }} <b><a href="/">Floppy</a></b> - скачати безкоштовний
           софт. Український каталог безкоштовних програм.<br />
-          Всі права на програми належать їхнім розробникам.
+          Всі права на програми належать їхнім розробникам.<br />
+          Версія сайту: {{ appVersion }}
         </p>
         <RouterLink
           to="/contact"
