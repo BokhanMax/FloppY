@@ -8,6 +8,10 @@ import { fetchProgramRoutes } from './src/router/programroutes.js'
 import { CATEGORIES } from './src/helpers/cats.js'
 import fs from 'fs'
 import path from 'path'
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const pkg = require('./package.json')
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -34,6 +38,9 @@ export default defineConfig(async ({ mode }) => {
   const allRoutes = [...staticRoutes, ...programRoutes].filter((route) => route !== '/404')
 
   return {
+    define: {
+      __APP_VERSION__: JSON.stringify(pkg.version),
+    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
