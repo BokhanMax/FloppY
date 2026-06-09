@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8e2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardFree" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0fdf4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardPaid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fffbeb;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="14" flood-color="#00000018" />
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Декоративні кола -->
+  <circle cx="80"   cy="100" r="180" fill="#047857" opacity="0.04" />
+  <circle cx="1120" cy="530" r="220" fill="#d97706" opacity="0.04" />
+  <circle cx="600"  cy="630" r="300" fill="#047857" opacity="0.03" />
+
+  <!-- Сітка -->
+  <g stroke="#a0a8a0" stroke-width="0.5" opacity="0.12">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="240" y1="0" x2="240" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" />
+    <line x1="960" y1="0" x2="960" y2="630" />
+  </g>
+
+  <!-- Роздільник по центру -->
+  <line x1="600" y1="100" x2="600" y2="530" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="8 6" />
+
+  <!-- ===== ЛІВА КАРТКА — Безкоштовне ===== -->
+  <rect x="80" y="100" width="460" height="360" rx="20" ry="20" fill="url(#cardFree)" filter="url(#shadow)" />
+
+  <!-- Зелена шапка -->
+  <rect x="80" y="100" width="460" height="72" rx="20" ry="20" fill="#047857" />
+  <rect x="80" y="148" width="460" height="24" fill="#047857" />
+
+  <!-- Заголовок лівої картки -->
+  <text x="310" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Безкоштовне (Freeware)</text>
+
+  <!-- Іконка галочки -->
+  <circle cx="310" cy="230" r="34" fill="#dcfce7" />
+  <path d="M294 230 l10 12 l22 -22" stroke="#047857" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+  <!-- Пункти лівої картки -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#1a2e1a">
+    <circle cx="118" cy="298" r="5" fill="#047857" />
+    <text x="136" y="304">Повний функціонал без оплати</text>
+
+    <circle cx="118" cy="338" r="5" fill="#047857" />
+    <text x="136" y="344">Без обмежень часу або функцій</text>
+
+    <circle cx="118" cy="378" r="5" fill="#047857" />
+    <text x="136" y="384">Без реєстрації</text>
+
+    <circle cx="118" cy="418" r="5" fill="#047857" />
+    <text x="136" y="424">Можна використовувати назавжди</text>
+  </g>
+
+  <!-- Мітка "Більшість на Floppy" -->
+  <rect x="148" y="445" width="322" height="34" rx="17" fill="#047857" opacity="0.12" />
+  <text x="309" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#047857" text-anchor="middle">&#10003; Більшість програм на Floppy</text>
+
+  <!-- ===== ПРАВА КАРТКА — Умовно-безкоштовне ===== -->
+  <rect x="660" y="100" width="460" height="360" rx="20" ry="20" fill="url(#cardPaid)" filter="url(#shadow)" />
+
+  <!-- Жовта шапка -->
+  <rect x="660" y="100" width="460" height="72" rx="20" ry="20" fill="#d97706" />
+  <rect x="660" y="148" width="460" height="24" fill="#d97706" />
+
+  <!-- Заголовок правої картки -->
+  <text x="890" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Умовно-безкоштовне</text>
+
+  <!-- Іконка замку -->
+  <circle cx="890" cy="230" r="34" fill="#fef3c7" />
+  <rect x="876" y="228" width="28" height="20" rx="4" fill="none" stroke="#d97706" stroke-width="3.5" />
+  <path d="M882 228 v-8 a8 8 0 0 1 16 0 v8" fill="none" stroke="#d97706" stroke-width="3.5" stroke-linecap="round" />
+  <circle cx="890" cy="237" r="3" fill="#d97706" />
+
+  <!-- Пункти правої картки -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#2e1a0a">
+    <circle cx="698" cy="298" r="5" fill="#d97706" />
+    <text x="716" y="304">Базовий функціонал — безплатно</text>
+
+    <circle cx="698" cy="338" r="5" fill="#d97706" />
+    <text x="716" y="344">Платна ліцензія для повного доступу</text>
+
+    <circle cx="698" cy="378" r="5" fill="#d97706" />
+    <text x="716" y="384">Часто є пробний період</text>
+
+    <circle cx="698" cy="418" r="5" fill="#d97706" />
+    <text x="716" y="424">Деякі функції заблоковані</text>
+  </g>
+
+  <!-- Мітка "Зрідка на Floppy" -->
+  <rect x="728" y="445" width="322" height="34" rx="17" fill="#d97706" opacity="0.12" />
+  <text x="889" y="467" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" fill="#b45309" text-anchor="middle">&#9432; Зрідка зустрічається на Floppy</text>
+
+  <!-- Нижній підпис -->
+  <text x="600" y="572" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="700" fill="#374151" text-anchor="middle">FloppY — скачати безкоштовний софт для Windows</text>
+</svg>

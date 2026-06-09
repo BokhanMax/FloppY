@@ -7,6 +7,7 @@ import SiteFooter from './components/Parts/FooterComponent.vue'
 
 const route = useRoute()
 useHead({
+  htmlAttrs: { lang: 'uk-UA' },
   title: computed(() => route.meta.title || 'Скачати безкоштовний софт | Floppy'),
 })
 </script>

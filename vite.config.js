@@ -19,7 +19,14 @@ const staticRoutes = [
   ...CATEGORIES.map((c) => `/${c.slug}`),
   '/faq',
   '/contact',
+  '/blog',
 ]
+
+// Генерація маршрутів для постів блогу з файлів /blog/*.md
+const blogRoutes = fs
+  .readdirSync(path.join(__dirname, 'blog'))
+  .filter((f) => f.endsWith('.md'))
+  .map((f) => `/blog/${f.replace(/\.md$/, '')}`)
 
 export default defineConfig(async ({ mode }) => {
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
@@ -35,7 +42,9 @@ export default defineConfig(async ({ mode }) => {
   }
 
   // Combine static and dynamic routes, exclude /404
-  const allRoutes = [...staticRoutes, ...programRoutes].filter((route) => route !== '/404')
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...programRoutes].filter(
+    (route) => route !== '/404',
+  )
 
   return {
     define: {
@@ -60,5 +69,12 @@ export default defineConfig(async ({ mode }) => {
         lastmod: new Date().toISOString(),
       }),
     ],
+    ssgOptions: {
+      includedRoutes(paths) {
+        // Виключаємо шаблони з параметрами (/:id, /:slug) — vite-ssg не може їх рендерити
+        const filtered = paths.filter((p) => !p.includes(':'))
+        return [...filtered, ...blogRoutes, ...programRoutes]
+      },
+    },
   }
 })

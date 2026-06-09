@@ -9,19 +9,21 @@ const appVersion = __APP_VERSION__
       <div class="text-center">
         <p class="text-gray-600 mb-4">
           © {{ new Date().getFullYear() }} <b><a href="/">Floppy</a></b> - скачати безкоштовний
-          софт. Український каталог безкоштовних програм.<br />
+          софт. Український каталог безкоштовних програм.<br class="xs:hidden" />
           Всі права на програми належать їхнім розробникам.<br />
           Версія сайту: {{ appVersion }}
         </p>
-        <RouterLink
-          to="/contact"
-          class="text-[#0071e3] hover:text-[#005bb5] transition-colors mr-16"
-        >
-          Зв'язатись з адміном
-        </RouterLink>
-        <RouterLink to="/faq" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
-          FAQ
-        </RouterLink>
+        <div class="flex justify-center gap-4">
+          <RouterLink to="/contact" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
+            Зв'язок з адміном
+          </RouterLink>
+          <RouterLink to="/blog" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
+            Блог
+          </RouterLink>
+          <RouterLink to="/faq" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
+            FAQ
+          </RouterLink>
+        </div>
       </div>
     </div>
   </footer>

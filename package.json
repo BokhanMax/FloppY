@@ -16,6 +16,7 @@
     "@gtm-support/vue-gtm": "*",
     "fs": "*",
     "fs-extra": "*",
+    "marked": "^18.0.5",
     "sharp": "*",
     "v-lazy-image": "*",
     "vite-ssg": "^28.3.0",

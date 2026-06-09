@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e2e8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="20" flood-color="#00000020" />
+    </filter>
+    <filter id="textShadow" x="-5%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <circle cx="120"  cy="80"  r="200" fill="#047857" opacity="0.04" />
+  <circle cx="1100" cy="560" r="260" fill="#047857" opacity="0.04" />
+  <circle cx="1050" cy="80"  r="140" fill="#0071e3" opacity="0.03" />
+  <circle cx="160"  cy="560" r="180" fill="#0071e3" opacity="0.03" />
+  <g stroke="#b0b0be" stroke-width="0.5" opacity="0.15">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="200"  y1="0" x2="200"  y2="630" />
+    <line x1="400"  y1="0" x2="400"  y2="630" />
+    <line x1="600"  y1="0" x2="600"  y2="630" />
+    <line x1="800"  y1="0" x2="800"  y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+  <rect x="470" y="150" width="260" height="260" rx="44" ry="44" fill="#ffffff" filter="url(#shadow)" />
+  <g transform="translate(520, 200) scale(2.5)" fill="#047857">
+    <path d="M35.2673988,6.0411h-7.9999981v10h7.9999981V6.0411z M33.3697014,14.1434002h-4.2046013V7.9387999h4.2046013V14.1434002z"/>
+    <path d="M41,47.0410995H21c-0.5527992,0-1,0.4472008-1,1c0,0.5527,0.4472008,1,1,1h20c0.5527,0,1-0.4473,1-1 C42,47.4883003,41.5527,47.0410995,41,47.0410995z"/>
+    <path d="M41,39.0410995H21c-0.5527992,0-1,0.4472008-1,1c0,0.5527,0.4472008,1,1,1h20c0.5527,0,1-0.4473,1-1 C42,39.4883003,41.5527,39.0410995,41,39.0410995z"/>
+    <path d="M12,56.0410995h38v-26H12V56.0410995z M14,32.0410995h34v22H14V32.0410995z"/>
+    <path d="M49.3811989,0.0411L49.3610992,0H7C4.7908001,0,3,1.7909,3,4v56c0,2.2092018,1.7908001,4,4,4h50 c2.2090988,0,4-1.7907982,4-4V11.6962996L49.3811989,0.0411z M39.9604988,2.0804999v17.9211006H14.0394001V2.0804999H39.9604988z M59,60c0,1.1027985-0.8972015,2-2,2H7c-1.1027999,0-2-0.8972015-2-2V4c0-1.1027999,0.8972001-2,2-2h5v20.0410995h30V2h6.5099983 L59,12.5228996V60z"/>
+  </g>
+  <text x="600" y="466" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#1a1a2e" text-anchor="middle" filter="url(#textShadow)">FloppY</text>
+  <rect x="546" y="478" width="108" height="3" rx="2" fill="#047857" opacity="0.45" />
+  <text x="600" y="512" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="400" fill="#6b7280" text-anchor="middle">Безкоштовний софт для Windows</text>
+</svg>
