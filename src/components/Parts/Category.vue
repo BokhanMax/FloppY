@@ -88,7 +88,7 @@ onMounted(() => {
     <div class="flex justify-center mb-8">
       <hr class="w-24 border-t border-gray-300" />
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
       <ProgramCard
         v-for="program in programs"
         :key="program.id"

@@ -27,7 +27,7 @@ const date = props.createdAt.toDate().toLocaleDateString()
 
 <template>
   <div
-    class="bg-white border border-gray-200 rounded-lg 2xl:p-5 lg:p-3 xs:p-3 hover:border-gray-300 transition-colors"
+    class="bg-white border border-gray-200 rounded-lg 2xl:p-5 lg:p-3 xs:p-4 hover:border-gray-300 transition-colors justify-between flex flex-col"
     :id="props.id"
   >
     <div class="flex items-center place-content-between mb-4">
@@ -93,7 +93,7 @@ const date = props.createdAt.toDate().toLocaleDateString()
         <Paid v-if="ispaid" />
       </div>
     </div>
-    <p class="text-gray-600 mb-4 md:text-base">{{ description }}</p>
+    <p class="text-gray-600 mb-4 md:text-base xs:text-justify xs:text-sm xs:mx-2">{{ description }}</p>
     <div class="flex flex-col sm:flex-row gap-2">
       <Button v-if="link64" title="Завантажити x64" :link="props.link64" />
       <Button v-if="link32" title="Завантажити x32" :link="props.link32" />
