@@ -2,6 +2,7 @@
 import { ref, onMounted, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { db } from '../helpers/firebaseConfig'
+import { CATEGORIES } from '../helpers/cats.js'
 import { doc, getDoc } from 'firebase/firestore'
 import { Timestamp } from 'firebase/firestore'
 import VLazyImage from 'v-lazy-image'
@@ -46,15 +47,8 @@ const date = computed(() => {
 })
 
 const categoryName = computed(() => {
-  const categories = {
-    internet: 'Інтернет, месенджери, RDP',
-    system: 'Системні утиліти',
-    drivers: 'Драйвери',
-    media: 'Програми для медіа',
-    files: 'Робота з файлами',
-    dev: 'Розробка, програмування',
-  }
-  return categories[program.value?.category] || program.value?.category || ''
+  const found = CATEGORIES.find((c) => c.cat === program.value?.category)
+  return found?.label || program.value?.category || ''
 })
 
 // Update document title when program is loaded

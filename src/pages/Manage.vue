@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { db } from '../helpers/firebaseConfig'
+import { CATEGORIES } from '../helpers/cats.js'
 import {
   collection,
   query,
@@ -54,14 +55,7 @@ const formData = ref({
 
 const updateDate = ref(true)
 
-const categories = [
-  { value: 'internet', label: 'Інтернет, месенджери, RDP' },
-  { value: 'system', label: 'Системні утиліти' },
-  { value: 'drivers', label: 'Драйвери' },
-  { value: 'media', label: 'Програми для медіа' },
-  { value: 'files', label: 'Робота з файлами' },
-  { value: 'dev', label: 'Розробка, програмування' },
-]
+const categories = CATEGORIES.map((c) => ({ value: c.cat, label: c.label }))
 
 const fetchPrograms = async () => {
   loading.value = true

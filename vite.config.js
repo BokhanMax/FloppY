@@ -5,14 +5,17 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import Sitemap from 'vite-plugin-sitemap'
 import { fetchProgramRoutes } from './src/router/programroutes.js'
+import { CATEGORIES } from './src/helpers/cats.js'
 import fs from 'fs'
 import path from 'path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const names = ['internet', 'media', 'drivers', 'dev', 'files', 'system', 'faq', 'contact']
-
-const staticRoutes = names.map((name) => `/${name}`)
+const staticRoutes = [
+  ...CATEGORIES.map((c) => `/${c.slug}`),
+  '/faq',
+  '/contact',
+]
 
 export default defineConfig(async ({ mode }) => {
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.

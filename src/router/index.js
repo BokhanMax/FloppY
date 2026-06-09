@@ -1,4 +1,5 @@
 import Category from '../components/Parts/Category.vue'
+import { CATEGORIES } from '../helpers/cats.js'
 
 export const routes = [
     // Pages
@@ -63,60 +64,13 @@ export const routes = [
         title: '',
       },
     },
-    {
-      path: '/internet',
-      name: 'internet',
+    ...CATEGORIES.map((c) => ({
+      path: `/${c.slug}`,
+      name: c.slug,
       component: Category,
-      props: { cat: 'internet', title: 'Програми для Інтернету' },
-      meta: {
-        title: 'Інтернет, месенджери, RDP - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
-      path: '/system',
-      name: 'system',
-      component: Category,
-      props: { cat: 'system', title: 'Системні утиліти' },
-      meta: {
-        title: 'Програми для системи - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
-      path: '/drivers',
-      name: 'drivers',
-      component: Category,
-      props: { cat: 'drivers', title: 'Драйвери' },
-      meta: {
-        title: 'Драйвери - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
-      path: '/media',
-      name: 'media',
-      component: Category,
-      props: { cat: 'media', title: 'Програми для медіа' },
-      meta: {
-        title: 'Програми для аудіо, відео - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
-      path: '/files',
-      name: 'files',
-      component: Category,
-      props: { cat: 'files', title: 'Робота з файлами' },
-      meta: {
-        title: 'Робота з файлами - Скачати безкоштовний софт | Floppy',
-      },
-    },
-    {
-      path: '/development',
-      name: 'development',
-      component: Category,
-      props: { cat: 'dev', title: 'Розробка, програмування' },
-      meta: {
-        title: 'Розробка, програмування - Скачати безкоштовний софт | Floppy',
-      },
-    },
+      props: { cat: c.cat, title: c.title },
+      meta: { title: c.metaTitle },
+    })),
 ]
 
 export function setupRouter(router) {
