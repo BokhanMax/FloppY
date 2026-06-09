@@ -1,9 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
 import Category from '../components/Parts/Category.vue'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
+export const routes = [
     // Pages
 
     /*     {
@@ -120,11 +117,12 @@ const router = createRouter({
         title: 'Розробка, програмування - Скачати безкоштовний софт | Floppy',
       },
     },
-  ],
-})
+]
 
-router.beforeEach((to, from) => {
-  document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy' // Set title based on meta or a default
-})
-
-export default router
+export function setupRouter(router) {
+  router.beforeEach((to) => {
+    if (typeof document !== 'undefined') {
+      document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy'
+    }
+  })
+}

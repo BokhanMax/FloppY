@@ -1,6 +1,14 @@
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import SiteHeader from './components/Parts/HeaderComponent.vue'
 import SiteFooter from './components/Parts/FooterComponent.vue'
+
+const route = useRoute()
+useHead({
+  title: computed(() => route.meta.title || 'Скачати безкоштовний софт | Floppy'),
+})
 </script>
 
 <template>

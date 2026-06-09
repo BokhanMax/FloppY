@@ -1,25 +1,23 @@
 import './assets/style.css'
 
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import Floppy from './Floppy.vue'
-import router from './router'
+import { routes, setupRouter } from './router'
 
 import { createGtm } from '@gtm-support/vue-gtm'
 import { createGtag } from 'vue-gtag'
 
-const gtag = createGtag({
-  tagId: 'G-LVRGKFB5Y6',
+export const createApp = ViteSSG(Floppy, { routes }, ({ app, router, isClient }) => {
+  setupRouter(router)
+  if (isClient) {
+    const gtag = createGtag({ tagId: 'G-LVRGKFB5Y6' })
+    app.use(gtag)
+    app.use(
+      createGtm({
+        id: 'GTM-TFSLLQWC',
+        vueRouter: router,
+        defer: true,
+      }),
+    )
+  }
 })
-
-const app = createApp(Floppy)
-app.use(router)
-app.use(gtag)
-app.use(
-  createGtm({
-    id: 'GTM-TFSLLQWC',
-    vueRouter: router,
-    defer: true,
-  }),
-)
-
-app.mount('#app')

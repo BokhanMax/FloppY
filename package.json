@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite build",
-    "buildhtml": "vite build",
+    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite-ssg build",
+    "buildhtml": "vite-ssg build",
     "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
     "import": "node import/import_lines.cjs",
@@ -14,12 +14,13 @@
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "*",
-    "vue-gtag": "*",
     "fs": "*",
     "fs-extra": "*",
     "sharp": "*",
     "v-lazy-image": "*",
+    "vite-ssg": "^28.3.0",
     "vue": "*",
+    "vue-gtag": "*",
     "vue-router": "*",
     "vuefire": "*"
   },
