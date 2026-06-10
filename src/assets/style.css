@@ -1,12 +1,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --breakpoint-xs: 22rem;
-  --container-xs: 22rem;
-  --light-green: '#d1fae5';
-  --green-custom: '#059669';
-  --green-dark: '#047857';
-  --green-accent: '#10b981';
-  --neutral-bg: '#f9fafb';
-  --border-color: '#e5e7eb';
+  --breakpoint-xs: 25rem;
+  --container-xs: 25rem;
 }
