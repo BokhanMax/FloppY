@@ -72,8 +72,9 @@ export default defineConfig(async ({ mode }) => {
     ssgOptions: {
       includedRoutes(paths) {
         // Виключаємо шаблони з параметрами (/:id, /:slug) — vite-ssg не може їх рендерити
+        // Маршрути /program/:id навмисно виключено з SSG
         const filtered = paths.filter((p) => !p.includes(':'))
-        return [...filtered, ...blogRoutes, ...programRoutes]
+        return [...filtered, ...blogRoutes]
       },
     },
   }
