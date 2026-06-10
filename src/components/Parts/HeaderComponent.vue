@@ -43,7 +43,8 @@ import { CATEGORIES } from '../../helpers/cats.js'
 <style scoped>
 /* Фикс для hover на активном пункте меню */
 .nav-link:not(.router-link-active):hover {
-  color: #0071e3;
+  color: white;
+  background-color: #0077ed;
 }
 
 .nav-link.router-link-active:hover {
