@@ -41,9 +41,9 @@ export default defineConfig(async ({ mode }) => {
     console.warn('   Sitemap will be generated without program routes')
   }
 
-  // Combine static and dynamic routes, exclude /404
+  // Combine static and dynamic routes
   const allRoutes = [...staticRoutes, ...blogRoutes, ...programRoutes].filter(
-    (route) => route !== '/404',
+    (route) => route.replace(/\s+/g, '%20'),
   )
 
   return {
@@ -64,9 +64,6 @@ export default defineConfig(async ({ mode }) => {
         hostname: 'https://floppy.pp.ua',
         i18n: false,
         exclude: ['/404', '/google791bf0808cd727c5'],
-        readable: true,
-        changefreq: 'daily',
-        priority: 0.8,
         lastmod: new Date().toISOString(),
         generateImageTags: false,
         generateVideoTags: false,
