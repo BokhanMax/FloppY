@@ -62,11 +62,21 @@ export default defineConfig(async ({ mode }) => {
       Sitemap({
         dynamicRoutes: allRoutes,
         hostname: 'https://floppy.pp.ua',
+        i18n: false,
         exclude: ['/404', '/google791bf0808cd727c5'],
         readable: true,
         changefreq: 'daily',
         priority: 0.8,
         lastmod: new Date().toISOString(),
+        generateImageTags: false,
+        generateVideoTags: false,
+        generateNewsTags: false,
+        xmlns: {
+          news: false,
+          xhtml: false,
+          image: false,
+          video: false
+        }
       }),
     ],
     ssgOptions: {
