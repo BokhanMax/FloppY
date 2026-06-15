@@ -28,6 +28,16 @@ const blogRoutes = fs
   .filter((f) => f.endsWith('.md'))
   .map((f) => `/blog/${f.replace(/\.md$/, '')}`)
 
+const customDate = new Date();
+customDate.toISOString = function() {
+  return this.getUTCFullYear() +
+    '-' + String(this.getUTCMonth() + 1).padStart(2, '0') +
+    '-' + String(this.getUTCDate()).padStart(2, '0') +
+    'T' + String(this.getUTCHours()).padStart(2, '0') +
+    ':' + String(this.getUTCMinutes()).padStart(2, '0') +
+    ':' + String(this.getUTCSeconds()).padStart(2, '0') + 'Z';
+};
+
 export default defineConfig(async ({ mode }) => {
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
   const env = loadEnv(mode, process.cwd(), '')
@@ -43,8 +53,7 @@ export default defineConfig(async ({ mode }) => {
 
   // Combine static and dynamic routes
   const allRoutes = [...staticRoutes, ...blogRoutes, ...programRoutes].filter(
-    (route) => route.replace(/\s+/g, '%20'),
-  )
+    (route) => route)
 
   return {
     define: {
@@ -64,16 +73,19 @@ export default defineConfig(async ({ mode }) => {
         hostname: 'https://floppy.pp.ua',
         i18n: false,
         exclude: ['/404', '/google791bf0808cd727c5'],
-        lastmod: new Date().toISOString(),
         generateImageTags: false,
         generateVideoTags: false,
         generateNewsTags: false,
+        lastmod: customDate,
         xmlns: {
           news: false,
           xhtml: false,
           image: false,
           video: false
-        }
+        }/* ,
+        modifyTime: (time) => {
+          return new Date(time).toISOString().replace(/\.\d{3}Z$/, 'Z');
+        } */
       }),
     ],
     ssgOptions: {

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite-ssg build",
-    "buildhtml": "vite-ssg build",
+    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite-ssg build && node clean-sitemap.js",
+    "buildhtml": "vite-ssg build && node clean-sitemap.js",
     "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
     "import": "node import/import_lines.cjs",
