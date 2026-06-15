@@ -1,6 +1,7 @@
 <script setup>
 import ProgramCard from './ProgramCard.vue'
 import TextBlock from '../TextBlock.vue'
+import BlogPreview from '@/components/BlogPreview.vue'
 import { ref, onMounted, computed } from 'vue'
 import { db } from '../../helpers/firebaseConfig'
 import { collection, query, where, orderBy, getDocs } from 'firebase/firestore'
@@ -107,7 +108,7 @@ onMounted(() => {
         :ispaid="program.ispaid"
       />
     </div>
-
+    <BlogPreview v-if="props.cat === 'newest'" />
     <TextBlock v-if="props.cat === 'newest' || props.cat === 'dev'" :content="textBlockContent" />
   </div>
 </template>

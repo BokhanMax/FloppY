@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e2e8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#00000018" />
+    </filter>
+    <filter id="textShadow" x="-5%" y="-5%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015" />
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Декоративні кола -->
+  <circle cx="100"  cy="100"  r="200" fill="#047857" opacity="0.04" />
+  <circle cx="1100" cy="530"  r="250" fill="#047857" opacity="0.04" />
+  <circle cx="1080" cy="80"   r="130" fill="#0071e3" opacity="0.03" />
+
+  <!-- Сітка -->
+  <g stroke="#b0b0be" stroke-width="0.5" opacity="0.12">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="240"  y1="0" x2="240"  y2="630" />
+    <line x1="480"  y1="0" x2="480"  y2="630" />
+    <line x1="720"  y1="0" x2="720"  y2="630" />
+    <line x1="960"  y1="0" x2="960"  y2="630" />
+  </g>
+
+  <!-- Основна картка -->
+  <rect x="160" y="100" width="880" height="360" rx="32" ry="32" fill="#ffffff" filter="url(#shadow)" />
+  <!-- Зелена смужка зверху -->
+  <rect x="160" y="100" width="880" height="8" rx="4" ry="4" fill="#047857" />
+
+  <!-- Іконка: вікно інсталятора (зліва) -->
+  <!-- Вікно -->
+  <rect x="220" y="155" width="220" height="170" rx="10" ry="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" />
+  <!-- Заголовок вікна -->
+  <rect x="220" y="155" width="220" height="30" rx="10" ry="0" fill="#047857" />
+  <rect x="220" y="170" width="220" height="15" fill="#047857" />
+  <circle cx="240" cy="170" r="6" fill="#d1fae5" opacity="0.7" />
+  <circle cx="258" cy="170" r="6" fill="#d1fae5" opacity="0.5" />
+  <circle cx="276" cy="170" r="6" fill="#d1fae5" opacity="0.3" />
+  <text x="330" y="175" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">Встановлення</text>
+
+  <!-- Тіло вікна: пункти з прапорцями -->
+  <!-- Пункт 1: корисний (зелена галочка) -->
+  <rect x="238" y="200" width="14" height="14" rx="3" ry="3" fill="#047857" />
+  <text x="250" y="212" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="265" y="212" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#374151">Встановити програму</text>
+
+  <!-- Пункт 2: небажаний (червоний хрест) -->
+  <rect x="238" y="222" width="14" height="14" rx="3" ry="3" fill="#ef4444" />
+  <text x="250" y="234" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="265" y="234" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Встановити тулбар</text>
+
+  <!-- Пункт 3: небажаний (червоний хрест) -->
+  <rect x="238" y="244" width="14" height="14" rx="3" ry="3" fill="#ef4444" />
+  <text x="250" y="256" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="265" y="256" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Змінити браузер</text>
+
+  <!-- Пункт 4: небажаний (червоний хрест) -->
+  <rect x="238" y="266" width="14" height="14" rx="3" ry="3" fill="#ef4444" />
+  <text x="250" y="278" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">✗</text>
+  <text x="265" y="278" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Реклам. ПЗ</text>
+
+  <!-- Кнопка "Вибіркове встановлення" -->
+  <rect x="238" y="295" width="172" height="26" rx="6" ry="6" fill="#047857" />
+  <text x="324" y="312" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Вибіркове встановлення</text>
+
+  <!-- Велика зелена галочка (права частина) -->
+  <circle cx="760" cy="245" r="90" fill="#d1fae5" />
+  <circle cx="760" cy="245" r="74" fill="#ffffff" />
+  <g stroke="#047857" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M720,248 L748,276 L800,214" />
+  </g>
+
+  <!-- Текст посередині між вікном і галочкою -->
+  <text x="520" y="230" font-family="'Segoe UI', Arial, sans-serif" font-size="36" fill="#d1d5db" text-anchor="middle">→</text>
+
+  <!-- Заголовок знизу -->
+  <text x="600" y="512" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a2e" text-anchor="middle" filter="url(#textShadow)">Встановлення без сміття</text>
+  <rect x="468" y="524" width="264" height="3" rx="2" fill="#047857" opacity="0.5" />
+  <text x="600" y="562" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#6b7280" text-anchor="middle">Як не підчепити небажане ПЗ при встановленні програм</text>
+</svg>
