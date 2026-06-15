@@ -44,7 +44,7 @@ useHead({
       <span>/</span>
       <span class="text-gray-700 truncate">{{ post.title }}</span>
     </nav> -->
-    
+
     <!-- Посилання назад -->
     <div class="my-8">
       <RouterLink
