@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+Disallow: /_redirects
+Disallow: /netlify.toml
+
 Sitemap: https://floppy.pp.ua/sitemap.xml
