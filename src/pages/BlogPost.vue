@@ -236,4 +236,46 @@ useHead({
   margin: 1.5rem auto;
   display: block;
 }
+
+.blog-content :deep(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.blog-content :deep(thead) {
+  background: #047857;
+  color: #fff;
+}
+
+.blog-content :deep(thead th) {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.blog-content :deep(tbody tr) {
+  border-top: 1px solid #e5e7eb;
+  transition: background 0.15s;
+}
+
+.blog-content :deep(tbody tr:nth-child(even)) {
+  background: #f9fafb;
+}
+
+.blog-content :deep(tbody tr:hover) {
+  background: #f0fdf4;
+}
+
+.blog-content :deep(tbody td) {
+  padding: 0.6875rem 1rem;
+  color: #374151;
+  vertical-align: middle;
+}
 </style>

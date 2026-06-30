@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e2e8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#00000018" />
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#04785740" />
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Декоративні кола -->
+  <circle cx="80"   cy="90"  r="190" fill="#047857" opacity="0.05" />
+  <circle cx="1120" cy="540" r="230" fill="#047857" opacity="0.05" />
+  <circle cx="1090" cy="70"  r="120" fill="#0071e3" opacity="0.04" />
+
+  <!-- Сітка -->
+  <g stroke="#b0b0be" stroke-width="0.5" opacity="0.12">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="240"  y1="0" x2="240"  y2="630" />
+    <line x1="480"  y1="0" x2="480"  y2="630" />
+    <line x1="720"  y1="0" x2="720"  y2="630" />
+    <line x1="960"  y1="0" x2="960"  y2="630" />
+  </g>
+
+  <!-- Центральне коло: символ "відкритого замка" / open source -->
+  <circle cx="600" cy="252" r="130" fill="#ffffff" filter="url(#shadow)" />
+  <circle cx="600" cy="252" r="112" fill="#f0fdf4" />
+
+  <!-- Символ: < / > — код -->
+  <g fill="none" stroke="#047857" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- < -->
+    <path d="M540,220 L510,252 L540,284" />
+    <!-- > -->
+    <path d="M660,220 L690,252 L660,284" />
+    <!-- / -->
+    <line x1="621" y1="212" x2="579" y2="292" />
+  </g>
+
+  <!-- Орбіта навколо центру (людини-розробники) -->
+  <circle cx="600" cy="252" r="170" fill="none" stroke="#047857" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.3" />
+
+  <!-- 6 аватарів-розробників по орбіті -->
+  <!-- Позиції: 0°, 60°, 120°, 180°, 240°, 300° від центру (600,252), радіус 170 -->
+  <!-- 0°:   (770, 252) -->
+  <circle cx="770" cy="252" r="22" fill="#047857" opacity="0.85" filter="url(#glow)" />
+  <text x="770" y="258" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+  <!-- 60°:  (685, 105) -->
+  <circle cx="685" cy="105" r="22" fill="#059669" opacity="0.85" filter="url(#glow)" />
+  <text x="685" y="111" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+  <!-- 120°: (515, 105) -->
+  <circle cx="515" cy="105" r="22" fill="#047857" opacity="0.85" filter="url(#glow)" />
+  <text x="515" y="111" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+  <!-- 180°: (430, 252) -->
+  <circle cx="430" cy="252" r="22" fill="#059669" opacity="0.85" filter="url(#glow)" />
+  <text x="430" y="258" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+  <!-- 240°: (515, 399) -->
+  <circle cx="515" cy="399" r="22" fill="#047857" opacity="0.85" filter="url(#glow)" />
+  <text x="515" y="405" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+  <!-- 300°: (685, 399) -->
+  <circle cx="685" cy="399" r="22" fill="#059669" opacity="0.85" filter="url(#glow)" />
+  <text x="685" y="405" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">👤</text>
+
+  <!-- Лінії від аватарів до центру -->
+  <g stroke="#047857" stroke-width="1" opacity="0.2">
+    <line x1="748" y1="252" x2="730" y2="252" />
+    <line x1="666" y1="116" x2="650" y2="128" />
+    <line x1="534" y1="116" x2="550" y2="128" />
+    <line x1="452" y1="252" x2="470" y2="252" />
+    <line x1="534" y1="388" x2="550" y2="376" />
+    <line x1="666" y1="388" x2="650" y2="376" />
+  </g>
+
+  <!-- Заголовок -->
+  <text x="600" y="502" font-family="'Segoe UI', Arial, sans-serif" font-size="36" font-weight="700" fill="#1a1a2e" text-anchor="middle">Open Source</text>
+  <rect x="464" y="514" width="272" height="3" rx="2" fill="#047857" opacity="0.5" />
+  <text x="600" y="550" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle">Відкритий код — відкрита довіра</text>
+  <text x="600" y="578" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">floppy.pp.ua</text>
+</svg>
