@@ -16,8 +16,8 @@ async function convertIcons() {
       return
     }
 
-    // Get all PNG, JPG, SVG files from source directory
-    const files = fs.readdirSync(sourceDir).filter((file) => /\.(png|jpe?g|svg)$/i.test(file))
+    // Get all PNG, JPG, SVG, WebP files from source directory
+    const files = fs.readdirSync(sourceDir).filter((file) => /\.(png|jpe?g|svg|webp)$/i.test(file))
 
     if (files.length === 0) {
       console.log('⚠️  В директорії source не знайдено PNG файлів')
