@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e2e8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#00000018" />
+    </filter>
+    <filter id="cardshadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000014" />
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Декоративні кола -->
+  <circle cx="80"   cy="90"  r="190" fill="#047857" opacity="0.05" />
+  <circle cx="1120" cy="540" r="230" fill="#047857" opacity="0.05" />
+  <circle cx="1090" cy="70"  r="120" fill="#0071e3" opacity="0.04" />
+
+  <!-- Сітка -->
+  <g stroke="#b0b0be" stroke-width="0.5" opacity="0.12">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="240"  y1="0" x2="240"  y2="630" />
+    <line x1="480"  y1="0" x2="480"  y2="630" />
+    <line x1="720"  y1="0" x2="720"  y2="630" />
+    <line x1="960"  y1="0" x2="960"  y2="630" />
+  </g>
+
+  <!-- ===== ЦЕНТРАЛЬНА ІЛЮСТРАЦІЯ ===== -->
+
+  <!-- Відеофайл зліва (MKV) -->
+  <g filter="url(#cardshadow)">
+    <rect x="148" y="218" width="148" height="176" rx="14" fill="#ffffff" />
+    <!-- Загнутий кут -->
+    <path d="M256,218 L296,258 L256,258 Z" fill="#e2e2e8" />
+    <path d="M256,218 L296,258 L256,258 L256,218 Z" fill="#d0d0da" />
+  </g>
+  <!-- Плівкові смуги на файлі -->
+  <rect x="163" y="258" width="118" height="12" rx="3" fill="#047857" opacity="0.15" />
+  <rect x="163" y="278" width="118" height="12" rx="3" fill="#047857" opacity="0.10" />
+  <rect x="163" y="298" width="118" height="12" rx="3" fill="#047857" opacity="0.15" />
+  <rect x="163" y="318" width="118" height="12" rx="3" fill="#047857" opacity="0.10" />
+  <!-- Назва формату -->
+  <text x="222" y="382" font-family="'Arial', sans-serif" font-size="22" font-weight="700" fill="#1a1a2e" text-anchor="middle">.mkv</text>
+  <!-- Піктограма плівки -->
+  <g fill="#047857" opacity="0.7">
+    <rect x="173" y="234" width="18" height="14" rx="3" />
+    <rect x="198" y="234" width="18" height="14" rx="3" />
+    <rect x="223" y="234" width="18" height="14" rx="3" />
+  </g>
+
+  <!-- Стрілка від файлу до кодеку -->
+  <g stroke="#047857" stroke-width="3" fill="none" opacity="0.7">
+    <line x1="298" y1="306" x2="358" y2="306" />
+    <path d="M350,298 L362,306 L350,314" fill="#047857" stroke="none" opacity="0.7" />
+  </g>
+
+  <!-- Центральний блок — КОДЕК -->
+  <g filter="url(#shadow)">
+    <rect x="362" y="218" width="236" height="176" rx="20" fill="#047857" />
+  </g>
+  <!-- Шестерня / символ обробки -->
+  <g transform="translate(480,295)" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.9">
+    <!-- Зовнішнє коло шестерні -->
+    <circle cx="0" cy="0" r="42" stroke-dasharray="12 8" />
+    <!-- Внутрішнє коло -->
+    <circle cx="0" cy="0" r="22" />
+    <!-- Стрілки обертання -->
+    <path d="M-30,-28 Q0,-50 30,-28" stroke-linecap="round" marker-end="none" />
+  </g>
+  <!-- Символ ⚙ (шестерня) -->
+  <text x="480" y="305" font-family="Arial" font-size="52" fill="#ffffff" text-anchor="middle" opacity="0.9">⚙</text>
+  <!-- Підпис -->
+  <text x="480" y="364" font-family="'Arial', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">КОДЕК</text>
+  <!-- Маленькі написи кодеків -->
+  <text x="480" y="385" font-family="'Arial', sans-serif" font-size="11" fill="#a7f3d0" text-anchor="middle">H.264 · H.265 · AV1 · VP9</text>
+
+  <!-- Стрілка від кодеку до екрану -->
+  <g stroke="#047857" stroke-width="3" fill="none" opacity="0.7">
+    <line x1="600" y1="306" x2="660" y2="306" />
+    <path d="M652,298 L664,306 L652,314" fill="#047857" stroke="none" opacity="0.7" />
+  </g>
+
+  <!-- Екран / відтворення справа -->
+  <g filter="url(#cardshadow)">
+    <!-- Рамка монітора -->
+    <rect x="664" y="210" width="236" height="154" rx="12" fill="#1a1a2e" />
+    <rect x="676" y="222" width="212" height="130" rx="6" fill="#0d1117" />
+    <!-- Ніжка монітора -->
+    <rect x="768" y="364" width="64" height="10" rx="4" fill="#c8c8d0" />
+    <rect x="756" y="374" width="88" height="8" rx="4" fill="#b8b8c4" />
+  </g>
+  <!-- Зображення на екрані — кадри фільму -->
+  <rect x="680" y="226" width="70" height="44" rx="3" fill="#047857" opacity="0.6" />
+  <rect x="756" y="226" width="70" height="44" rx="3" fill="#059669" opacity="0.5" />
+  <rect x="832" y="226" width="52" height="44" rx="3" fill="#047857" opacity="0.4" />
+  <rect x="680" y="276" width="70" height="44" rx="3" fill="#065f46" opacity="0.5" />
+  <rect x="756" y="276" width="70" height="44" rx="3" fill="#047857" opacity="0.6" />
+  <rect x="832" y="276" width="52" height="44" rx="3" fill="#059669" opacity="0.4" />
+  <!-- Кнопка Play поверх екрану -->
+  <circle cx="782" cy="293" r="30" fill="#ffffff" opacity="0.15" />
+  <polygon points="772,280 772,306 800,293" fill="#ffffff" opacity="0.9" />
+
+  <!-- ===== КАРТКИ ФОРМАТІВ ЗНИЗУ ===== -->
+  <!-- MP4 -->
+  <g filter="url(#cardshadow)">
+    <rect x="148" y="434" width="108" height="48" rx="10" fill="#ffffff" />
+  </g>
+  <text x="202" y="465" font-family="'Arial', sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">.mp4</text>
+
+  <!-- MKV -->
+  <g filter="url(#cardshadow)">
+    <rect x="270" y="434" width="108" height="48" rx="10" fill="#ffffff" />
+  </g>
+  <text x="324" y="465" font-family="'Arial', sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">.mkv</text>
+
+  <!-- AVI -->
+  <g filter="url(#cardshadow)">
+    <rect x="392" y="434" width="108" height="48" rx="10" fill="#ffffff" />
+  </g>
+  <text x="446" y="465" font-family="'Arial', sans-serif" font-size="17" font-weight="700" fill="#6b7280" text-anchor="middle">.avi</text>
+
+  <!-- MOV -->
+  <g filter="url(#cardshadow)">
+    <rect x="514" y="434" width="108" height="48" rx="10" fill="#ffffff" />
+  </g>
+  <text x="568" y="465" font-family="'Arial', sans-serif" font-size="17" font-weight="700" fill="#6b7280" text-anchor="middle">.mov</text>
+
+  <!-- WebM -->
+  <g filter="url(#cardshadow)">
+    <rect x="636" y="434" width="108" height="48" rx="10" fill="#ffffff" />
+  </g>
+  <text x="690" y="465" font-family="'Arial', sans-serif" font-size="17" font-weight="700" fill="#6b7280" text-anchor="middle">.webm</text>
+
+  <!-- ===== ПІДПИС ===== -->
+  <!-- Лейбл "Контейнер" -->
+  <text x="400" y="508" font-family="'Arial', sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">контейнери (формати файлів)</text>
+
+  <!-- ===== ЗАГОЛОВОК ===== -->
+  <text x="600" y="94" font-family="'Arial', sans-serif" font-size="36" font-weight="700" fill="#1a1a2e" text-anchor="middle">Що таке кодек?</text>
+  <text x="600" y="134" font-family="'Arial', sans-serif" font-size="18" fill="#4b5563" text-anchor="middle">і чому відео не відтворюється</text>
+
+  <!-- Розділювач -->
+  <line x1="420" y1="152" x2="780" y2="152" stroke="#047857" stroke-width="2" opacity="0.3" />
+
+  <!-- Лого Floppy -->
+  <text x="600" y="580" font-family="'Arial', sans-serif" font-size="15" fill="#9ca3af" text-anchor="middle">floppy.com.ua · безкоштовний софт для Windows</text>
+</svg>
