@@ -5,6 +5,7 @@ import { RouterLink } from 'vue-router'
 import Button from '@/components/Button.vue'
 import Paid from '@/components/Paid.vue'
 import Website from '@/components/Website.vue'
+import Version from '@/components/Version.vue'
 
 const props = defineProps({
   id: { type: String },
@@ -81,7 +82,7 @@ const date = props.createdAt.toDate().toLocaleDateString()
               {{ name }}
             </h1>
             <p class="lg:text-s xs:text-xs">
-              <span class="text-[#0071e3]">{{ version }}</span>
+              <Version :version="props.version" :name="props.name" />
               <span class="text-gray-400 mx-2">•</span>
               <span class="text-gray-500 text-xs">{{ date }}</span>
             </p>
