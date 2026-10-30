@@ -1,15 +1,15 @@
 /**
  * Централізований список категорій.
  * Поля:
- *   cat       — значення поля category у Firestore
+ *   cat       — значення поля category у data/programs/*.json
  *   slug      — сегмент URL (без /)
  *   navLabel  — коротка назва у навігаційному меню
- *   label     — повна назва у UI (Manage, ProgramPage)
+ *   label     — повна назва у UI (ProgramPage, public/admin/config.yml)
  *   title     — заголовок сторінки категорії (Category.vue prop)
  *   metaTitle — вміст тегу <title>
  *   iconPaths — масив рядків SVG <path d="..."> для іконки в меню
  *
- * Щоб додати нову категорію — просто додай об'єкт сюди.
+ * Щоб додати нову категорію — додай об'єкт сюди та опцію в public/admin/config.yml.
  */
 export const CATEGORIES = [
   {

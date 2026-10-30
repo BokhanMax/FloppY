@@ -9,7 +9,6 @@
     "buildhtml": "vite-ssg build && node clean-sitemap.js",
     "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
-    "import": "node import/import_lines.cjs",
     "format": "prettier --write src/"
   },
   "dependencies": {
@@ -23,25 +22,17 @@
     "vue": "*",
     "vue-gtag": "*",
     "vue-router": "*",
-    "vuefire": "*",
     "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@tailwindcss/vite": "*",
     "@vitejs/plugin-vue": "*",
     "autoprefixer": "*",
-    "firebase": "*",
-    "firebase-admin": "*",
     "postcss": "*",
     "prettier": "*",
     "tailwindcss": "*",
     "vite": "*",
     "vite-plugin-sitemap": "*",
     "vite-plugin-vue-devtools": "*"
-  },
-  "allowScripts": {
-    "vue-demi@0.14.10": true,
-    "protobufjs@7.6.5": true,
-    "@firebase/util@1.15.1": true
   }
 }

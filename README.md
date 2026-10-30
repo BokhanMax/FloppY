@@ -20,8 +20,8 @@
 | [Vue 3](https://vuejs.org/) | UI-фреймворк |
 | [Vite](https://vitejs.dev/) | Збірник та dev-сервер |
 | [Vue Router](https://router.vuejs.org/) | Маршрутизація |
-| [VueFire](https://vuefire.vuejs.org/) | Інтеграція з Firebase |
-| [Firebase Firestore](https://firebase.google.com/) | База даних (зберігання програм) |
+| [vite-ssg](https://github.com/antfu-collective/vite-ssg) | Статична генерація сторінок (SSG) |
+| [Sveltia CMS](https://github.com/sveltia/sveltia-cms) | Адмінка (`/admin`), зберігає зміни комітами в GitHub |
 | [TailwindCSS](https://tailwindcss.com/) | Стилізація |
 | [Sharp](https://sharp.pixelplumbing.com/) | Конвертація іконок у AVIF |
 | [v-lazy-image](https://github.com/alexjoverm/v-lazy-image) | Ліниве завантаження зображень |
@@ -30,20 +30,25 @@
 
 ``` code
 src/
-├── pages/        # Сторінки (категорії, деталі програми, адмін тощо)
+├── pages/        # Сторінки (деталі програми, блог, FAQ, контакти)
 ├── components/   # Перевикористовувані компоненти
 ├── router/       # Конфігурація маршрутів
-└── helpers/      # Утиліти (Firebase, конвертація іконок)
+└── helpers/      # Утиліти (дані програм, блог, категорії, іконки)
 public/
+├── admin/        # Sveltia CMS (index.html + config.yml)
 ├── icons/        # Іконки програм у форматі AVIF
 └── sitemap.xml   # Автогенерований sitemap
+data/
+└── programs/     # Програми, один JSON-файл на програму
 blog/
 └── *.md          # Статті блогу (назва файлу = дата публікації, формат DDMMYYYY)
 ```
 
 ## Дані
 
-Програми зберігаються у колекції `programs` у Firebase Firestore. Кожен запис містить назву, опис, категорію, версію, посилання на завантаження та іконку.
+Програми зберігаються у `data/programs/<slug>.json` — один файл на програму, імʼя файлу = адреса сторінки `/program/<slug>`. Під час збірки дані вбудовуються у згенерований HTML, бази даних немає.
+
+Редагування — через адмінку `https://floppy.pp.ua/admin/` (вхід GitHub-токеном) або напряму у файлах. Кожна зміна — це коміт у `main`, після якого Netlify перезбирає сайт.
 
 ## Блог
 

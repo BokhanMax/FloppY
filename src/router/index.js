@@ -13,14 +13,6 @@ export const routes = [
       },
     }, */
   {
-    path: '/manage',
-    name: 'manage',
-    component: () => import('../pages/Manage.vue'),
-    meta: {
-      title: 'Управління програмами | Floppy',
-    },
-  },
-  {
     path: '/contact',
     name: 'contact',
     component: () => import('../pages/ContactPage.vue'),
