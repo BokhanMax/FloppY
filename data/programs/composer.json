@@ -1,6 +1,6 @@
 {
   "name": "Composer",
-  "version": "2.11.0",
+  "version": "2.11.1",
   "category": "dev",
   "description": "Менеджер пакетів для PHP. Забезпечує автозавантаження бібліотек та класів.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-10-29T14:26:53.519Z"
+  "createdAt": "2026-10-30T14:04:00Z"
 }
