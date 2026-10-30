@@ -1,0 +1,15 @@
+{
+  "name": "Opera Browser",
+  "version": "139.0.6053.22",
+  "category": "internet",
+  "description": "Один з найвідоміших браузерів, на двіжку Blink. Є вбудований VPN та блокувальник реклами.",
+  "descriptionbig": "",
+  "website": "https://www.opera.com/uk",
+  "link64": "https://get.geo.opera.com/pub/opera/desktop/139.0.6053.22/win/Opera_139.0.6053.22_Setup_x64.exe",
+  "link32": "https://get.geo.opera.com/pub/opera/desktop/139.0.6053.22/win/Opera_139.0.6053.22_Setup.exe",
+  "linkcommon": "",
+  "linkupdate": "https://get.opera.com/pub/opera/win/1218/int/Opera_1218_int_Setup.exe",
+  "textupdate": "12.18 Classic",
+  "ispaid": false,
+  "createdAt": "2026-10-30T07:10:49.699Z"
+}

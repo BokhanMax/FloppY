@@ -1,3 +1,5 @@
+import { parse as parseYaml } from 'yaml'
+
 /**
  * Утиліти для завантаження та парсингу постів блогу з .md файлів.
  * Файли зберігаються у /blog/DDMMYYYY.md
@@ -9,22 +11,13 @@ const rawFiles = import.meta.glob('/blog/*.md', { query: '?raw', eager: true })
 
 /**
  * Парсинг YAML-фронтматерії з .md файлу.
- * Підтримує прості пари key: value (без вкладеності).
+ * Повноцінний YAML: CMS може брати значення в лапки або переносити довгі рядки.
  */
 function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
   if (!match) return { meta: {}, content: raw }
 
-  const meta = {}
-  match[1].split('\n').forEach((line) => {
-    const colonIdx = line.indexOf(':')
-    if (colonIdx === -1) return
-    const key = line.substring(0, colonIdx).trim()
-    const value = line.substring(colonIdx + 1).trim()
-    meta[key] = value
-  })
-
-  return { meta, content: match[2] }
+  return { meta: parseYaml(match[1]) || {}, content: match[2] }
 }
 
 /**

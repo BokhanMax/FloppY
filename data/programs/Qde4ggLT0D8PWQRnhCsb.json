@@ -1,0 +1,15 @@
+{
+  "name": "AkelPad",
+  "version": "4.9.9",
+  "category": "files",
+  "description": "Замінник Блокноту для Windows. Має дуже багато плагінів та налаштувань. Must have!",
+  "descriptionbig": "",
+  "website": "https://akelpad.sourceforge.net/en/index.php",
+  "link64": "https://sourceforge.net/projects/akelpad/files/AkelPad%204/4.9.9/x64/AkelPad-4.9.9-x64-setup.exe/download",
+  "link32": "http://prdownloads.sourceforge.net/akelpad/AkelPad-4.9.9-setup.exe?download",
+  "linkcommon": "",
+  "linkupdate": "https://akelpad.sourceforge.net/en/plugins.php",
+  "textupdate": "Плагіни",
+  "ispaid": false,
+  "createdAt": "2025-07-21T11:50:19.837Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "NodeJS",
+  "version": "26.13.0",
+  "category": "dev",
+  "description": "Програмне середовище для виконання застосунків, написаних мовою JavaScript.",
+  "descriptionbig": "",
+  "website": "https://nodejs.org/uk/",
+  "link64": "https://nodejs.org/dist/v26.13.0/node-v26.13.0-x64.msi",
+  "link32": "https://nodejs.org/dist/v22.23.4/node-v22.23.4-x86.msi",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-29T07:01:46.900Z"
+}

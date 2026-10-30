@@ -1,0 +1,15 @@
+{
+  "name": "Total Commander",
+  "version": "11.58",
+  "category": "files",
+  "description": "Гнучкий файловий менеджер з багатою історією, має безліч можливостей розширення функціоналу.",
+  "descriptionbig": "",
+  "website": "https://www.ghisler.com",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://totalcommander.ch/1158/tcmd1158x32_64.exe",
+  "linkupdate": "https://www.ghisler.com/plugins.htm",
+  "textupdate": "Плагіни",
+  "ispaid": true,
+  "createdAt": "2026-07-03T06:10:46.095Z"
+}

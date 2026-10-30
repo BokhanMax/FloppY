@@ -1,0 +1,15 @@
+{
+  "name": "PeaZIP",
+  "version": "11.4.0",
+  "category": "system",
+  "description": "Альтернативний архіватор (+ файловий менеджер) з відкритим вихідним кодом, читає до 200 форматів архівів.",
+  "descriptionbig": "",
+  "website": "https://peazip.github.io/",
+  "link64": "https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip-11.4.0.WIN64.exe",
+  "link32": "https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip-11.4.0.WINDOWS.exe",
+  "linkcommon": "",
+  "linkupdate": "https://peazip.github.io/peazip-themes.html",
+  "textupdate": "Теми для PeaZIP",
+  "ispaid": false,
+  "createdAt": "2026-10-22T10:20:01.416Z"
+}

@@ -23,7 +23,8 @@
     "vue": "*",
     "vue-gtag": "*",
     "vue-router": "*",
-    "vuefire": "*"
+    "vuefire": "*",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@tailwindcss/vite": "*",

@@ -1,17 +1,17 @@
 <script setup>
-import { Timestamp } from 'firebase/firestore'
 import VLazyImage from 'v-lazy-image'
 import { RouterLink } from 'vue-router'
 import Button from '@/components/Button.vue'
 import Paid from '@/components/Paid.vue'
 import Website from '@/components/Website.vue'
 import Version from '@/components/Version.vue'
+import { formatProgramDate } from '@/helpers/programs.js'
 
 const props = defineProps({
   id: { type: String },
   name: { type: String, required: true },
   description: { type: String },
-  createdAt: { type: Timestamp },
+  createdAt: { type: String },
   version: { type: String },
   website: { type: String },
   icon: { type: String },
@@ -23,7 +23,8 @@ const props = defineProps({
   ispaid: { type: Boolean, default: false },
 })
 
-const date = props.createdAt.toDate().toLocaleDateString()
+// Явні локаль і часовий пояс — щоб дата в SSG-HTML збігалася з датою в браузері
+const date = formatProgramDate(props.createdAt, { timeZone: 'Europe/Kyiv' })
 </script>
 
 <template>

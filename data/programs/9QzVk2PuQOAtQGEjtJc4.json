@@ -1,0 +1,15 @@
+{
+  "name": "VLC",
+  "version": "3.0.24",
+  "category": "media",
+  "description": "Медіаплеєр з відкритим вихідним кодом, здатен відтворювати практично будь-який формат аудіо та відео без необхідності встановлення додаткових кодеків.",
+  "descriptionbig": "",
+  "website": "https://www.videolan.org/",
+  "link64": "https://get.videolan.org/vlc/3.0.24/win64/vlc-3.0.24-win64.exe",
+  "link32": "https://get.videolan.org/vlc/3.0.24/win32/vlc-3.0.24-win32.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.videolan.org/vlc/skins.html",
+  "textupdate": "Skins",
+  "ispaid": false,
+  "createdAt": "2026-10-22T10:22:39.242Z"
+}

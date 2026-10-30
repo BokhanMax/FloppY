@@ -1,0 +1,15 @@
+{
+  "name": "Microsoft Teams",
+  "version": "26260.1717.5229.7049",
+  "category": "internet",
+  "description": "Програма для комунікації та групових онлайн-конференцій. Заміна Скайпу.",
+  "descriptionbig": "",
+  "website": "https://www.microsoft.com/uk-ua/microsoft-teams/teams-free",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://statics.teams.cdn.office.net/evergreen-assets/DesktopClient/MSTeamsSetup.exe",
+  "linkupdate": "https://statics.teams.cdn.office.net/production-windows/1.8.00.27654/Teams_windows.exe",
+  "textupdate": "Home 1.8.00.27654",
+  "ispaid": false,
+  "createdAt": "2026-10-22T11:01:54.743Z"
+}

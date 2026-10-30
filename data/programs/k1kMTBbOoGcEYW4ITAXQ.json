@@ -1,0 +1,15 @@
+{
+  "name": "MP3 Direct Cut",
+  "version": "2.40",
+  "category": "media",
+  "description": "Програма-крихітка для обрізки та редагування mp3 файлів. Дозволяє зберегти якість звуку.",
+  "descriptionbig": "",
+  "website": "https://mpesch3.de/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://mpesch3.de/mp3DC_240.exe",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-03-30T07:17:19.443Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "VirtualBox",
+  "version": "7.2.22",
+  "category": "system",
+  "description": "Програма віртуалізації для операційних систем Windows, Linux, macOS, Solaris, DOS тощо.",
+  "descriptionbig": "",
+  "website": "https://www.virtualbox.org/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://download.virtualbox.org/virtualbox/7.2.22/VirtualBox-7.2.22-175245-Win.exe",
+  "linkupdate": "https://download.virtualbox.org/virtualbox/7.2.22/Oracle_VirtualBox_Extension_Pack-7.2.22.vbox-extpack",
+  "textupdate": "Extension Pack",
+  "ispaid": false,
+  "createdAt": "2026-10-22T10:12:20.270Z"
+}

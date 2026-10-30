@@ -1,0 +1,15 @@
+{
+  "name": "Mozilla Thunderbird",
+  "version": "159.0",
+  "category": "internet",
+  "description": "Безкоштовний поштовий клієнт, який дозволяє керувати електронною поштою, календарями та контактами.",
+  "descriptionbig": "",
+  "website": "https://www.thunderbird.net/uk",
+  "link64": "https://download.mozilla.org/?product=thunderbird-latest-SSL&os=win64&lang=uk",
+  "link32": "https://download.mozilla.org/?product=thunderbird-latest-SSL&os=win&lang=uk",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-28T10:16:36.158Z"
+}

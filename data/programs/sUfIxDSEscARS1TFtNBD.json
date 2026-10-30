@@ -1,0 +1,15 @@
+{
+  "name": "Geek Uninstaller",
+  "version": "1.6.0.200",
+  "category": "system",
+  "description": "Кращий інструмент для правильної деінсталяції програм, видаляє всі залишки в системі та реєстрі.",
+  "descriptionbig": "",
+  "website": "https://geekuninstaller.com",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://geekuninstaller.com/geek.zip",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-22T09:36:31.249Z"
+}

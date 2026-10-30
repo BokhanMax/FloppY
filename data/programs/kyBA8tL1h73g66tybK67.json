@@ -1,0 +1,15 @@
+{
+  "name": "Mozilla Firefox",
+  "version": "159.0",
+  "category": "internet",
+  "description": "Веб-браузер від Mozilla, наразі вважається найшвидшим за всі інші браузери. Має велику кількість налаштувань.",
+  "descriptionbig": "",
+  "website": "https://www.mozilla.org/uk/firefox/new",
+  "link64": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=uk",
+  "link32": "https://download.mozilla.org/?product=firefox-latest-ssl&os=win&lang=uk",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-27T08:21:29.650Z"
+}

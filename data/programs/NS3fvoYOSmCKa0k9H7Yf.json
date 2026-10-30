@@ -1,0 +1,15 @@
+{
+  "name": "Cockos Reaper",
+  "version": "7.84",
+  "category": "media",
+  "description": "Дуже маленький звуковий редактор, дозволяє записувати, редагувати та створювати багатоканальні аудіо треки.",
+  "descriptionbig": "",
+  "website": "https://reaper.fm",
+  "link64": "https://www.reaper.fm/files/7.x/reaper784_x64-install.exe",
+  "link32": "https://www.reaper.fm/files/7.x/reaper784-install.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.reaper.fm/reaplugs/",
+  "textupdate": "ReaPlugs VST",
+  "ispaid": false,
+  "createdAt": "2026-10-29T07:04:00.291Z"
+}

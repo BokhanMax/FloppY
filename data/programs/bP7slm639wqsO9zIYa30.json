@@ -1,0 +1,15 @@
+{
+  "name": "Cursor Editor",
+  "version": "3.27.22",
+  "category": "dev",
+  "description": "Редактор коду на основі штучного інтелекту. Аналізує директорію проекту та допомагає в логіці написання. ",
+  "descriptionbig": "",
+  "website": "https://cursor.com/",
+  "link64": "https://api2.cursor.sh/updates/download/golden/win32-x64-user/cursor/3.27",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": true,
+  "createdAt": "2026-10-28T07:00:46.779Z"
+}

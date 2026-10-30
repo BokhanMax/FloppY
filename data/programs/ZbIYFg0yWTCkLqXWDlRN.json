@@ -1,0 +1,15 @@
+{
+  "name": "Composer",
+  "version": "2.11.0",
+  "category": "dev",
+  "description": "Менеджер пакетів для PHP. Забезпечує автозавантаження бібліотек та класів.",
+  "descriptionbig": "",
+  "website": "https://getcomposer.org/",
+  "link64": "https://getcomposer.org/Composer-Setup.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-29T14:26:53.519Z"
+}

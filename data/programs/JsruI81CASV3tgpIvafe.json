@@ -1,0 +1,15 @@
+{
+  "name": "Darktable",
+  "version": "5.6.2",
+  "category": "media",
+  "description": "Безкоштовний аналог Adobe Lightroom, поєднує в собі каталогізатор та фоторедактор. Підтримує роботу з RAW-зображеннями.",
+  "descriptionbig": "",
+  "website": "https://darktable.org/",
+  "link64": "https://github.com/darktable-org/darktable/releases/download/release-5.6.2/darktable-5.6.2-win64.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-06T19:31:39.279Z"
+}

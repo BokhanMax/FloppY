@@ -1,0 +1,15 @@
+{
+  "name": "Telegram Desktop",
+  "version": "7.3.3",
+  "category": "internet",
+  "description": "Популярний месенджер для дзвінків та текстового спілкування з широкими можливостями.",
+  "descriptionbig": "",
+  "website": "https://telegram.org",
+  "link64": "https://telegram.org/dl/desktop/win64",
+  "link32": "https://telegram.org/dl/desktop/win",
+  "linkcommon": "",
+  "linkupdate": "https://updates.tdesktop.com/tsetup/tsetup.1.8.15.exe",
+  "textupdate": "Для WinXP",
+  "ispaid": false,
+  "createdAt": "2026-10-22T11:03:59.555Z"
+}

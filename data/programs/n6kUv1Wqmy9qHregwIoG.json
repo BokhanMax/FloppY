@@ -1,0 +1,15 @@
+{
+  "name": "NAPS2",
+  "version": "8.6.0",
+  "category": "files",
+  "description": "Програма для сканування документів з підтримкою багатосторінкових PDF та різних форматів збереження.",
+  "descriptionbig": "",
+  "website": "https://www.naps2.com/",
+  "link64": "https://github.com/cyanfish/naps2/releases/download/v8.6.0/naps2-8.6.0-win-x64.exe",
+  "link32": "https://github.com/cyanfish/naps2/releases/download/v7.5.3/naps2-7.5.3-win-x86.msi",
+  "linkcommon": "",
+  "linkupdate": "https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.exe",
+  "textupdate": "Для WinXP",
+  "ispaid": false,
+  "createdAt": "2026-10-26T08:08:09.308Z"
+}

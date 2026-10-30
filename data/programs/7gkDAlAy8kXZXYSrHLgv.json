@@ -1,0 +1,15 @@
+{
+  "name": "LibreOffice",
+  "version": "26.8.2",
+  "category": "files",
+  "description": "Безкоштовний кросплатформовий офісний пакет із відкритим вихідним кодом, є альтернативою MS Office. Підтримує DOCX, XLSX, PPTX та власний стандарт ODF.",
+  "descriptionbig": "",
+  "website": "https://uk.libreoffice.org/",
+  "link64": "https://download.documentfoundation.org/libreoffice/stable/26.8.2/win/x86_64/LibreOffice_26.8.2_Win_x86-64.msi",
+  "link32": "https://download.documentfoundation.org/libreoffice/stable/26.8.2/win/x86/LibreOffice_26.8.2_Win_x86.msi",
+  "linkcommon": "",
+  "linkupdate": "https://extensions.libreoffice.org/en",
+  "textupdate": "Extensions",
+  "ispaid": false,
+  "createdAt": "2026-10-30T07:22:05.190Z"
+}

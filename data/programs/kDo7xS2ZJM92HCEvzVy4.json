@@ -1,0 +1,15 @@
+{
+  "name": "Figma",
+  "version": "126.11.7",
+  "category": "dev",
+  "description": "Сервіс для розробки інтерфейсів та прототипування. Часто використовується веб-розробниками.",
+  "descriptionbig": "",
+  "website": "https://figma.com/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://www.figma.com/download/desktop/win",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-29T07:05:30.125Z"
+}

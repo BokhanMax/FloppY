@@ -1,0 +1,15 @@
+{
+  "name": "JetBrains Toolbox",
+  "version": "3.9",
+  "category": "dev",
+  "description": "Набір середовищ програмування. Можна встановити IDE для PHP, Python, Rust тощо.",
+  "descriptionbig": "",
+  "website": "https://www.jetbrains.com/toolbox-app/",
+  "link64": "https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=windows",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": true,
+  "createdAt": "2026-10-21T18:32:08.331Z"
+}

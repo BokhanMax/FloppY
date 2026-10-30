@@ -2,9 +2,8 @@
 import ProgramCard from './ProgramCard.vue'
 import TextBlock from '../TextBlock.vue'
 import BlogPreview from '@/components/BlogPreview.vue'
-import { ref, onMounted, computed } from 'vue'
-import { db } from '../../helpers/firebaseConfig'
-import { collection, query, where, orderBy, getDocs } from 'firebase/firestore'
+import { computed } from 'vue'
+import { getProgramsByCategory } from '../../helpers/programs.js'
 
 const props = defineProps({
   cat: {
@@ -15,9 +14,7 @@ const props = defineProps({
   },
 })
 
-const programs = ref([])
-const loading = ref(true)
-const error = ref(null)
+const programs = computed(() => getProgramsByCategory(props.cat))
 
 const textBlockContent = computed(() => {
   if (props.cat === 'newest') {
@@ -47,42 +44,6 @@ const textBlockContent = computed(() => {
   return ''
 })
 
-const fetchPrograms = async (category) => {
-  loading.value = true
-  error.value = null
-  try {
-    if (props.cat == 'newest') {
-      const q = query(collection(db, 'programs'), orderBy('createdAt', 'desc'))
-      const querySnapshot = await getDocs(q)
-
-      programs.value = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-    } else {
-      const q = query(
-        collection(db, 'programs'),
-        where('category', '==', category),
-        orderBy('name', 'asc'),
-      )
-      const querySnapshot = await getDocs(q)
-
-      programs.value = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-    }
-  } catch (err) {
-    console.error('Помилка при отриманні програм:', err)
-    error.value = err
-  } finally {
-    loading.value = false
-  }
-}
-
-onMounted(() => {
-  fetchPrograms(props.cat)
-})
 </script>
 
 <template>

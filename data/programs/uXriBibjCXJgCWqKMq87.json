@@ -1,0 +1,15 @@
+{
+  "name": "Putty",
+  "version": "0.85",
+  "category": "dev",
+  "description": "SSH та telnet клієнт для Windows. Вміє зберігати сесії, має низку налаштувань підключення.",
+  "descriptionbig": "",
+  "website": "https://putty.org/index.html",
+  "link64": "https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.85-installer.msi",
+  "link32": "https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.85-installer.msi",
+  "linkcommon": "",
+  "linkupdate": "https://the.earth.li/~sgtatham/putty/latest/wa64/putty-arm64-0.85-installer.msi",
+  "textupdate": "ARM64",
+  "ispaid": false,
+  "createdAt": "2026-08-18T11:19:26.159Z"
+}

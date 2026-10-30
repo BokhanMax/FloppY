@@ -1,0 +1,15 @@
+{
+  "name": "Display Driver Uninstaller",
+  "version": "18.1.6.2",
+  "category": "drivers",
+  "description": "Утиліта допоможе видалити встановлені драйвери відеокарти - остаточно, зачищаючи всі сліди.",
+  "descriptionbig": "",
+  "website": "https://www.wagnardsoft.com/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://download.wagnardsoft.com/DDU/DDU%20v18.1.6.2.exe",
+  "linkupdate": "https://download.wagnardsoft.com/DDU/DDU%20v18.1.6.2.exe",
+  "textupdate": "Portable",
+  "ispaid": false,
+  "createdAt": "2026-10-22T11:03:48.864Z"
+}

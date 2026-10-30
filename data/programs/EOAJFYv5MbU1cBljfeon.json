@@ -1,0 +1,15 @@
+{
+  "name": "AMD Software Adrenalin Edition",
+  "version": "26.10.1",
+  "category": "drivers",
+  "description": "Офіційні драйвери від AMD для відеокарт AMD Radeon для стаціонарних комп'ютерів та ноутбуків.",
+  "descriptionbig": "",
+  "website": "https://www.amd.com/en.html",
+  "link64": "https://drivers.amd.com/drivers/whql-amd-software-adrenalin-edition-26.10.1-win11-c.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "https://drivers.amd.com/drivers/amdcleanuputility.exe",
+  "textupdate": "AMD Cleanup Utility",
+  "ispaid": false,
+  "createdAt": "2026-10-22T09:48:19.736Z"
+}

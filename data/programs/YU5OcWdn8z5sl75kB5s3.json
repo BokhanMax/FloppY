@@ -1,0 +1,15 @@
+{
+  "name": "GIMP",
+  "version": "3.2.6",
+  "category": "media",
+  "description": "Повноцінний замінник Photoshop, який дозволяє редагувати та створювати графічні зображення.",
+  "descriptionbig": "",
+  "website": "https://www.gimp.org/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://download.gimp.org/gimp/v3.2/windows/gimp-3.2.6-setup.exe",
+  "linkupdate": "http://download.gimp.org/pub/gimp/v2.8/windows/gimp-2.8.22-setup.exe",
+  "textupdate": "Для WinXP",
+  "ispaid": false,
+  "createdAt": "2026-09-11T10:00:17.258Z"
+}

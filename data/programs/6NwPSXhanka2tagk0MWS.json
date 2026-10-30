@@ -1,0 +1,15 @@
+{
+  "name": "VSCode",
+  "version": "1.144.0",
+  "category": "dev",
+  "description": "Шикарна безкоштовна IDE від компанії Microsoft, з купою функцій, підтримує майже всі мови.",
+  "descriptionbig": "",
+  "website": "https://code.visualstudio.com/",
+  "link64": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+  "link32": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/f1b07bd25dfad64b0167beb15359ae573aecd2cc/VSCodeUserSetup-ia32-1.83.1.exe",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-29T07:02:20.142Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Python",
+  "version": "3.15.2",
+  "category": "dev",
+  "description": "Популярна мова програмування високого рівня із суворою динамічною типізацією.",
+  "descriptionbig": "",
+  "website": "https://www.python.org/",
+  "link64": "https://www.python.org/ftp/python/3.15.2/python-3.15.2-amd64.exe",
+  "link32": "https://www.python.org/ftp/python/3.15.2/python-3.15.2.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.python.org/ftp/python/pymanager/python-manager-26.4.msix",
+  "textupdate": "Install Manager",
+  "ispaid": false,
+  "createdAt": "2026-10-26T07:52:37.847Z"
+}

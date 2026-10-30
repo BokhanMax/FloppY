@@ -1,0 +1,15 @@
+{
+  "name": "AIMP",
+  "version": "5.40.2727",
+  "category": "media",
+  "description": "Чудовий аудіоплеєр, дуже сильно схожий на легендарний Winamp. Купа додаткових можливостей!",
+  "descriptionbig": "",
+  "website": "https://aimp.ru",
+  "link64": "https://www.aimp.ru/?do=download.file&id=3",
+  "link32": "https://www.aimp.ru/?do=download.file&id=4",
+  "linkcommon": "",
+  "linkupdate": "https://www.aimp.ru/?do=download.file&id=7",
+  "textupdate": "Skin Editor",
+  "ispaid": false,
+  "createdAt": "2026-09-10T11:12:41.725Z"
+}

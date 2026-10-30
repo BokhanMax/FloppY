@@ -1,0 +1,15 @@
+{
+  "name": "CPU-Z",
+  "version": "3.01",
+  "category": "system",
+  "description": "Утиліта, яка показує необхідні характеристики процесора, з можливістю зберігання звіту.",
+  "descriptionbig": "",
+  "website": "https://www.cpuid.com/softwares/cpu-z.html",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://download.cpuid.com/cpu-z/cpu-z_3.01-en.exe",
+  "linkupdate": "https://download.cpuid.com/cpu-z/cpu-z_3.01-en.zip",
+  "textupdate": "Portable",
+  "ispaid": false,
+  "createdAt": "2026-08-21T07:52:38.936Z"
+}

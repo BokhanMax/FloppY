@@ -1,0 +1,15 @@
+{
+  "name": "Viber",
+  "version": "29.3.0",
+  "category": "internet",
+  "description": "Месенджер від компанії Rakuten для дзвінків та повідомлень. Відомий по всьому світу.",
+  "descriptionbig": "",
+  "website": "https://www.viber.com/ua",
+  "link64": "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe",
+  "link32": "https://download.cdn.viber.com/desktop/windows_32/ViberSetup.exe",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-30T07:22:53.687Z"
+}

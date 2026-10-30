@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import Sitemap from 'vite-plugin-sitemap'
-import { fetchProgramRoutes } from './src/router/programroutes.js'
 import { CATEGORIES } from './src/helpers/cats.js'
 import fs from 'fs'
 import path from 'path'
@@ -28,6 +27,12 @@ const blogRoutes = fs
   .filter((f) => f.endsWith('.md'))
   .map((f) => `/blog/${f.replace(/\.md$/, '')}`)
 
+// Маршрути сторінок програм з файлів /data/programs/<id>.json
+const programRoutes = fs
+  .readdirSync(path.join(__dirname, 'data', 'programs'))
+  .filter((f) => f.endsWith('.json'))
+  .map((f) => `/program/${f.replace(/\.json$/, '')}`)
+
 const customDate = new Date();
 customDate.toISOString = function() {
   return this.getUTCFullYear() +
@@ -42,15 +47,6 @@ export default defineConfig(async ({ mode }) => {
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
   const env = loadEnv(mode, process.cwd(), '')
   Object.assign(process.env, env)
-  // Fetch program routes from Firebase at build time
-  let programRoutes = []
-  try {
-    programRoutes = await fetchProgramRoutes()
-  } catch (error) {
-    console.warn('⚠️  Could not fetch program routes for sitemap:', error.message)
-    console.warn('   Sitemap will be generated without program routes')
-  }
-
   // Combine static and dynamic routes
   const allRoutes = [...staticRoutes, ...blogRoutes, ...programRoutes].filter(
     (route) => route)
@@ -91,9 +87,8 @@ export default defineConfig(async ({ mode }) => {
     ssgOptions: {
       includedRoutes(paths) {
         // Виключаємо шаблони з параметрами (/:id, /:slug) — vite-ssg не може їх рендерити
-        // Маршрути /program/:id навмисно виключено з SSG
         const filtered = paths.filter((p) => !p.includes(':'))
-        return [...filtered, ...blogRoutes]
+        return [...filtered, ...blogRoutes, ...programRoutes]
       },
     },
   }

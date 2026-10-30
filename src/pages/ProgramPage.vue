@@ -1,83 +1,40 @@
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { db } from '../helpers/firebaseConfig'
+import { useHead } from '@unhead/vue'
 import { CATEGORIES } from '../helpers/cats.js'
-import { doc, getDoc } from 'firebase/firestore'
-import { Timestamp } from 'firebase/firestore'
+import { getProgramById, formatProgramDate } from '../helpers/programs.js'
 import VLazyImage from 'v-lazy-image'
 
 const route = useRoute()
-const program = ref(null)
-const loading = ref(true)
-const error = ref(null)
+const program = computed(() => getProgramById(route.params.id))
+const error = computed(() => (program.value ? null : 'Програму не знайдено'))
 
-const fetchProgram = async (programId) => {
-  loading.value = true
-  error.value = null
-  try {
-    const docRef = doc(db, 'programs', programId)
-    const docSnap = await getDoc(docRef)
-
-    if (docSnap.exists()) {
-      program.value = {
-        id: docSnap.id,
-        ...docSnap.data(),
-      }
-    } else {
-      error.value = 'Програму не знайдено'
-    }
-  } catch (err) {
-    console.error('Помилка при отриманні програми:', err)
-    error.value = 'Помилка при завантаженні програми'
-  } finally {
-    loading.value = false
-  }
-}
-
-const date = computed(() => {
-  if (program.value?.createdAt instanceof Timestamp) {
-    return program.value.createdAt.toDate().toLocaleDateString('uk-UA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
-  }
-  return ''
-})
+const date = computed(() =>
+  formatProgramDate(program.value?.createdAt, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'Europe/Kyiv',
+  }),
+)
 
 const categoryName = computed(() => {
   const found = CATEGORIES.find((c) => c.cat === program.value?.category)
   return found?.label || program.value?.category || ''
 })
 
-// Update document title when program is loaded
-watch(
-  program,
-  (newProgram) => {
-    if (newProgram) {
-      document.title = `Скачати ${newProgram.name} ${newProgram.version} безкоштовно | Floppy`
-    }
-  },
-  { immediate: true },
-)
-
-onMounted(() => {
-  if (route.params.id) {
-    fetchProgram(route.params.id)
-  }
+useHead({
+  title: computed(() =>
+    program.value
+      ? `Скачати ${program.value.name} ${program.value.version} безкоштовно | Floppy`
+      : 'Програму не знайдено | Floppy',
+  ),
 })
 </script>
 
 <template>
-  <div v-if="loading" class="text-center py-12">
-    <div
-      class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"
-    ></div>
-    <p class="mt-4 text-gray-600">Завантаження...</p>
-  </div>
-
-  <div v-else-if="error" class="text-center py-12">
+  <div v-if="error" class="text-center py-12">
     <p class="text-red-500 text-xl mb-4">{{ error }}</p>
     <router-link
       to="/"

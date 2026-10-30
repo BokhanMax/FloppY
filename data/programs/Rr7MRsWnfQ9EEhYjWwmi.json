@@ -1,0 +1,15 @@
+{
+  "name": "7Zip",
+  "version": "26.05",
+  "category": "files",
+  "description": "Альтернативний архіватор, використовує свій формат, а також працює з усіма відомими.",
+  "descriptionbig": "",
+  "website": "https://7-zip.org",
+  "link64": "https://7-zip.org/a/7z2605-x64.exe",
+  "link32": "https://7-zip.org/a/7z2605.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.7-zip.org/a/7z2605-extra.7z",
+  "textupdate": "7-Zip Extra",
+  "ispaid": false,
+  "createdAt": "2026-10-22T11:03:22.655Z"
+}

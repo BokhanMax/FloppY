@@ -1,0 +1,15 @@
+{
+  "name": "Audacity",
+  "version": "4.0.1",
+  "category": "media",
+  "description": "Безкоштовний багатоплатформовий аудіоредактор з відкритим вихідним кодом, призначений для запису, редагування та мікшування звукових файлів.",
+  "descriptionbig": "",
+  "website": "https://www.audacityteam.org/",
+  "link64": "https://github.com/audacity/audacity/releases/download/Audacity-4.0.1/audacity-win-4.0.1-x86_64.msi",
+  "link32": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.9/audacity-win-3.7.9-32bit.exe",
+  "linkcommon": "",
+  "linkupdate": "https://plugins.audacityteam.org/",
+  "textupdate": "Плагіни",
+  "ispaid": false,
+  "createdAt": "2026-10-01T18:56:29.952Z"
+}

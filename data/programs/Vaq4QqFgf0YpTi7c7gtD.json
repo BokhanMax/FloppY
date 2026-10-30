@@ -1,0 +1,15 @@
+{
+  "name": "Docker Desktop",
+  "version": "4.97.0",
+  "category": "dev",
+  "description": "Платформа для запуску програм у контейнерах. Гарантує швидкість та стабільну роботу коду в будь-якому середовищі.",
+  "descriptionbig": "",
+  "website": "https://www.docker.com/",
+  "link64": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "https://hub.docker.com/",
+  "textupdate": "Containers' Hub",
+  "ispaid": false,
+  "createdAt": "2026-10-27T08:20:47.157Z"
+}

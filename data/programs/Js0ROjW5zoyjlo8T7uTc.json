@@ -1,0 +1,15 @@
+{
+  "name": "Foobar2000",
+  "version": "2.26",
+  "category": "media",
+  "description": "Легендарний аудіо-плеєр з конвертером, візуалізаціями та багатим вибором зовнішнього вигляду.",
+  "descriptionbig": "",
+  "website": "https://www.foobar2000.org",
+  "link64": "https://www.foobar2000.org/files/foobar2000-x64_v2.26.exe",
+  "link32": "https://www.foobar2000.org/files/foobar2000_v2.26.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.foobar2000.org/getfile/foobar2000_v1.5.11.exe",
+  "textupdate": "Для WinXP",
+  "ispaid": false,
+  "createdAt": "2026-10-01T18:54:24.250Z"
+}

@@ -1,0 +1,90 @@
+# Конфігурація Sveltia CMS (https://github.com/sveltia/sveltia-cms)
+# Кожне збереження — коміт у main, Netlify після нього перезбирає сайт.
+
+backend:
+  name: github
+  repo: BokhanMax/FloppY
+  branch: main
+  commit_messages:
+    create: '+ {{collection}}: {{slug}}'
+    update: 'Update {{collection}}: {{slug}}'
+    delete: '- {{collection}}: {{slug}}'
+
+site_url: https://floppy.pp.ua
+display_url: https://floppy.pp.ua
+locale: uk
+
+# Іконки програм: ім'я файлу = назва програми без пробілів + Icon.png (напр. 7ZipIcon.png)
+media_folder: public/icons/source
+public_folder: /icons/source
+
+collections:
+  - name: programs
+    label: Програми
+    label_singular: Програму
+    folder: data/programs
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    slug: '{{slug}}'
+    summary: '{{name}} {{version}}'
+    sortable_fields:
+      default:
+        field: createdAt
+        direction: descending
+      fields: [createdAt, name, category]
+    view_filters:
+      - { label: Інтернет, field: category, pattern: '^internet$' }
+      - { label: Медіа, field: category, pattern: '^media$' }
+      - { label: Файли, field: category, pattern: '^files$' }
+      - { label: Система, field: category, pattern: '^system$' }
+      - { label: Драйвери, field: category, pattern: '^drivers$' }
+      - { label: Розробка, field: category, pattern: '^dev$' }
+    fields:
+      - { name: name, label: Назва, widget: string }
+      - { name: version, label: Версія, widget: string }
+      - name: category
+        label: Категорія
+        widget: select
+        # Має збігатися з полем cat у src/helpers/cats.js
+        options:
+          - { label: 'Інтернет, месенджери, RDP', value: internet }
+          - { label: 'Програми для медіа', value: media }
+          - { label: 'Робота з файлами', value: files }
+          - { label: 'Системні утиліти', value: system }
+          - { label: 'Драйвери', value: drivers }
+          - { label: 'Розробка, програмування', value: dev }
+      - { name: description, label: Короткий опис, widget: text }
+      - { name: descriptionbig, label: Детальний опис, widget: text, required: false }
+      - { name: website, label: Сайт розробника, widget: string, required: false }
+      - { name: link64, label: Посилання x64, widget: string, required: false }
+      - { name: link32, label: Посилання x32, widget: string, required: false }
+      - { name: linkcommon, label: Посилання x86-x64, widget: string, required: false }
+      - { name: linkupdate, label: Додаткове посилання, widget: string, required: false }
+      - { name: textupdate, label: Текст додаткового посилання, widget: string, required: false }
+      - { name: ispaid, label: Shareware, widget: boolean, default: false, required: false }
+      - name: createdAt
+        label: Дата оновлення
+        hint: При оновленні версії постав поточну дату — від неї залежить порядок на головній
+        widget: datetime
+        default: '{{now}}'
+        picker_utc: true
+
+  - name: blog
+    label: Блог
+    label_singular: Статтю
+    folder: blog
+    extension: md
+    format: frontmatter
+    create: true
+    # Ім'я файлу = дата публікації DDMMYYYY (див. src/helpers/blogUtils.js)
+    slug: '{{day}}{{month}}{{year}}'
+    media_folder: /public/img/blog
+    public_folder: /img/blog
+    sortable_fields: [title]
+    fields:
+      - { name: title, label: Заголовок, widget: string }
+      - { name: image, label: Обкладинка, widget: image }
+      - { name: description, label: Опис для SEO та превʼю, widget: text }
+      - { name: body, label: Текст, widget: markdown }

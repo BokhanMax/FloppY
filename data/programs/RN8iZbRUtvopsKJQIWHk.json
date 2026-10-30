@@ -1,0 +1,15 @@
+{
+  "name": "Inkscape",
+  "version": "1.4.4",
+  "category": "media",
+  "description": "Безкоштовний редактор векторної графіки. Є чудовою альтернативою платному Adobe Illustrator.",
+  "descriptionbig": "",
+  "website": "https://inkscape.org/",
+  "link64": "https://inkscape.org/release/inkscape-1.4.4/windows/64-bit/exe/dl/",
+  "link32": "https://inkscape.org/gallery/item/37361/inkscape-1.2.2_2022-12-09_732a01da63-x86.exe",
+  "linkcommon": "",
+  "linkupdate": "https://inkscape.org/gallery/=extension/",
+  "textupdate": "Розширення",
+  "ispaid": false,
+  "createdAt": "2026-06-09T07:19:31.490Z"
+}

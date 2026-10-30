@@ -1,0 +1,15 @@
+{
+  "name": "WinRar",
+  "version": "7.23",
+  "category": "files",
+  "description": "Безумовно найвідоміший архіватор для Windows, працює з багатьма форматами.",
+  "descriptionbig": "",
+  "website": "https://www.rarlab.com",
+  "link64": "https://www.rarlab.com/rar/winrar-x64-723uk.exe",
+  "link32": "https://www.rarlab.com/rar/winrar-x32-701.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.rarlab.com/themes.htm",
+  "textupdate": "Каталог тем",
+  "ispaid": true,
+  "createdAt": "2026-06-30T08:45:54.710Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Discord",
+  "version": "1.0.9265.0",
+  "category": "internet",
+  "description": "Месенджер для геймерів та стримерів, дозволяє спілкуватися голосом, текстом та відео.",
+  "descriptionbig": "",
+  "website": "https://discord.com/",
+  "link64": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64",
+  "link32": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-26T08:10:06.867Z"
+}

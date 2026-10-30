@@ -1,0 +1,15 @@
+{
+  "name": "FileZilla",
+  "version": "3.71.1",
+  "category": "dev",
+  "description": "Чудовий клієнт для роботи з FTP, SFTP та FTPS. Має просунутий менеджер сайтів. ",
+  "descriptionbig": "",
+  "website": "https://filezilla-project.org/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://filezilla-project.org/download.php?show_all=1",
+  "linkupdate": "https://filezilla-project.org/download.php?type=server",
+  "textupdate": "FZ Server 1.12.6",
+  "ispaid": false,
+  "createdAt": "2026-08-27T08:02:06.104Z"
+}

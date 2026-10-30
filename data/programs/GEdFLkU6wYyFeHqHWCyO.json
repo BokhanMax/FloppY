@@ -1,0 +1,15 @@
+{
+  "name": "Git SCM",
+  "version": "2.56.0.4",
+  "category": "dev",
+  "description": "Система контролю версій, яка дозволяє відстежувати зміни в коді та співпрацювати з іншими розробниками.",
+  "descriptionbig": "",
+  "website": "https://git-scm.com/",
+  "link64": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/Git-2.56.0.4-64-bit.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/PortableGit-2.56.0.4-64-bit.7z.exe",
+  "textupdate": "Portable Edition",
+  "ispaid": false,
+  "createdAt": "2026-10-28T07:28:03.442Z"
+}

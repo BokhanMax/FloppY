@@ -1,0 +1,15 @@
+{
+  "name": "TeamViewer",
+  "version": "15.83.3",
+  "category": "internet",
+  "description": "Надійний RDP клієнт на базі протоколу VNC. Має підвищений рівень безпеки.",
+  "descriptionbig": "",
+  "website": "https://www.teamviewer.com/en/",
+  "link64": "http://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
+  "link32": "http://download.teamviewer.com/download/TeamViewer_Setup.exe",
+  "linkcommon": "",
+  "linkupdate": "https://download.teamviewer.com/download/TeamViewerPortable.zip",
+  "textupdate": "Portable",
+  "ispaid": false,
+  "createdAt": "2026-10-28T10:17:24.551Z"
+}

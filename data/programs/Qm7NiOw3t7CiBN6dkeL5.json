@@ -1,0 +1,15 @@
+{
+  "name": "Rufus",
+  "version": "4.15",
+  "category": "system",
+  "description": "Програма, яка допоможе підготувати флеш-диск для встановлення різних операційних систем.",
+  "descriptionbig": "",
+  "website": "https://rufus.ie/uk/",
+  "link64": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15.exe",
+  "link32": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15_x86.exe",
+  "linkcommon": "",
+  "linkupdate": "https://github.com/pbatard/rufus/releases/download/v4.15/rufus-4.15p.exe",
+  "textupdate": "Portable",
+  "ispaid": false,
+  "createdAt": "2026-07-03T06:13:39.464Z"
+}

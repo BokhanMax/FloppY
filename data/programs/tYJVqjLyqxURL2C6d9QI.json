@@ -1,0 +1,15 @@
+{
+  "name": "DaVinci Resolve",
+  "version": "21.1.1",
+  "category": "media",
+  "description": "Програма для нелінійного відеомонтажу та корекції. Free версія з повним спектром етапів підготовки відео.",
+  "descriptionbig": "",
+  "website": "https://www.blackmagicdesign.com/ua/",
+  "link64": "https://www.blackmagicdesign.com/ua/products/davinciresolve",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-02T10:00:40.876Z"
+}

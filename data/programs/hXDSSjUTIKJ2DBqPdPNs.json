@@ -1,0 +1,15 @@
+{
+  "name": "Unchecky",
+  "version": "1.2",
+  "category": "system",
+  "description": "Утиліта, яка запобігає встановленню небажаного програмного забезпечення (реклами, панелей інструментів, браузерних розширень) при інсталяції.",
+  "descriptionbig": "",
+  "website": "https://unchecky.userecho.com/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://floppy.pp.ua/setups/unchecky_1.2.exe",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-06-15T09:50:06.104Z"
+}

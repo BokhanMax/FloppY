@@ -1,0 +1,15 @@
+{
+  "name": "PHP",
+  "version": "8.5.12",
+  "category": "dev",
+  "description": "Одна з найпоширеніших мов програмування для веб-серверів та застосунків.",
+  "descriptionbig": "",
+  "website": "https://www.php.net/",
+  "link64": "https://downloads.php.net/~windows/releases/archives/php-8.5.12-Win32-vs17-x64.zip",
+  "link32": "https://downloads.php.net/~windows/releases/archives/php-8.5.12-Win32-vs17-x86.zip",
+  "linkcommon": "",
+  "linkupdate": "https://php.github.io/pie/#docs",
+  "textupdate": "PIE",
+  "ispaid": false,
+  "createdAt": "2026-10-21T18:33:56.304Z"
+}

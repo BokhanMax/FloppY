@@ -1,0 +1,15 @@
+{
+  "name": "Sumatra PDF",
+  "version": "3.6.1",
+  "category": "files",
+  "description": "Дуже компактний переглядач PDF, а також багатьох форматів електронних книжок та коміксів.",
+  "descriptionbig": "",
+  "website": "https://www.sumatrapdfreader.org/free-pdf-reader",
+  "link64": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
+  "link32": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-install.exe",
+  "linkcommon": "",
+  "linkupdate": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1.zip",
+  "textupdate": "Portable",
+  "ispaid": false,
+  "createdAt": "2026-04-07T14:50:20.376Z"
+}

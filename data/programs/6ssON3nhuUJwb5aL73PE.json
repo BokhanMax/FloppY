@@ -1,0 +1,15 @@
+{
+  "name": "GPU-Z",
+  "version": "2.71.0",
+  "category": "system",
+  "description": "Програма для показування основних характеристик та показників встановленої відеокарти.",
+  "descriptionbig": "",
+  "website": "https://www.techpowerup.com/gpuz/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://www.techpowerup.com/download/techpowerup-gpu-z/",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-09-23T13:42:43.297Z"
+}

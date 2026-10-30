@@ -1,0 +1,15 @@
+{
+  "name": "NVIDIA GeForce WHQL",
+  "version": "621.01",
+  "category": "drivers",
+  "description": "WHQL-сертифікований драйвер для відеокарт nVidia сімейства GeForce для Windows 11 та 10.",
+  "descriptionbig": "",
+  "website": "https://www.nvidia.com/en-gb/geforce/drivers/",
+  "link64": "https://uk.download.nvidia.com/Windows/621.01/621.01-notebook-win10-win11-64bit-international-dch-whql.exe",
+  "link32": "",
+  "linkcommon": "",
+  "linkupdate": "https://uk.download.nvidia.com/nvapp/client/11.0.9.565/NVIDIA_app_v11.0.9.565.exe",
+  "textupdate": "nVidia App 11.0.9.565",
+  "ispaid": false,
+  "createdAt": "2026-10-22T11:02:47.768Z"
+}

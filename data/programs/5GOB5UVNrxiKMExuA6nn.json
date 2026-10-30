@@ -1,0 +1,15 @@
+{
+  "name": "Wise Disk Cleaner",
+  "version": "11.4.0",
+  "category": "system",
+  "description": "Ця программа допомагає чистити систему від тимчасових файлів, кешу тощо. Видаляє тільки те, що треба.",
+  "descriptionbig": "",
+  "website": "https://www.wisecleaner.com/wise-disk-cleaner.html",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://www.wisecleaner.com/index.php?r=download-product/latest-version&product=wise-disk-cleaner",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-01T18:55:57.150Z"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "AnyDesk",
+  "version": "9.8.3",
+  "category": "internet",
+  "description": "Компактний RDP-клієнт, дуже простий у використанні, підходить для будь-яких систем.",
+  "descriptionbig": "",
+  "website": "https://anydesk.com/en/downloads/windows",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://download.anydesk.com/AnyDesk.exe",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-10-27T08:20:55.828Z"
+}
