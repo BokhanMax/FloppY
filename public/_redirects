@@ -2,6 +2,10 @@
 /program/7zip /program/7-zip 301
 /program/k-lite-codek-pack /program/k-lite-codec-pack 301
 
+# Видалені програми → їхня категорія
+/program/realtek-universal-audio-drivers /drivers 301
+/program/OsiAvhSwserjsWEtv2bm /drivers 301
+
 # Старі адреси програм (ID з Firestore) → нові
 /program/Rr7MRsWnfQ9EEhYjWwmi /program/7-zip 301
 /program/ETBVcFN8MNXAh6nel1Lu /program/aimp 301
@@ -47,7 +51,6 @@
 /program/1MaXZ5RLxQgykkkpqP5N /program/php 301
 /program/uXriBibjCXJgCWqKMq87 /program/putty 301
 /program/dHxwOok28fdGRZyGjg09 /program/python 301
-/program/OsiAvhSwserjsWEtv2bm /program/realtek-universal-audio-drivers 301
 /program/Qm7NiOw3t7CiBN6dkeL5 /program/rufus 301
 /program/qJRlQs24J5lpUIbgm91x /program/shutter-encoder 301
 /program/QhSX7aHE4wDPT1vKxJCf /program/signal-messenger 301

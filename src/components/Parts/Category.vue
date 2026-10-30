@@ -4,6 +4,7 @@ import TextBlock from '../TextBlock.vue'
 import BlogPreview from '@/components/BlogPreview.vue'
 import { computed } from 'vue'
 import { getProgramsByCategory } from '../../helpers/programs.js'
+import { CATEGORIES } from '../../helpers/cats.js'
 
 const props = defineProps({
   cat: {
@@ -30,20 +31,10 @@ const textBlockContent = computed(() => {
 <p>Від <strong>графічних редакторів</strong> до аудіоредакторів, від утиліт для очищення системи до медіаплеєрів — у нас є все для ваших потреб. Знайдіть програму для роботи з відео, фото, звуком, документами або системою буквально за хвилину.</p>
 <p>Кожна картка програми містить коротку інформацію про застосунок, його версію та пряме посилання для завантаження. Жодної реєстрації та зайвих кроків — лише корисний безкоштовний софт.</p>
 <p>Обирайте категорію зверху, щоб знайти потрібну програму. <em>Загальна база містить програми всіх категорій</em>.</p>`
-  } else if (props.cat === 'dev') {
-    return `<p><strong>Інструменти розробки для програмістів</strong> — скачати програми для веб-розробки, мобільної розробки та роботи з кодом.</p>
-<p>У цій категорії ви знайдете:</p>
-<ul>
-  <li><strong>Редактори коду</strong> — потужні текстові редактори з підтримкою синтаксису</li>
-  <li><strong>Git-клієнти</strong> — керування версіями та контролем коду</li>
-  <li><strong>Компілятори й інтерпретатори</strong> — рантайми для популярних мов програмування</li>
-  <li><strong>Утиліти для зручності</strong> — допоміжні інструменти для розробника</li>
-</ul>
-<p>Безкоштовний софт для розробки програмного забезпечення без додаткових витрат!</p>`
   }
-  return ''
+  // Тексти категорій — у полі text в helpers/cats.js
+  return CATEGORIES.find((c) => c.cat === props.cat)?.text || ''
 })
-
 </script>
 
 <template>
@@ -72,6 +63,6 @@ const textBlockContent = computed(() => {
       />
     </div>
     <BlogPreview v-if="props.cat === 'newest'" />
-    <TextBlock v-if="props.cat === 'newest' || props.cat === 'dev'" :content="textBlockContent" />
+    <TextBlock v-if="textBlockContent" :content="textBlockContent" />
   </div>
 </template>
