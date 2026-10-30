@@ -1,7 +1,7 @@
 {
   "name": "PeaZIP",
   "version": "11.4.0",
-  "category": "system",
+  "category": "files",
   "description": "Альтернативний архіватор (+ файловий менеджер) з відкритим вихідним кодом, читає до 200 форматів архівів.",
   "descriptionbig": "",
   "website": "https://peazip.github.io/",
