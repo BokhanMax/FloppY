@@ -21,27 +21,43 @@ const staticRoutes = [
   '/blog',
 ]
 
-// Генерація маршрутів для постів блогу з файлів /blog/*.md
-const blogRoutes = fs
+// Пости блогу з файлів /blog/DDMMYYYY.md
+const blogSlugs = fs
   .readdirSync(path.join(__dirname, 'blog'))
   .filter((f) => f.endsWith('.md'))
-  .map((f) => `/blog/${f.replace(/\.md$/, '')}`)
+  .map((f) => f.replace(/\.md$/, ''))
+const blogRoutes = blogSlugs.map((slug) => `/blog/${slug}`)
 
-// Маршрути сторінок програм з файлів /data/programs/<id>.json
-const programRoutes = fs
-  .readdirSync(path.join(__dirname, 'data', 'programs'))
+// Програми з файлів /data/programs/<slug>.json
+const programsDir = path.join(__dirname, 'data', 'programs')
+const programs = fs
+  .readdirSync(programsDir)
   .filter((f) => f.endsWith('.json'))
-  .map((f) => `/program/${f.replace(/\.json$/, '')}`)
+  .map((f) => ({
+    slug: f.replace(/\.json$/, ''),
+    ...JSON.parse(fs.readFileSync(path.join(programsDir, f), 'utf8')),
+  }))
+const programRoutes = programs.map((p) => `/program/${p.slug}`)
 
-const customDate = new Date();
-customDate.toISOString = function() {
-  return this.getUTCFullYear() +
-    '-' + String(this.getUTCMonth() + 1).padStart(2, '0') +
-    '-' + String(this.getUTCDate()).padStart(2, '0') +
-    'T' + String(this.getUTCHours()).padStart(2, '0') +
-    ':' + String(this.getUTCMinutes()).padStart(2, '0') +
-    ':' + String(this.getUTCSeconds()).padStart(2, '0') + 'Z';
-};
+// lastmod для sitemap: дата оновлення програми; для категорій і головної — найсвіжіша програма;
+// для постів — дата з імені файлу. Решта сторінок ('*') — дата збірки.
+// Мілісекунди з дат прибирає clean-sitemap.js
+const latest = (dates) => new Date(Math.max(...dates.map((d) => d.getTime())))
+const programDate = (p) => new Date(p.createdAt)
+const blogDate = (slug) =>
+  new Date(Date.UTC(+slug.slice(4, 8), +slug.slice(2, 4) - 1, +slug.slice(0, 2)))
+
+const lastmod = {
+  '*': new Date(),
+  '/': latest(programs.map(programDate)),
+  ...Object.fromEntries(programs.map((p) => [`/program/${p.slug}`, programDate(p)])),
+  ...Object.fromEntries(blogSlugs.map((slug) => [`/blog/${slug}`, blogDate(slug)])),
+}
+if (blogSlugs.length) lastmod['/blog'] = latest(blogSlugs.map(blogDate))
+for (const c of CATEGORIES) {
+  const dates = programs.filter((p) => p.category === c.cat).map(programDate)
+  if (dates.length) lastmod[`/${c.slug}`] = latest(dates)
+}
 
 export default defineConfig(async ({ mode }) => {
   // Client-side code should still read variables via import.meta.env (Vite) or use VITE_ prefix.
@@ -72,16 +88,13 @@ export default defineConfig(async ({ mode }) => {
         generateImageTags: false,
         generateVideoTags: false,
         generateNewsTags: false,
-        lastmod: customDate,
+        lastmod,
         xmlns: {
           news: false,
           xhtml: false,
           image: false,
           video: false
-        }/* ,
-        modifyTime: (time) => {
-          return new Date(time).toISOString().replace(/\.\d{3}Z$/, 'Z');
-        } */
+        }
       }),
     ],
     ssgOptions: {

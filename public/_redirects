@@ -1,5 +1,9 @@
+# Перейменовані адреси програм
+/program/7zip /program/7-zip 301
+/program/k-lite-codek-pack /program/k-lite-codec-pack 301
+
 # Старі адреси програм (ID з Firestore) → нові
-/program/Rr7MRsWnfQ9EEhYjWwmi /program/7zip 301
+/program/Rr7MRsWnfQ9EEhYjWwmi /program/7-zip 301
 /program/ETBVcFN8MNXAh6nel1Lu /program/aimp 301
 /program/Qde4ggLT0D8PWQRnhCsb /program/akelpad 301
 /program/EOAJFYv5MbU1cBljfeon /program/amd-software-adrenalin-edition 301
@@ -25,7 +29,7 @@
 /program/6ssON3nhuUJwb5aL73PE /program/gpu-z 301
 /program/RN8iZbRUtvopsKJQIWHk /program/inkscape 301
 /program/laT5AZxiSZgM2Un0uF8E /program/jetbrains-toolbox 301
-/program/4fYO3CuFZkuPeawCfifF /program/k-lite-codek-pack 301
+/program/4fYO3CuFZkuPeawCfifF /program/k-lite-codec-pack 301
 /program/7gkDAlAy8kXZXYSrHLgv /program/libreoffice 301
 /program/MzztWgEf3xFD1zy5TiEP /program/microsoft-edge 301
 /program/BFZcoSWeCqJujJvLJfKd /program/microsoft-teams 301

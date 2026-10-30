@@ -31,7 +31,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-package-lock.json
 import/
 temp/index.html
 temp/submenus.html

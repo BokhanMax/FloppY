@@ -5,34 +5,31 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "prettier --write src/ && node src/helpers/SharpIconsConvert.js && vite-ssg build && node clean-sitemap.js",
+    "build": "node src/helpers/SharpIconsConvert.js && vite-ssg build && node clean-sitemap.js",
     "buildhtml": "vite-ssg build && node clean-sitemap.js",
     "buildimages": "node src/helpers/SharpIconsConvert.js",
     "preview": "vite preview",
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@gtm-support/vue-gtm": "*",
-    "fs": "*",
-    "fs-extra": "*",
-    "marked": "^18.0.5",
-    "sharp": "*",
-    "v-lazy-image": "*",
+    "@unhead/vue": "^2.1.17",
+    "fs-extra": "^11.4.1",
+    "marked": "^18.1.2",
+    "sharp": "^0.35.5",
+    "v-lazy-image": "^2.1.2",
     "vite-ssg": "^28.3.0",
-    "vue": "*",
-    "vue-gtag": "*",
-    "vue-router": "*",
+    "vue": "^3.5.44",
+    "vue-gtag": "^3.7.1",
+    "vue-router": "^5.4.0",
     "yaml": "^2.9.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "*",
-    "@vitejs/plugin-vue": "*",
-    "autoprefixer": "*",
-    "postcss": "*",
-    "prettier": "*",
-    "tailwindcss": "*",
-    "vite": "*",
-    "vite-plugin-sitemap": "*",
-    "vite-plugin-vue-devtools": "*"
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5",
+    "vite-plugin-sitemap": "^0.8.2",
+    "vite-plugin-vue-devtools": "^8.2.1"
   }
 }

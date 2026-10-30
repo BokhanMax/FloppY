@@ -1,12 +1,23 @@
 import sharp from 'sharp'
 import fs from 'fs-extra'
 import path from 'path'
+import crypto from 'crypto'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const sourceDir = path.join(__dirname, '../../public/icons/source')
 const outputDir = path.join(__dirname, '../../public/icons')
+// Хеші вихідників уже сконвертованих іконок — щоб не конвертувати все на кожній збірці
+const manifestPath = path.join(__dirname, '../../data/icon-hashes.json')
 const sizes = [96, 72]
+const quality = 80
+// --force — сконвертувати всі іконки заново
+const force = process.argv.includes('--force')
+
+const outputsFor = (baseName) => [
+  path.join(outputDir, `${baseName}.avif`),
+  ...sizes.map((size) => path.join(outputDir, `${baseName}-${size}w.avif`)),
+]
 
 async function convertIcons() {
   try {
@@ -24,35 +35,53 @@ async function convertIcons() {
       return
     }
 
-    console.log(`📦 Конвертуємо ${files.length} зображень...`)
+    const manifest = force || !fs.existsSync(manifestPath) ? {} : fs.readJsonSync(manifestPath)
+    // Налаштування входять у хеш: зміна розмірів чи якості перезбирає всі іконки
+    const settings = JSON.stringify({ sizes, quality })
 
-    let totalConverted = 0
+    let converted = 0
+    let skipped = 0
 
     for (const file of files) {
       const inputPath = path.join(sourceDir, file)
       const baseName = path.parse(file).name
+      const hash = crypto
+        .createHash('sha1')
+        .update(settings)
+        .update(fs.readFileSync(inputPath))
+        .digest('hex')
+      const outputsExist = outputsFor(baseName).every((p) => fs.existsSync(p))
+
+      // Вихідник не змінився — або іконка з'явилася до появи маніфесту і вже сконвертована
+      if (!force && outputsExist && (manifest[file] === hash || !(file in manifest))) {
+        manifest[file] = hash
+        skipped++
+        continue
+      }
 
       // Convert to original size AVIF
-      const originalOutputPath = path.join(outputDir, `${baseName}.avif`)
-      await sharp(inputPath).avif({ quality: 80 }).toFile(originalOutputPath)
-
-      totalConverted++
+      await sharp(inputPath).avif({ quality }).toFile(outputsFor(baseName)[0])
 
       // Convert to different sizes
       for (const size of sizes) {
-        const sizedOutputPath = path.join(outputDir, `${baseName}-${size}w.avif`)
         await sharp(inputPath)
           .resize(size, size, { fit: 'cover' })
-          .avif({ quality: 80 })
-          .toFile(sizedOutputPath)
-
-        totalConverted++
+          .avif({ quality })
+          .toFile(path.join(outputDir, `${baseName}-${size}w.avif`))
       }
 
+      manifest[file] = hash
+      converted++
       console.log(`✅ Зроблено: ${baseName}`)
     }
 
-    console.log(`\n🎉 Конвертовано ${totalConverted} файлів`)
+    // Прибираємо з маніфесту видалені вихідники
+    for (const file of Object.keys(manifest)) {
+      if (!files.includes(file)) delete manifest[file]
+    }
+    fs.outputJsonSync(manifestPath, manifest, { spaces: 2 })
+
+    console.log(`🎉 Іконки: сконвертовано ${converted}, без змін ${skipped}`)
   } catch (error) {
     console.error('❌ Помилка:', error.message)
     process.exit(1)
