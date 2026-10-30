@@ -1,6 +1,7 @@
 import Category from '../components/Parts/Category.vue'
 import { CATEGORIES } from '../helpers/cats.js'
 
+// meta.title, meta.description, meta.noindex — базові SEO-теги сторінки (див. Floppy.vue та helpers/seo.js)
 export const routes = [
   // Pages
 
@@ -18,6 +19,8 @@ export const routes = [
     component: () => import('../pages/ContactPage.vue'),
     meta: {
       title: 'Контакти - Скачати безкоштовний софт | Floppy',
+      description:
+        'Контакти сайту FloppY: питання щодо розміщення програм у каталозі та роботи сайту. Оберіть зручний спосіб звʼязку та напишіть нам.',
     },
   },
   {
@@ -26,6 +29,8 @@ export const routes = [
     component: () => import('../pages/FAQPage.vue'),
     meta: {
       title: 'Часті питання - Скачати безкоштовний софт | Floppy',
+      description:
+        'Часті питання про програми з каталогу FloppY: яку версію обрати — x32 чи x64, що робити, якщо програма зависла або не запускається на Windows 7.',
     },
   },
   {
@@ -42,6 +47,8 @@ export const routes = [
     component: () => import('../pages/BlogPage.vue'),
     meta: {
       title: 'Блог - Скачати безкоштовний софт | Floppy',
+      description:
+        'Блог FloppY: практичні поради з вибору та використання безкоштовних програм для Windows, огляди та покрокові інструкції.',
     },
   },
   {
@@ -68,25 +75,21 @@ export const routes = [
     name: c.slug,
     component: Category,
     props: { cat: c.cat, title: c.title },
-    meta: { title: c.metaTitle },
+    meta: { title: c.metaTitle, description: c.metaDescription },
   })),
 
-  // 404 — завжди останній, щоб не перехоплювати інші маршрути
+  // 404: /404 генерується в dist/404.html — Netlify віддає його з кодом 404 для неіснуючих адрес.
+  // Catch-all — завжди останній, для навігації всередині застосунку
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('../pages/NotFound.vue'),
+    meta: { title: 'Сторінку не знайдено | Floppy', noindex: true },
+  },
   {
     path: '/:pathMatch(.*)*',
-    name: '404',
-    component: Category,
-    props: { cat: 'newest', title: 'Останні оновлення програм' },
-    meta: {
-      title: '',
-    },
+    name: 'not-found',
+    component: () => import('../pages/NotFound.vue'),
+    meta: { title: 'Сторінку не знайдено | Floppy', noindex: true },
   },
 ]
-
-export function setupRouter(router) {
-  router.beforeEach((to) => {
-    if (typeof document !== 'undefined') {
-      document.title = to.meta.title || 'Скачати безкоштовний софт | Floppy'
-    }
-  })
-}

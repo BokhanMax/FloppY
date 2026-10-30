@@ -61,4 +61,5 @@
 /program/5GOB5UVNrxiKMExuA6nn /program/wise-disk-cleaner 301
 /program/xMLscn6MFsZNLWyOa3Qn /program/wise-registry-cleaner 301
 
-/* /index.html 200
+# Загального правила /* /index.html 200 немає: усі сторінки згенеровані (SSG),
+# а для неіснуючих адрес Netlify віддає 404.html з кодом 404.

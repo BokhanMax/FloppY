@@ -1,9 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { useHead } from '@unhead/vue'
 import { CATEGORIES } from '../helpers/cats.js'
 import { getProgramById, formatProgramDate } from '../helpers/programs.js'
+import { useSeo, breadcrumbList, absoluteUrl } from '../helpers/seo.js'
 import VLazyImage from 'v-lazy-image'
 
 const route = useRoute()
@@ -19,17 +19,46 @@ const date = computed(() =>
   }),
 )
 
-const categoryName = computed(() => {
-  const found = CATEGORIES.find((c) => c.cat === program.value?.category)
-  return found?.label || program.value?.category || ''
-})
+const category = computed(() => CATEGORIES.find((c) => c.cat === program.value?.category))
+const categoryName = computed(() => category.value?.label || program.value?.category || '')
 
-useHead({
-  title: computed(() =>
+useSeo({
+  title: () =>
     program.value
       ? `Скачати ${program.value.name} ${program.value.version} безкоштовно | Floppy`
       : 'Програму не знайдено | Floppy',
-  ),
+  description: () =>
+    program.value &&
+    `Скачати ${program.value.name} ${program.value.version} для Windows ${program.value.ispaid ? '' : 'безкоштовно '}з офіційного сайту. ${program.value.description}`,
+  noindex: () => !program.value,
+  jsonLd: () => {
+    const p = program.value
+    if (!p) return null
+    const path = `/program/${p.id}`
+    return [
+      {
+        '@type': 'SoftwareApplication',
+        name: p.name,
+        softwareVersion: p.version,
+        operatingSystem: 'Windows',
+        applicationCategory: category.value?.schemaCategory,
+        description: p.descriptionbig || p.description,
+        url: absoluteUrl(path),
+        // AVIF генерується для кожної іконки; вихідник у source/ може бути png, svg або webp
+        image: absoluteUrl('/icons/' + p.name.replace(/\s+/g, '') + 'Icon.avif'),
+        downloadUrl: p.link64 || p.linkcommon || p.link32 || undefined,
+        dateModified: p.createdAt,
+        ...(p.ispaid ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'UAH' } }),
+      },
+      breadcrumbList([
+        { name: 'Головна', path: '/' },
+        ...(category.value
+          ? [{ name: category.value.title, path: '/' + category.value.slug }]
+          : []),
+        { name: p.name, path },
+      ]),
+    ]
+  },
 })
 </script>
 

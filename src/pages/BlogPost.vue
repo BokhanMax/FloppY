@@ -1,9 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
-import { useHead } from '@unhead/vue'
 import { marked } from 'marked'
 import { getPostBySlug } from '@/helpers/blogUtils'
+import { useSeo, breadcrumbList, absoluteUrl, SITE_NAME, SITE_URL } from '@/helpers/seo.js'
 
 // Налаштування marked: безпечний рендер (без довільного HTML у вмісті)
 marked.setOptions({ breaks: true })
@@ -17,10 +17,44 @@ const htmlContent = computed(() => {
   return marked.parse(post.value.rawContent)
 })
 
-useHead({
-  title: computed(() =>
-    post.value ? `${post.value.title} | Блог | FloppY` : 'Пост не знайдено | FloppY',
-  ),
+// Соцмережі не показують SVG-обкладинки — для них лишається загальна og-картинка сайту
+const ogImage = computed(() =>
+  post.value?.image && !post.value.image.endsWith('.svg') ? post.value.image : '',
+)
+
+useSeo({
+  title: () => (post.value ? `${post.value.title} | Блог | FloppY` : 'Пост не знайдено | FloppY'),
+  description: () => post.value?.description,
+  image: ogImage,
+  type: 'article',
+  noindex: () => !post.value,
+  jsonLd: () => {
+    const p = post.value
+    if (!p) return null
+    const path = `/blog/${p.slug}`
+    const site = { '@type': 'Organization', name: SITE_NAME, url: SITE_URL }
+    return [
+      {
+        '@type': 'BlogPosting',
+        headline: p.title,
+        description: p.description,
+        image: p.image ? absoluteUrl(p.image) : undefined,
+        // slug = DDMMYYYY → YYYY-MM-DD (без toISOString, щоб часовий пояс не зсунув дату)
+        datePublished: p.date
+          ? `${p.slug.slice(4, 8)}-${p.slug.slice(2, 4)}-${p.slug.slice(0, 2)}`
+          : undefined,
+        inLanguage: 'uk',
+        author: site,
+        publisher: site,
+        mainEntityOfPage: absoluteUrl(path),
+      },
+      breadcrumbList([
+        { name: 'Головна', path: '/' },
+        { name: 'Блог', path: '/blog' },
+        { name: p.title, path },
+      ]),
+    ]
+  },
 })
 </script>
 
