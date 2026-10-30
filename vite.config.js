@@ -68,7 +68,7 @@ export default defineConfig(async ({ mode }) => {
         dynamicRoutes: allRoutes,
         hostname: 'https://floppy.pp.ua',
         i18n: false,
-        exclude: ['/404', '/google791bf0808cd727c5'],
+        exclude: ['/404', '/google791bf0808cd727c5', '/admin'],
         generateImageTags: false,
         generateVideoTags: false,
         generateNewsTags: false,
