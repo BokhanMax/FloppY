@@ -8,6 +8,31 @@
     <!-- title, description, canonical, Open Graph, Twitter — задаються на кожній сторінці через useSeo() (src/helpers/seo.js) -->
     <title>Скачати безкоштовний софт | Floppy</title>
 
+    <!-- Тема до першого рендеру, щоб не було спалаху: збережений вибір (ThemeToggle.vue) або системна -->
+    <script>
+      ;(function () {
+        var root = document.documentElement
+        var media = window.matchMedia('(prefers-color-scheme: dark)')
+        var saved = null
+        try {
+          saved = localStorage.getItem('theme')
+        } catch (e) {}
+        root.classList.toggle('dark', saved ? saved === 'dark' : media.matches)
+        media.addEventListener('change', function (e) {
+          var current = null
+          try {
+            current = localStorage.getItem('theme')
+          } catch (err) {}
+          if (!current) root.classList.toggle('dark', e.matches)
+        })
+      })()
+    </script>
+
+    <!-- Шрифти: Onest (кирилиця) та JetBrains Mono для версій -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -18,7 +43,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
   </head>
-  <body class="bg-white text-gray-800">
+  <body>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

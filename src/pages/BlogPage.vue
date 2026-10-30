@@ -8,65 +8,60 @@ const recentPosts = computed(() => allPosts.slice(0, 3))
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto">
-    <h1 class="text-3xl font-bold mb-8 text-green-dark text-center">Блог</h1>
-    <div class="flex justify-center mb-8">
-      <hr class="w-24 border-t border-gray-300" />
-    </div>
-    <div class="flex flex-col lg:flex-row gap-8">
+  <div class="pt-6 sm:pt-10">
+    <h1 class="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">Блог</h1>
+    <div class="flex flex-col gap-8 lg:flex-row">
       <!-- Основний список постів -->
-      <div class="flex-1 min-w-0 space-y-6">
-        <div v-if="allPosts.length === 0" class="text-gray-500 text-center py-12">
+      <div class="flex min-w-0 flex-1 flex-col gap-5">
+        <p v-if="allPosts.length === 0" class="card p-8 text-center text-muted">
           Поки що немає записів.
-        </div>
+        </p>
 
-        <article
-          v-for="post in allPosts"
-          :key="post.slug"
-          class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors"
-        >
+        <article v-for="post in allPosts" :key="post.slug" class="card overflow-hidden">
           <!-- Зображення поста -->
-          <RouterLink :to="`/blog/${post.slug}`" v-if="post.image" class="block overflow-hidden">
+          <RouterLink
+            v-if="post.image"
+            :to="`/blog/${post.slug}`"
+            class="block overflow-hidden bg-surface-2"
+            tabindex="-1"
+            aria-hidden="true"
+          >
             <img
               :src="post.image"
               :alt="post.title"
-              class="w-full h-56 object-cover hover:scale-[1.02] transition-transform duration-500"
+              class="h-56 w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
               loading="lazy"
             />
           </RouterLink>
 
-          <div class="p-6">
-            <!-- Дата -->
+          <div class="flex flex-col gap-3 p-6">
             <time
               v-if="post.dateFormatted"
-              class="text-sm text-gray-500 mb-2 block"
+              class="text-sm text-faint"
               :datetime="post.date?.toISOString()"
             >
               {{ post.dateFormatted }}
             </time>
-
-            <!-- Заголовок -->
-            <h2 class="text-xl font-semibold mb-3">
-              <RouterLink
-                :to="`/blog/${post.slug}`"
-                class="text-green-dark hover:text-[#0071e3] transition-colors"
-              >
+            <h2 class="text-xl leading-snug font-semibold">
+              <RouterLink :to="`/blog/${post.slug}`" class="hover:text-accent-fg">
                 {{ post.title }}
               </RouterLink>
             </h2>
-
-            <!-- Опис -->
-            <p v-if="post.description" class="text-gray-600 leading-relaxed mb-4">
+            <p v-if="post.description" class="leading-relaxed text-muted">
               {{ post.description }}
             </p>
-
-            <!-- Посилання -->
             <RouterLink
               :to="`/blog/${post.slug}`"
-              class="inline-flex items-center gap-1 text-[#0071e3] hover:text-[#005bb5] font-medium transition-colors text-sm"
+              class="inline-flex items-center gap-1 self-start text-sm font-semibold text-accent-fg hover:underline"
             >
               Читати далі
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -80,42 +75,36 @@ const recentPosts = computed(() => allPosts.slice(0, 3))
       </div>
 
       <!-- Сайдбар: останні 3 пости -->
-      <aside class="lg:w-72 shrink-0">
-        <div class="bg-white border border-gray-200 rounded-lg p-5 sticky top-24">
-          <h2 class="text-lg font-semibold text-green-dark mb-4 pb-3 border-b border-gray-100">
-            Останні записи
-          </h2>
-
-          <div class="space-y-4">
-            <div v-for="post in recentPosts" :key="post.slug" class="group">
-              <RouterLink
-                :to="`/blog/${post.slug}`"
-                class="flex gap-3 items-start hover:text-[#0071e3] transition-colors"
-              >
+      <aside class="shrink-0 lg:w-72">
+        <div class="card p-5 lg:sticky lg:top-24">
+          <h2 class="mb-4 border-b border-line pb-3 text-lg font-semibold">Останні записи</h2>
+          <ul class="flex flex-col gap-4">
+            <li v-for="post in recentPosts" :key="post.slug">
+              <RouterLink :to="`/blog/${post.slug}`" class="group flex items-start gap-3">
                 <img
                   v-if="post.image"
                   :src="post.image"
-                  :alt="post.title"
-                  class="w-16 h-16 object-cover rounded-md shrink-0 group-hover:scale-[1.03] transition-transform duration-300"
+                  alt=""
+                  class="h-16 w-16 shrink-0 rounded-xl bg-surface-2 object-cover"
                   loading="lazy"
                 />
-                <div class="flex-1 min-w-0">
-                  <p
-                    class="text-sm font-medium text-gray-900 group-hover:text-[#0071e3] transition-colors line-clamp-2 leading-snug"
+                <span class="flex min-w-0 flex-1 flex-col gap-1">
+                  <span
+                    class="line-clamp-2 text-sm leading-snug font-medium group-hover:text-accent-fg"
                   >
                     {{ post.title }}
-                  </p>
+                  </span>
                   <time
                     v-if="post.dateFormatted"
-                    class="text-xs text-gray-400 mt-1 block"
+                    class="text-xs text-faint"
                     :datetime="post.date?.toISOString()"
                   >
                     {{ post.dateFormatted }}
                   </time>
-                </div>
+                </span>
               </RouterLink>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </aside>
     </div>

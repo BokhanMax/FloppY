@@ -1,108 +1,138 @@
 <script setup>
-import VLazyImage from 'v-lazy-image'
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import Button from '@/components/Button.vue'
-import Paid from '@/components/Paid.vue'
-import Website from '@/components/Website.vue'
 import Version from '@/components/Version.vue'
-import { formatProgramDate } from '@/helpers/programs.js'
+import { formatProgramDate, getDownloads, iconBase } from '@/helpers/programs.js'
 
 const props = defineProps({
-  id: { type: String },
-  name: { type: String, required: true },
-  description: { type: String },
-  createdAt: { type: String },
-  version: { type: String },
-  website: { type: String },
-  icon: { type: String },
-  link32: { type: String },
-  link64: { type: String },
-  linkcommon: { type: String },
-  linkupdate: { type: String },
-  textupdate: { type: String },
-  ispaid: { type: Boolean, default: false },
+  program: { type: Object, required: true },
+  // h2 на сторінці категорії (під h1), h3 на головній (під h2 "Останні оновлення")
+  headingTag: { type: String, default: 'h2' },
 })
 
 // Явні локаль і часовий пояс — щоб дата в SSG-HTML збігалася з датою в браузері
-const date = formatProgramDate(props.createdAt, { timeZone: 'Europe/Kyiv' })
+const date = computed(() => formatProgramDate(props.program.createdAt, { timeZone: 'Europe/Kyiv' }))
+const downloads = computed(() => getDownloads(props.program))
+const icon = computed(() => iconBase(props.program.name))
 </script>
 
 <template>
-  <div
-    class="bg-white border border-gray-200 rounded-lg 2xl:p-5 lg:p-3 xs:p-4 hover:border-gray-300 transition-colors justify-between flex flex-col"
-    :id="props.id"
-  >
-    <div class="flex items-center place-content-between mb-4">
-      <div class="flex">
-        <div
-          class="text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4 hover:scale-[1.05] duration-500 ease-in-out"
+  <article class="card flex flex-col gap-3.5 p-5" :id="program.id">
+    <div class="flex items-start gap-3.5">
+      <img
+        :src="icon + '-96w.avif'"
+        :alt="'Скачати ' + program.name + ' безкоштовно'"
+        width="52"
+        height="52"
+        loading="lazy"
+        class="h-13 w-13 shrink-0 rounded-[14px] bg-surface-2 object-contain p-1.5"
+      />
+      <div class="flex min-w-0 flex-1 flex-col gap-1.5">
+        <component :is="headingTag" class="text-lg leading-tight font-semibold">
+          <RouterLink :to="'/program/' + program.id" class="hover:text-accent-fg">
+            {{ program.name }}
+          </RouterLink>
+        </component>
+        <div class="flex min-w-0 items-center gap-2">
+          <Version v-if="program.version" :version="program.version" :name="program.name" />
+          <span class="shrink-0 text-xs whitespace-nowrap text-faint">{{ date }}</span>
+        </div>
+      </div>
+      <span
+        v-if="program.ispaid"
+        class="shrink-0 rounded-full bg-paid px-2.5 py-1 text-xs font-semibold text-paid-fg"
+        title="Умовно-безкоштовна: після пробного періоду потрібна ліцензія"
+      >
+        Shareware
+      </span>
+      <span
+        v-else
+        class="shrink-0 rounded-full bg-free px-2.5 py-1 text-xs font-semibold text-free-fg"
+      >
+        Безкоштовна
+      </span>
+    </div>
+
+    <p class="flex-1 text-[15px] leading-relaxed text-muted">{{ program.description }}</p>
+
+    <div v-if="downloads.length" class="flex gap-2">
+      <a :href="downloads[0].href" target="_blank" rel="noopener" class="btn btn-primary flex-1">
+        <svg
+          class="h-[18px] w-[18px]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
         >
-          <!--<img
-            :src="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'" :alt="name"
-            :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
-          /> -->
-          <picture>
-            <source
-              media="(width < 800px)"
-              :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-72w.avif'"
-              :width="72"
-              :height="72"
-            />
-            <source
-              media="(width >= 800px)"
-              :srcset="'icons/' + props.name.replace(/\s+/g, '') + 'Icon-96w.avif'"
-              :width="96"
-              :height="96"
-            />
-            <v-lazy-image
-              :src="'icons/source/' + props.name.replace(/\s+/g, '') + 'Icon.png'"
-              :alt="'Скачати ' + props.name + ' безкоштовно'"
-              :title="'Скачати ' + props.name + ' безкоштовно по прямому посиланню'"
-              :width="48"
-              :height="48"
-            />
-          </picture>
-        </div>
-        <div class="flex">
-          <div class="flex flex-col">
-            <h1
-              v-if="id"
-              class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8 hover:text-[#0071e3] transition-colors cursor-pointer"
-            >
-              <RouterLink
-                :to="'/program/' + id"
-                class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8 hover:text-[#0071e3] transition-colors cursor-pointer"
-              >
-                {{ name }}
-              </RouterLink>
-            </h1>
-            <h1
-              v-else
-              class="text-l lg:text-sm 2xl:text-xl font-semibold text-green-dark xs:text-base xs:leading-8"
-            >
-              {{ name }}
-            </h1>
-            <p class="lg:text-s xs:text-xs">
-              <Version :version="props.version" :name="props.name" />
-              <span class="text-gray-400 mx-2">•</span>
-              <span class="text-gray-500 text-xs">{{ date }}</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="flex self-start flex-col items-end">
-        <Website v-if="website" :website="props.website" />
-        <Paid v-if="ispaid" />
-      </div>
+          <path d="M12 4v11M7 10l5 5 5-5M5 20h14" />
+        </svg>
+        Завантажити{{ downloads[0].arch === 'x86-x64' ? '' : ' ' + downloads[0].arch }}
+      </a>
+      <a
+        v-for="d in downloads.slice(1)"
+        :key="d.arch"
+        :href="d.href"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-secondary"
+        :aria-label="'Завантажити ' + program.name + ' ' + d.arch"
+      >
+        {{ d.arch }}
+      </a>
     </div>
-    <p class="text-gray-600 mb-4 md:text-base xs:text-justify xs:text-sm xs:mx-2">
-      {{ description }}
-    </p>
-    <div class="flex flex-col sm:flex-row gap-2">
-      <Button v-if="link64" title="Завантажити x64" :link="props.link64" />
-      <Button v-if="link32" title="Завантажити x32" :link="props.link32" />
-      <Button v-if="linkcommon" title="Завантажити x86-x64" :link="props.linkcommon" />
-      <Button v-if="linkupdate" :title="textupdate" :link="props.linkupdate" />
+
+    <div
+      v-if="program.website || (program.linkupdate && program.textupdate)"
+      class="flex flex-wrap items-center gap-x-5 gap-y-1 border-t border-line pt-3 text-sm"
+    >
+      <a
+        v-if="program.website"
+        :href="program.website"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex min-h-7 items-center gap-1.5 text-muted hover:text-fg"
+      >
+        <svg
+          class="h-[15px] w-[15px]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+          <path
+            d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9s1.3-6.3 3.8-9z"
+          />
+        </svg>
+        Офіційний сайт
+      </a>
+      <a
+        v-if="program.linkupdate && program.textupdate"
+        :href="program.linkupdate"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex min-h-7 items-center gap-1.5 font-medium text-accent-fg hover:underline"
+      >
+        <svg
+          class="h-[15px] w-[15px]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+        </svg>
+        {{ program.textupdate }}
+      </a>
     </div>
-  </div>
+  </article>
 </template>

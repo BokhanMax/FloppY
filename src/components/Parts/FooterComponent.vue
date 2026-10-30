@@ -1,30 +1,25 @@
 <script setup>
-const appVersion = __APP_VERSION__
+// Версія сайту з package.json; показуємо major.minor (2.0.0 → 2.0)
+const appVersion = __APP_VERSION__.split('.').slice(0, 2).join('.')
+const year = new Date().getFullYear()
 </script>
 
 <template>
-  <!-- Footer -->
-  <footer class="bg-gray-50 border-t border-gray-200 mt-2">
-    <div class="container mx-auto px-4 py-8">
-      <div class="text-center">
-        <p class="text-gray-600 mb-4">
-          © {{ new Date().getFullYear() }} <b><a href="/">Floppy</a></b> - скачати безкоштовний
-          софт. Український каталог безкоштовних програм.<br class="xs:hidden" />
-          Всі права на програми належать їхнім розробникам.<br />
-          Версія сайту: {{ appVersion }}
-        </p>
-        <div class="flex justify-center gap-4">
-          <RouterLink to="/contact" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
-            Зв'язок з адміном
-          </RouterLink>
-          <RouterLink to="/blog" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
-            Блог
-          </RouterLink>
-          <RouterLink to="/faq" class="text-[#0071e3] hover:text-[#005bb5] transition-colors">
-            FAQ
-          </RouterLink>
-        </div>
+  <footer class="mt-16 border-t border-line bg-header">
+    <div
+      class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-7 text-sm text-muted sm:px-6"
+    >
+      <div class="flex flex-col gap-1">
+        <span>© {{ year }} FloppY — український каталог безкоштовних програм</span>
+        <span class="text-[13px] text-faint">
+          Усі права на програми належать їхнім розробникам · Версія {{ appVersion }}
+        </span>
       </div>
+      <nav aria-label="Сайт" class="flex gap-5">
+        <RouterLink to="/blog" class="hover:text-fg">Блог</RouterLink>
+        <RouterLink to="/faq" class="hover:text-fg">Часті питання</RouterLink>
+        <RouterLink to="/contact" class="hover:text-fg">Контакти</RouterLink>
+      </nav>
     </div>
   </footer>
 </template>

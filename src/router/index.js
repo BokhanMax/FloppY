@@ -1,6 +1,14 @@
 import Category from '../components/Parts/Category.vue'
 import { CATEGORIES } from '../helpers/cats.js'
 
+// Прокрутка при переході: "Назад"/"Вперед" — на збережену позицію, якір — до елемента
+// (з відступом під липку шапку), інакше — нагору сторінки
+export function scrollBehavior(to, from, savedPosition) {
+  if (savedPosition) return savedPosition
+  if (to.hash) return { el: to.hash, top: 96, behavior: 'smooth' }
+  return { top: 0 }
+}
+
 // meta.title, meta.description, meta.noindex — базові SEO-теги сторінки (див. Floppy.vue та helpers/seo.js)
 export const routes = [
   // Pages

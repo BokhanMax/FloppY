@@ -25,9 +25,9 @@ useSeo({
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FCFCFD]">
+  <div class="flex min-h-screen flex-col bg-bg text-fg">
     <SiteHeader />
-    <main class="container mx-auto px-2 py-4 xs:px-1 xs:py-8">
+    <main class="mx-auto w-full max-w-[1200px] flex-1 px-4 sm:px-6">
       <router-view :key="$route.fullPath"></router-view>
     </main>
     <SiteFooter />

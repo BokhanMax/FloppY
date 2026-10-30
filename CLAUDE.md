@@ -51,6 +51,15 @@ Sveltia CMS на `/admin` (`public/admin/index.html` + `config.yml`). Вхід G
 - `sitemap.xml` генерує `vite-plugin-sitemap` у `vite.config.js`. Плагін **сам додає всі HTML з `dist/`** — службові сторінки треба вносити в `exclude`. `lastmod` — дата програми / найсвіжішої програми в категорії / дата посту.
 - 404: маршрут `/404` → `dist/404.html`, Netlify віддає його з кодом 404. Загального правила `/* /index.html 200` у `_redirects` **немає й не повинно бути** — усі сторінки згенеровані.
 
+## Дизайн
+
+- Токени кольорів — у `src/assets/style.css`: CSS-змінні для світлої (`:root`) і темної (`.dark`) теми, доступні як класи Tailwind: `bg-bg`, `bg-header`, `bg-surface`, `bg-surface-2`, `border-line`, `text-fg`, `text-muted`, `text-faint`, `bg-accent`, `text-on-accent`, `bg-accent-soft`, `text-accent-fg`, `bg-free`/`text-free-fg`, `bg-paid`/`text-paid-fg`. **Не використовуй фіксовані кольори** (`bg-white`, `text-gray-*`, hex) — вони ламають темну тему.
+- Компонентні класи там само: `.card`, `.btn` + `.btn-primary` / `.btn-secondary`, `.prose-content` (HTML/Markdown: тексти категорій, статті блогу).
+- Темна тема: клас `.dark` на `<html>`. Початкову тему ставить inline-скрипт у `index.html` (збережений вибір у `localStorage.theme` або системна), перемикач — `ThemeToggle.vue`. Елементи, що залежать від теми, перемикай через `dark:`, а не через JS-стан — інакше HTML при SSG і в браузері розійдеться.
+- Шрифти: Onest (текст), JetBrains Mono (версії) — Google Fonts у `index.html`. Контейнер сторінок — `max-w-[1200px]`.
+- Пошук на головній — миттєвий фільтр у `Category.vue` (назва + опис), без окремої сторінки.
+- Макет дизайну: https://claude.ai/artifact/Bzs22XLEnhaLBHxoKCMmB9
+
 ## Netlify
 - `public/_redirects` — 301 зі старих адрес (ID з Firestore, перейменування). Нові правила — над старими.
 - `public/_headers` — кеш (`/assets/*` immutable, іконки й зображення — тиждень) і базові заголовки безпеки.
@@ -58,7 +67,7 @@ Sveltia CMS на `/admin` (`public/admin/index.html` + `config.yml`). Вхід G
 
 ## Підводні камені
 - **Hydration:** HTML генерується на сервері збірки (UTC), потім гідратується в браузері. Дати форматуй з явними `'uk-UA'` і `timeZone: 'Europe/Kyiv'` (див. `formatProgramDate`), інакше текст на сервері й у браузері розійдеться. Не використовуй `window`/`document` поза `onMounted`.
-- **Шляхи іконок** у `ProgramCard.vue` відносні (`icons/...`), у `ProgramPage.vue` — абсолютні (`/icons/...`). Картки показуються лише на сторінках першого рівня, тому це працює.
+- **Шляхи іконок** — завжди абсолютні, через `iconBase(name)` з `helpers/programs.js` (`/icons/<Name>Icon` + `-96w.avif`).
 - `createdAt` при оновленні програми в CMS не змінюється автоматично — його ставлять вручну.
 - Аналітика — лише GA4 через `vue-gtag` у `src/main.js` (GTM прибрано свідомо).
 - Стиль коду: prettier (`semi: false`, `singleQuote`, `printWidth: 100`), Tailwind 4 з кастомним брейкпоінтом `xs` у `src/assets/style.css`.

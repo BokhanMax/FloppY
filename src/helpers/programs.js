@@ -7,7 +7,10 @@
 const files = import.meta.glob('/data/programs/*.json', { eager: true, import: 'default' })
 
 const programs = Object.entries(files).map(([path, data]) => ({
-  id: path.split('/').pop().replace(/\.json$/, ''),
+  id: path
+    .split('/')
+    .pop()
+    .replace(/\.json$/, ''),
   ...data,
 }))
 
@@ -29,6 +32,33 @@ export function getProgramById(id) {
 
 export function getAllProgramIds() {
   return programs.map((p) => p.id)
+}
+
+/**
+ * Посилання на завантаження програми: [{ href, arch }], перше — основне.
+ */
+export function getDownloads(p) {
+  return [
+    p.link64 && { href: p.link64, arch: 'x64' },
+    p.link32 && { href: p.link32, arch: 'x32' },
+    p.linkcommon && { href: p.linkcommon, arch: 'x86-x64' },
+  ].filter(Boolean)
+}
+
+/**
+ * Базове ім'я файлів іконки: назва без пробілів + Icon (див. SharpIconsConvert.js).
+ */
+export const iconBase = (name) => '/icons/' + name.replace(/\s+/g, '') + 'Icon'
+
+/**
+ * "1 програма", "3 програми", "13 програм".
+ */
+export function pluralPrograms(n) {
+  const mod10 = n % 10
+  const mod100 = n % 100
+  if (mod10 === 1 && mod100 !== 11) return `${n} програма`
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${n} програми`
+  return `${n} програм`
 }
 
 /**
