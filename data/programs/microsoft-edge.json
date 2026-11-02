@@ -1,6 +1,6 @@
 {
   "name": "Microsoft Edge",
-  "version": "156.0.4314.50",
+  "version": "156.0.4314.58",
   "category": "internet",
   "description": "Веб-браузер, розроблений Microsoft. Є наступником Internet Explorer, підтримує сучасні веб-стандарти.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-10-27T10:00:28.091Z"
+  "createdAt": "2026-11-02T07:30:00Z"
 }
