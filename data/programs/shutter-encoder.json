@@ -1,6 +1,6 @@
 {
   "name": "Shutter Encoder",
-  "version": "20.4",
+  "version": "20.5",
   "category": "media",
   "description": "Повністю безкоштовний конвертер медіафайлів з широким наборов опцій. Також вміє скачувати веб-відео.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-09-28T07:00:23.552Z"
+  "createdAt": "2026-11-04T10:50:00Z"
 }
