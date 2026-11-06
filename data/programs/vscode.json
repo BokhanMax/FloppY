@@ -1,6 +1,6 @@
 {
   "name": "VSCode",
-  "version": "1.145.0",
+  "version": "1.145.1",
   "category": "dev",
   "description": "Шикарна безкоштовна IDE від компанії Microsoft, з купою функцій, підтримує майже всі мови.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-11-04T10:51:00Z"
+  "createdAt": "2026-11-06T09:47:00Z"
 }
