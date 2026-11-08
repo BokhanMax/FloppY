@@ -1,15 +1,15 @@
 {
   "name": "K-Lite Codec Pack",
-  "version": "20.1.0",
+  "version": "20.2.0",
   "category": "media",
   "description": "Величезний набір кодеків для відтворення та перепаковки відео. Може допомогти прочитати рідкісні формати.",
   "descriptionbig": "",
   "website": "https://codecguide.com/",
   "link64": "",
   "link32": "",
-  "linkcommon": "https://files3.codecguide.com/K-Lite_Codec_Pack_2010_Mega.exe",
-  "linkupdate": "https://files3.codecguide.com/klcp_update_2016_20261103.exe",
-  "textupdate": "Update 20.1.6",
+  "linkcommon": "https://files3.codecguide.com/K-Lite_Codec_Pack_2020_Mega.exe",
+  "linkupdate": "",
+  "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-11-04T10:50:00Z"
+  "createdAt": "2026-11-08T10:19:00Z"
 }
