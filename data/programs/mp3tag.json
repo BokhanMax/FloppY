@@ -1,15 +1,15 @@
 {
   "name": "mp3Tag",
-  "version": "3.36.1",
+  "version": "3.37",
   "category": "media",
   "description": "Універсальний пакетний редактор ID3 тегів для колекціонерів музики на комп'ютері.",
   "descriptionbig": "",
   "website": "https://www.mp3tag.de/en/index.html",
-  "link64": "https://www.mp3tag.de/en/dodownload64.html",
-  "link32": "https://www.mp3tag.de/en/dodownload.html",
+  "link64": "https://download.mp3tag.de/mp3tag-v3.37-x64-setup.exe",
+  "link32": "https://download.mp3tag.de/mp3tag-v3.37-setup.exe",
   "linkcommon": "",
   "linkupdate": "https://download.mp3tag.de/versions/mp3tagv305setup.exe",
   "textupdate": "Для WinXP",
   "ispaid": false,
-  "createdAt": "2026-08-30T07:39:35.788Z"
+  "createdAt": "2026-11-08T10:18:00Z"
 }
