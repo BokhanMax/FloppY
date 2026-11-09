@@ -1,6 +1,6 @@
 {
   "name": "Figma",
-  "version": "126.11.7",
+  "version": "126.11.8",
   "category": "dev",
   "description": "Сервіс для розробки інтерфейсів та прототипування. Часто використовується веб-розробниками.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-10-29T07:05:30.125Z"
+  "createdAt": "2026-11-09T12:59:00Z"
 }
