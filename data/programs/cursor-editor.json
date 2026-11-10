@@ -1,6 +1,6 @@
 {
   "name": "Cursor Editor",
-  "version": "3.29.9",
+  "version": "3.29.15",
   "category": "dev",
   "description": "Редактор коду на основі штучного інтелекту. Аналізує директорію проекту та допомагає в логіці написання.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": true,
-  "createdAt": "2026-11-06T09:47:00Z"
+  "createdAt": "2026-11-10T09:05:00Z"
 }
