@@ -1,6 +1,6 @@
 {
   "name": "Mozilla Thunderbird",
-  "version": "159.0",
+  "version": "160.0",
   "category": "internet",
   "description": "Безкоштовний поштовий клієнт, який дозволяє керувати електронною поштою, календарями та контактами.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-10-28T10:16:36.158Z"
+  "createdAt": "2026-11-11T08:05:00Z"
 }
