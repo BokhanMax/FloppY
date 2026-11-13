@@ -1,15 +1,15 @@
 {
   "name": "Notepad++",
-  "version": "8.9.9",
+  "version": "8.9.9.1",
   "category": "files",
   "description": "Безкоштовний редактор текстових файлів з підтримкою синтаксисів мов програмування.",
   "descriptionbig": "",
   "website": "https://notepad-plus-plus.org",
-  "link64": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9/npp.8.9.9.Installer.x64.exe",
-  "link32": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9/npp.8.9.9.Installer.exe",
+  "link64": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.x64.exe",
+  "link32": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.exe",
   "linkcommon": "",
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-11-08T10:20:00Z"
+  "createdAt": "2026-11-13T13:50:00Z"
 }
