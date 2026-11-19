@@ -1,6 +1,6 @@
 {
   "name": "AnyDesk",
-  "version": "9.8.3",
+  "version": "9.8.4",
   "category": "internet",
   "description": "Компактний RDP-клієнт, дуже простий у використанні, підходить для будь-яких систем.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "",
   "textupdate": "",
   "ispaid": false,
-  "createdAt": "2026-10-27T08:20:55.828Z"
+  "createdAt": "2026-11-19T18:30:00Z"
 }
