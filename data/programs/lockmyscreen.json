@@ -2,7 +2,7 @@
   "name": "LockMyScreen",
   "version": "0.1",
   "category": "system",
-  "description": "Маленька утиліта, яка по таймеру блокую Windows, як при натисканні Win+L.",
+  "description": "Маленька утиліта, яка по таймеру блокує Windows, як при натисканні Win+L.",
   "descriptionbig": "",
   "website": "https://bokhanmax.github.io/lockmyscreen/",
   "link64": "",
