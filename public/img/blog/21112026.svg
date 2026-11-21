@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f0f2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e2e8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cardshadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000014" />
+    </filter>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Декоративні кола -->
+  <circle cx="80"   cy="90"  r="190" fill="#047857" opacity="0.05" />
+  <circle cx="1120" cy="540" r="230" fill="#047857" opacity="0.05" />
+  <circle cx="1090" cy="70"  r="120" fill="#0071e3" opacity="0.04" />
+
+  <!-- Сітка -->
+  <g stroke="#b0b0be" stroke-width="0.5" opacity="0.12">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="240" y1="0" x2="240" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" />
+    <line x1="960" y1="0" x2="960" y2="630" />
+  </g>
+
+  <!-- ===== ЗАГОЛОВОК ===== -->
+  <text x="600" y="90" font-family="'Arial', sans-serif" font-size="36" font-weight="700" fill="#1a1a2e" text-anchor="middle">LockMyScreen</text>
+  <text x="600" y="130" font-family="'Arial', sans-serif" font-size="18" fill="#4b5563" text-anchor="middle">таймер, який заблокує комп’ютер, коли час вийде</text>
+  <line x1="320" y1="150" x2="880" y2="150" stroke="#047857" stroke-width="2" opacity="0.3" />
+
+  <!-- ===== ВІДЖЕТ ===== -->
+  <g filter="url(#cardshadow)">
+    <rect x="140" y="220" width="400" height="120" rx="16" fill="#ffffff" />
+  </g>
+  <!-- Годинник -->
+  <circle cx="200" cy="280" r="26" fill="none" stroke="#047857" stroke-width="4" />
+  <line x1="200" y1="280" x2="200" y2="264" stroke="#047857" stroke-width="4" stroke-linecap="round" />
+  <line x1="200" y1="280" x2="212" y2="287" stroke="#047857" stroke-width="4" stroke-linecap="round" />
+  <text x="250" y="268" font-family="'Arial', sans-serif" font-size="13" fill="#6b7280">Залишилось</text>
+  <text x="250" y="306" font-family="'Courier New', monospace" font-size="40" font-weight="700" fill="#1a1a2e">29:47</text>
+  <rect x="430" y="258" width="88" height="44" rx="10" fill="#047857" />
+  <text x="474" y="286" font-family="'Arial', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Стоп</text>
+
+  <!-- Стрілка -->
+  <g stroke="#047857" stroke-width="3" fill="none" opacity="0.6">
+    <line x1="560" y1="280" x2="650" y2="280" />
+  </g>
+  <polygon points="660,280 646,272 646,288" fill="#047857" opacity="0.6" />
+
+  <!-- ===== ЕКРАН БЛОКУВАННЯ ===== -->
+  <g filter="url(#cardshadow)">
+    <rect x="680" y="190" width="380" height="230" rx="16" fill="#1a1a2e" />
+  </g>
+  <!-- Замок -->
+  <path d="M846 262 v-18 a24 24 0 0 1 48 0 v18" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+  <rect x="832" y="262" width="76" height="60" rx="10" fill="#ffffff" />
+  <circle cx="870" cy="287" r="7" fill="#1a1a2e" />
+  <rect x="867" y="290" width="6" height="16" rx="3" fill="#1a1a2e" />
+  <text x="870" y="360" font-family="'Arial', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Час вийшов</text>
+  <text x="870" y="386" font-family="'Arial', sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">як після Win + L</text>
+
+  <!-- ===== НИЖНЯ ІНФОРМАЦІЯ ===== -->
+  <g filter="url(#cardshadow)">
+    <rect x="180" y="460" width="840" height="72" rx="12" fill="#f0fdf4" />
+  </g>
+  <text x="600" y="490" font-family="'Arial', sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">Через 5 хв · 15 хв · 30 хв · 1 год — або о точній годині</text>
+  <text x="600" y="514" font-family="'Arial', sans-serif" font-size="12" fill="#374151" text-anchor="middle">Блокування або гучне нагадування · Повтор · Віджет поверх вікон · Безкоштовно</text>
+
+  <!-- Лого -->
+  <text x="600" y="600" font-family="'Arial', sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">floppy.pp.ua · безкоштовний софт для Windows</text>
+</svg>
