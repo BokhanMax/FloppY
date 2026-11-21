@@ -1,0 +1,15 @@
+{
+  "name": "LockMyScreen",
+  "version": "0.1",
+  "category": "system",
+  "description": "Маленька утиліта, яка по таймеру блокую Windows, як при натисканні Win+L.",
+  "descriptionbig": "",
+  "website": "https://bokhanmax.github.io/lockmyscreen/",
+  "link64": "",
+  "link32": "",
+  "linkcommon": "https://github.com/BokhanMax/lockmyscreen/releases/download/0.1/LockMyScreenSetup-0.1.exe",
+  "linkupdate": "",
+  "textupdate": "",
+  "ispaid": false,
+  "createdAt": "2026-11-21T14:28:00Z"
+}
