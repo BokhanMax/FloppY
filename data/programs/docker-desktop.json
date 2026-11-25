@@ -1,6 +1,6 @@
 {
   "name": "Docker Desktop",
-  "version": "4.100.0",
+  "version": "4.100.1",
   "category": "dev",
   "description": "Платформа для запуску програм у контейнерах. Гарантує швидкість та стабільну роботу коду в будь-якому середовищі.",
   "descriptionbig": "",
@@ -11,5 +11,5 @@
   "linkupdate": "https://hub.docker.com/",
   "textupdate": "Containers' Hub",
   "ispaid": false,
-  "createdAt": "2026-11-22T08:54:00Z"
+  "createdAt": "2026-11-25T07:47:00Z"
 }
